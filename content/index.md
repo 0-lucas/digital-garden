@@ -1,6 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to my digital garden!
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is Lucas own digital garden for remote access.
+This is hosted using (https://quartz.jzhao.xyz) as base. Please check him out!
