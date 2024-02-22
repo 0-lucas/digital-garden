@@ -1,5 +1,5 @@
 ---
-title: Welcome to my digital garden!
+title: Lucas' Digital Garden
 ---
 
 This is Lucas own digital garden for remote access.
