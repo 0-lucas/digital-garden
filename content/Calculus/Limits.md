@@ -12,8 +12,7 @@ $$
 The function is *always **1** despite any values inputted* as $x$, but when $f(x) = 1$, the function becomes **undefined**, as $0 \, / \, 0$ does not have a definition. Because of that, *any other value* is accepted, **except for the value of 1**. We can get infinitely close to **1**, as long as it *never actually reaches it*, the **function is still defined**.
 
 Rewriting it so it matches the *limit notation* presented up above, it would be:
-$$
-\begin{aligned}
+$$\begin{aligned}
 \scriptsize\text{"The limit of\unicode{0x2026}"}&\qquad\scriptsize\text{"\unicode{0x2026}the function }f\text{\unicode{0x2026}"}
 \\
 \searrow\qquad&\qquad\swarrow
@@ -23,24 +22,17 @@ $$
 \nearrow\qquad
 \\
 \scriptsize\text{"\unicode{0x2026}as }x\text{ approaches }1\text{."}
-\end{aligned}
-$$
+\end{aligned}$$
 ___
 # Approaching infinitesimally closer
 
 Limits are about a **range of numbers** that **get closer and closer** to a specified value, but ***never quite reaches it***. 
 Let's analyze another function:
-
-$$
-f(x) = x^{2}, \, x \neq 2
-$$
-
+$$f(x) = x^{2}, \, x \neq 2 $$
 In this case, the **function is undefined** at *$x = 2$*, so its established **a limit** on this point. Let's rewrite the function taking the limit into account:
-
 $$
 \lim_{{x \to 2}} \, x ^ {2} \text{, \qquad resulting in the graph below:}
 $$
-
 ![[Limits Parabola.png]]
 
 As *$x$* approaches *2* from **either side**, *$f(x)$* also gets closer and closer to **4**. This happens to both sides **infinitely**. 
