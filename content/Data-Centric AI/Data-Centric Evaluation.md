@@ -1,4 +1,4 @@
-To improve models by improving its data, one should correctly **evaluate the mode**l to determine if it needs #DCAI  approaches and how well they do, and to investigate the model's shortcomings.
+To improve models by improving its data, one should correctly **evaluate the mode**l to determine if it needs [[Data-Centric AI]] approaches and how well they do, and to investigate the model's shortcomings.
 
 > *Take into consideration that this note will use a multi-class classification model.*
 ___

@@ -1,1 +1,1 @@
- For now, use my portuguese content: https://medium.com/@luccleandro/sobre-a-regressão-linear-74572c602ffc
+ For now, content with portuguese content https://medium.com/@luccleandro/sobre-a-regressão-linear-74572c602ffc

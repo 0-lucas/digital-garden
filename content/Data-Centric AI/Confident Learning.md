@@ -1,6 +1,6 @@
 # What is it?
 
-[[Confident Learning|Confident Learning]], **CL**, for short, is a framework of methods of [[What is Data-Centric AI|Data-Centric AI]] to systematically find inaccurate data in a dataset for a [[Classification]] and [[Supervised Learning]] problem. *It also can be used for LLMs, Neural Networks and traditional #MachineLearning.* It searches and find label errors in the dataset and then clean the noisy labels, providing better training data for your actual model.
+[[Confident Learning|Confident Learning]], **CL**, for short, is a framework of methods of [[Data-Centric AI|Data-Centric AI]] to systematically find inaccurate data in a dataset for a [[Classification]] and [[Supervised Learning]] problem. *It also can be used for LLMs, Neural Networks and traditional #MachineLearning.* It searches and find label errors in the dataset and then clean the noisy labels, providing better training data for your actual model.
 ___
 ## The presumption of class-conditional noise
 
