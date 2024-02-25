@@ -28,7 +28,8 @@ To create a pipeline in Airflow, one would use [[DAGs]] for [[Data Orchestration
 ___
 ## DAG
 
-Airflow uses [[DAGs]] to represent pipelines. It defines them **using Python code**. The **DAG** code is **responsible only for orchestrating a pipeline**. For best practices, it shouldn't contain any of the operation itself. **Abstract all operations into modules** and then just **import them into the DAG** code.
+Airflow uses [[DAGs]] to represent pipelines. It defines them **using Python code**. The **DAG** code is **responsible only for orchestrating a pipeline**. 
+>*For best practices, if using other python code for the pipeline, **abstract all operations into modules** and then just **import them into the DAG** code. This way the DAG file is left only for **scheduling**.*
 
 Take for example a **basic DAG structure**:
 
@@ -54,4 +55,15 @@ with DAG(
 ____
 ## Operators
 
-An **Operator** is a predefined taks
+An **Operator** is a template for a predefined task. There are <u>A LOT</u> of *operators* available and built-in. Some popular ones are: 
+
+___
+- ##### BashOperator
+>*Executes a bash terminal command.*
+
+- ##### PythonOperator
+>*Runs a given python function that may do whatever you see fit.*
+
+- ##### EmailOperator
+>*Sends as email.*
+___

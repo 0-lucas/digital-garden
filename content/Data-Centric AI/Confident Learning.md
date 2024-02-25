@@ -40,7 +40,7 @@ ___
 | N, **dog** | 100 | 40 | 20 |  | N, **dog** | 0.25 | 0.1 | 0.05 |
 | N, **fox** | 56 | 60 | 0 |  | N, **fox** | 0.14 | 0.15 | 0 |
 | N,** cow** | 32 | 12 | 80 |  | N, **cow** | 0.08 | 0.03 | 0.2 |
-## Find Label Errors
+## Find label errors
 
 Simply put, using the matrix above as an example:
 
@@ -54,7 +54,7 @@ Simply put, using the matrix above as an example:
 
 Now, the dataset it's **cleaner** than at the beginning, and will probably **wield better results**. By using *cross-validation*, it's possible to apply this method to the **entire dataset** with a *folding strategy* of your liking. That way, you can apply Confident Learning for the entire data.
 ___
-## Code Example
+## Code example
 
 All the work mentioned above can *-obviously-* be done with a custom algorithm built from scratch, but there's also the [cleanlab](https://pypi.org/project/cleanlab/) python package, which supports any classifier based on scikit-learn/ PyTorch/ TensorFlow. cleanlab automate the process in just one simple line of code:
 

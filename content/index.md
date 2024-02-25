@@ -4,7 +4,7 @@ title: Lucas' Digital Garden
 
 >If you somehow found this *-or I told you about it-*, use this notes as you see fit. 
 
-This is my own **digital garden** for knowledge management.
+This is my own **digital garden** for knowledge management. I started it not too long ago, so i'm hosting just a handful of notes.
 
 I try not to go too deep into the *Zettelkasten method* or *Second Brain concept*. I just really like summarizing my ideas while I'm studying.
 

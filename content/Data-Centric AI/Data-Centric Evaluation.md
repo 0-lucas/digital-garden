@@ -2,7 +2,7 @@ To improve models by improving its data, one should correctly **evaluate the mod
 
 > *Take into consideration that this note will use a multi-class classification model.*
 ___
-# Reporting Model Performance
+# Reporting model performance
 
 The ***loss function*** is as **fundamental** in training models as it is in **evaluating** them. The loss may be a function of either:
  - The predicted class ***y*** for a given sample ***x***, like *accuracy*, *balanced accuracy*, *precision, and recall*.
@@ -25,12 +25,12 @@ Another pitfall is not using ***truly** held-out data*. It's very easy to ***ove
 
 > *A great way to deal with this is to split the data in three different parts: **train**, **validation** and **test**. [Click this link for reference.](https://mlu-explain.github.io/train-test-validation/)*
 ___
-# Underperforming Samples
+# Underperforming samples
 
 For a given model, it's possible for the loss of a **specific subpopulation** of the data to be **significantly higher** than the rest of the dataset. For example, *Generative AI* is known to have issues in human-centric data, like race, gender and socio-economical factors, i.e., some races may perform better in facial recognition than others.
 A model prediction **should not depend on which subpopulation a data point belongs to**, and needs to be able to generalize proportionally well across the **entire distribution.**
 ___
-## Discovering Underperforming Samples
+## Discovering underperforming samples
 
 It may not be easy to identify the **characteristics of the underperforming subpopulation**, so one should be able to **strategize ways to find these subgroups** where the model underperform.
 
@@ -58,7 +58,7 @@ Here are some ways to improve model performance for a specific sample:
 - ##### Collect additional data;
 - ##### Measure or engineer extra features for the specific sample.
 ___
-# Inspecting Isolated Data Points
+# Inspecting isolated data points
 
 There are a lot of reasons on why a classifier might output a **bad prediction** for a **given example**. Some of them are:
 
@@ -77,7 +77,7 @@ There are a lot of reasons on why a classifier might output a **bad prediction**
 - ##### The dataset contains similar examples with different labels.
 > *It's possible that may exist **other data points nearly identical** to the one being wrongfully predicted, but containing **different labels**.  In this scenario, there's little you can do to improve performance, besides **feature engineering** and **calibration techniques**.*
 ___
-# Influence of Individual Data Points
+# Influence of individual data points
 
 Certain data points might exert a significant influence on the model by being unique examples. This influence can be quantified by the **Influence Function *I(x)***, which can measure the change in the model's prediction vs. the change in its loss *(i.e., its performance)*. 
 *Influence* reveals which data points **impacts the most**. If you were to correct a label from a **very influential data point**, it would produce a **much better result** than to correct a low influence data point.
@@ -94,7 +94,7 @@ Another form of influence is the **LOO influence** of a given data point in any 
 
 >*e.g, if there are two identical data points in a dataset where omitting **both severely harms** model accuracy, **LOO influence** may still conclude that **neither is too important** **(unlike the Data Shapely value)**.*
 ___
-## Monte-Carlo Influence for Classification
+## Monte-Carlo influence for classification
 
 For an arbitrary classifier, it's possible to **approximate influence** via Monte-Carlo sampling:
 
