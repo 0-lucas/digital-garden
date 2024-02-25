@@ -1,6 +1,8 @@
 # Creating pipelines in Airflow
 
 To create a pipeline in [[Apache Airflow]], one would use [[DAGs]] for [[Data Orchestration]] and **Operators** for actual *data wrangling*.
+
+> *For consulting, check the book [[Data Pipelines with Airflow.pdf|Data Pipeline with Airflow]], from Bas Harenslak and Julian de Ruiter*.
 ___
 ## DAG
 
