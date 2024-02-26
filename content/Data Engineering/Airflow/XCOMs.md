@@ -8,18 +8,26 @@ ___
 
 ![[XCOM diagram.png]]
 ___
+# Using XCOMs
+
+Passing data around is not hard, but it needs to comply with the **Airflow standard for XCOMs**. You need to call a *push method* for sending the XCOM data from a task, **specifying its parameters,** and them a *pull method* for retrieving the same data, using the **parameters you just defined**.
+The **XCOM** is unique dependent on the **XCOM key ID**, **DAG ID**, **task ID**, and **logical date**.
+
+___
 # Using TaskFlow API
 
 To pass data around tasks, one could use **return statements** and **dependency management**. If you create a task that is **expecting a parameter**, and another **returning the same parameter**, it's possible to implement this behavior inside the **tasks dependencies**.
 
 One could easily build it using the **TaskFlow API**:
 ```python
-from airflow import DAG
-from airflow.decorators import task
+from airflow.decorators import task, dag
 from datetime import datetime
 
-with DAG("xcom_dag", start_date=datetime(2024,2,25), schedule_interval=None, catchup=False):
 
+@dag(
+    "xcom_dag", start_date=datetime(2024, 2, 25), schedule_interval=None, catchup=False
+)
+def xcom_dag():
     @task
     def return_task():
         return "retuning_value"
@@ -30,9 +38,6 @@ with DAG("xcom_dag", start_date=datetime(2024,2,25), schedule_interval=None, cat
 
     dependent_task(return_task())
 ```
-
-Resulting in the following graph:
-![[xcom_graph.png]]
 
 And because the XCOM is implicit, it creates a default *key value* in the *Web Server's* XCOMs tab:
 

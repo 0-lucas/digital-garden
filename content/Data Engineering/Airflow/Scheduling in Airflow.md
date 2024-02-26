@@ -17,8 +17,8 @@ One could use *timedelta*, but should prefer *Cron expressions* for defining sch
 from datetime import datetime, timedelta
 from airflow import DAG
 
-# Let's create a DAG that runs everyday at 6:00AM.
 
+# Let's create a DAG that runs everyday at 6:00AM.
 default_args = {
     "owner": "lucas",
     "depends_on_past": False,
