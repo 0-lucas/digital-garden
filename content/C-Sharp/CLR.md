@@ -7,7 +7,7 @@ After receiving the compiled *binary encoded* C# code, the CLR will handle:
 - Code management at run time;
 - Garbage collector/ Memory management;
 - Handle exceptions and type safety;
-- Instance of #C-Sharp to call methods from another .NET language, like F#.
+- Instance of C# to call methods from another .NET language, like F#.
 ___
 ![[CLR flowchart.png]]
 ___

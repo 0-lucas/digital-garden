@@ -1,4 +1,4 @@
-# Using the #ref keyword
+# Using the ref keyword
 
 In [[C-Sharp]], it's possible to ***pass arguments as reference***, instead of ***values***.
 
@@ -29,7 +29,7 @@ SquareNumber(ref number); // The change will be made directly to number.
 Console.WriteLine(number); // Returns 25, change made to the variable.
 ```
 ___
-# Using the #out keyword
+# Using the out keyword
 
 Similar to *ref*, **out** also passes a *variable by reference*. Using **out**, the variable doesn't need to be initialized **before the calling** the method, but must **be before exiting it**. Using out, it's possible to **return multiple values** from a single method.
 

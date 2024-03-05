@@ -1,6 +1,6 @@
 # What it is?
 
-**C#** is *a strongly typed*, *managed*, *object-oriented* programming language. When #C-Sharp is compiled, it returns a binary encoding of the source code, which then a *JIT* application called [[CLR]], short for ***Common Language Runtime*** converts to the *CPU* for the code execution.
+**C#** is *a strongly typed*, *managed*, *object-oriented* programming language. When C# is compiled, it returns a binary encoding of the source code, which then a *JIT* application called [[CLR]], short for ***Common Language Runtime*** converts to the *CPU* for the code execution.
 ___
 # Methods
 
