@@ -22,7 +22,7 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "##e3e3e3",
+          light: "#e5e9f0",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
@@ -32,14 +32,14 @@ const config: QuartzConfig = {
           highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#2e3440",
+          lightgray: "#4C566A",
+          gray: "#d8dee9",
+          darkgray: "#ffffff",
+          dark: "#EBCB8B",
+          secondary: "#435c7a",
+          tertiary: "#81A1C1",
+          highlight: "#c1d3d9",
         },
       },
     },
@@ -56,7 +56,7 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting({
         // uses themes bundled with Shikiji, see https://shikiji.netlify.app/themes
         theme: {
-          light: "nord",
+          light: "tokyo-night",
           dark: "nord",
         },
         // set this to 'true' to use the background color of the Shikiji theme

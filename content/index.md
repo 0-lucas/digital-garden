@@ -15,6 +15,6 @@ However, if you found this useful, maybe want to download a note, or have anythi
 You can reach out to me through my [GitHub](https://github.com/0-lucas) and [LinkedIn](https://www.linkedin.com/in/llsalmeida/).
 
 
->This is hosted using [Jzhao's work!](https://quartz.jzhao.xyz). Check him out!!!
+>This is hosted using [Jzhao's work!](https://quartz.jzhao.xyz). Check him out!!
 
 ![[homeimage.png]]
