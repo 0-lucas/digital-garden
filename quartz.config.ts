@@ -29,7 +29,7 @@ const config: QuartzConfig = {
           dark: "#bf616a",
           secondary: "#3b4252",
           tertiary: "#b48ead",
-          highlight: "#c1d3d9",
+          highlight: "#fceac5",
         },
         darkMode: {
           light: "#2e3440",
@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           dark: "#EBCB8B",
           secondary: "#d8dee9",
           tertiary: "#81A1C1",
-          highlight: "#c1d3d9",
+          highlight: "#4C566A",
         },
       },
     },
