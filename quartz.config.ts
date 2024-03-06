@@ -3,14 +3,14 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴Lucas' Garden",
+    pageTitle: "🍁Lucas' Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "https://ob-server.pages.dev",
+    baseUrl: "https://0-lucas.github.io/digital-garden/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -22,14 +22,14 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "##e3e3e3",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
           secondary: "#284b63",
           tertiary: "#84a59d",
-          highlight: "faf8f8",
+          highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
           light: "#161618",
@@ -56,12 +56,12 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting({
         // uses themes bundled with Shikiji, see https://shikiji.netlify.app/themes
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "nord",
+          dark: "nord",
         },
         // set this to 'true' to use the background color of the Shikiji theme
         // if set to 'false', will use Quartz theme colors for background
-        keepBackground: false,
+        keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),

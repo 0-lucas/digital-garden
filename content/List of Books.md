@@ -6,6 +6,8 @@
 ___
 This is a collection of the main books I use for studying.
 
+Some of them are large enough that might 404 its page. Bear with it for now. 
+
 # Statistics
 - [[ISLP_website.pdf|Introduction to Statistical Learning]]
 - [[2004_Book_AllOfStatistics.pdf|All of Statistics]]
