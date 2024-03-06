@@ -17,10 +17,10 @@ Some of them are large enough that might 404 its page. Bear with it for now.
 - [[Probabilidade - Um curso moderno com aplicações.pdf|Probabilidade - Um Curso Moderno com Aplicações]]
 ___
 # Mathematics
-- [[James Stewart - Calculus_ Early transcendentals-Brooks Cole (2016) (1).pdf|Calculus - Early Transcendentals]]
-- [[James Stewart, Lothar Redlin, Saleem Watson - Precalculus. Mathematics for Calculus-Cengage Learning (2024).pdf|Precalculus - Mathematics for Calculus]]
+- [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|Calculus - Early Transcendentals]]
+- [[James Stewart, Lothar Redlin, Saleem Watson - Precalculus_ Mathematics for Calculus, 5th Edition, Enhanced WebAssign Edition  -Brooks Cole (2009).pdf|Precalculus - Mathematics for Calculus]]
 - [[Thomas Nield - Essential Math for Data Science_ Take Control of Your Data with Fundamental Linear Algebra, Probability, and Statistics-O'Reilly Media (2022).pdf|Essential Math for Data Science]]
-- [[Mark Ryan - Calculus All-in-One For Dummies-For Dummies (2023).pdf|Calculus All-in-One for Dummies]]
+- [[Calculus ALL IN ONE - Mark Ryan.pdf|Calculus All-in-One for Dummies]]
 - [[Mathematics for Machine Learning.pdf|Mathematics for Machine Learning]]
 ___
 # Data Analysis
@@ -31,7 +31,7 @@ ___
 # Data Science
 - [[o Data_Science_from_Scratch_First_Princ.pdf|Data Science from Scratch]]
 - [[pythondatasciencehandbook.pdf|Python Data Science Handbook]]
-- [[Algorithms for Data Science ( PDFDrive ).pdf|Algorithms for Data Science]]
+- [[Algorithms for Data Science.pdf|Algorithms for Data Science]]
 - [[storytelling-with-data-cole-nussbaumer-knaflic.pdf|Storytelling with Data]]
 - [[Think Like a Data Scientist.pdf|Think like a Data Scientist]]
 ___
@@ -39,8 +39,12 @@ ___
 - [[Hands-on-Machine-Learning.pdf|Hands-on: Machine Learning using Scikit-Learn and Tensorflow]]
 - [[_AutoML_Bible_1676031584.pdf|AutoML Bible]]
 - [[o Thoughtful Machine Learning with Python by Matthew Kirk.pdf|Thoughtful Machine Learning with Python]]
-- [[Deep Learning with PyTorch - ENGLISH.pdf|Deep Learning with PyTorch]]
-- [[Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon (z-lib.org).pdf|Machine Learning with Python Cookbook]]
+- [[PyTorch Pocket Reference Building and Deploying Deep Learning Models (Joe Papa).pdf|PyTorch Pocket Reference]]
+- [[Programming PyTorch for Deep Learning Creating and Deploying Deep Learning Applications (Ian Pointer).pdf|Programming PyTorch for Deep Learning]]
+- [[Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon.pdf|Machine Learning with Python Cookbook]]
+- [[Introducing MLOps How to Scale Machine Learning in the Enterprise (Mark Treveil, Nicolas Omont, Clément Stenac etc.).pdf|Introducing MLOPS]]
+- [[Machine Learning Design Patterns Solutions to Common Challenges in Data Preparation, Model Building, and MLOps (Valliappa Lakshmanan, Sara Robinson etc.).pdf|Machine Learning Design Patterns]]
+- [[Hands-On Unsupervised Learning Using Python How to Build Applied Machine Learning Solutions from Unlabeled Data (Ankur A. Patel).pdf|Hands-on: Unsupervised Learning]]
 ___
 # Natural Language Processing — NLP
 - [[Natural_Language_Processing_with_Python.pdf|Natural Language Processing with Python]]
@@ -54,7 +58,6 @@ ___
 ___
 # Computer Vision
 - [[Bishop - Pattern Recognition And Machine Learning - Springer  2006.pdf|Pattern Recognition and Machine Learning]]
-- [[Image Processing, Analysis, and Machine Vision.pdf|Image Processing, Analysis, and Machine Learning]]
 ___
 # Data Engineering
 - [[Data Pipelines with Airflow.pdf|Data Pipelines with Airflow]]
@@ -62,11 +65,12 @@ ___
 - [[Agile Data Science 2.0.pdf|Agile Data Science]]
 - [[Learning Apache Spark with Python - ENGLISH.pdf|Learning Apache Spark with Python]]
 - [[Spark for Data Science - ENGLISH.pdf|Spark for Data Science]]
+- [[Data Pipelines Pocket Reference Moving and Processing Data for Analytics (James Densmore).pdf|Data Pipelines Pocket Reference]]
 ___
 # Cloud Computing
-- [[Andreas Wittig, Michael Wittig - Amazon Web Services in Action_ An in-depth guide to AWS-Manning (2023) (1).pdf|Amazon Web Services in Action]]
+- [[Amazon Web Services in Action (Andreas Wittig, Michael Wittig).pdf|Amazon Web Services in Action]]
 ____
 # Time Series
-- [[Demand Forecasting for Inventory Control ( PDFDrive ).pdf|Demand Forecasting for Inventory Control]]
+- [[Demand Forecasting for Inventory Control.pdf|Demand Forecasting for Inventory Control]]
 ___
 
