@@ -1,6 +1,6 @@
 # What is it?
 
-A *logarithm* can be expressed as the **exponential relationship** between numbers. Basically, the *logarithm* of a number is the **exponent** at which should we **elevate the base number** until results in the number itself. 
+A *logarithm* is a can be expressed as the **exponential relationship** between numbers. Basically, the *logarithm* of a number is the **exponent** at which should we **elevate the base number** until results in the number itself. 
 
 So, $\log_{2} 8 = 3$, because $2^3 = 8$.
 
