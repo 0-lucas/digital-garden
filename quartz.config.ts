@@ -22,14 +22,14 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#e5e9f0",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#ffffff",
+          lightgray: "#dde2ed",
+          gray: "#b48ead",
+          darkgray: "#2E3440",
+          dark: "#bf616a",
+          secondary: "#3b4252",
+          tertiary: "#b48ead",
+          highlight: "#c1d3d9",
         },
         darkMode: {
           light: "#2e3440",
@@ -57,7 +57,7 @@ const config: QuartzConfig = {
         // uses themes bundled with Shikiji, see https://shikiji.netlify.app/themes
         theme: {
           light: "tokyo-night",
-          dark: "nord",
+          dark: "tokyo-night",
         },
         // set this to 'true' to use the background color of the Shikiji theme
         // if set to 'false', will use Quartz theme colors for background
