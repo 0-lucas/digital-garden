@@ -27,5 +27,10 @@ There are basically two main approaches to reduce dimensionality: *projection* a
 - #### Projection
 Because in most real-world problems, data **is not** spread uniformly, it was empirically observed that **all data points** lie close to a **much lower-dimensional** *subspace*. The ideais to project the data into this *subspace*, which would result in **similar distribution**, but **lower dimensionality**.
 
-![[Pasted image 20240307074902.png]]
+![[3d to 2d.png]]
 >*For example, here the **hyperplane** of a 3D space was found taking into account the distance of it and all data points.*
+
+- #### Manifold Learning
+There are instances where projection data to a lower-dimension may not represent the information of the original data. In this cases, the *subspace* can twist, turn and roll around. For example, in the *Swiss Roll dataset:*
+
+![[Pasted image 20240307075811.png]]
