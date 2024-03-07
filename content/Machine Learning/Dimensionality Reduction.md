@@ -20,17 +20,25 @@ The general issue is that when **dimensionality increases**, the **volume of spa
 Also, organizing data becomes very messy and slow, because of the **space between valuable data points**. Another issue is the **ratio of signal** *(valuable data)* and **noise** *(irrelevant data)* that normally results in a lot of noise for high dimensions.
 So, in a *Machine Learning* context, how do we solve this problem?
 ___
-# Dimensionality reduction algorithms
+# Dimensionality reduction methods
 
 There are basically two main approaches to reduce dimensionality: *projection* and *Manifold Learning*. 
 
-- #### Projection
-Because in most real-world problems, data **is not** spread uniformly, it was empirically observed that **all data points** lie close to a **much lower-dimensional** *subspace*. The ideais to project the data into this *subspace*, which would result in **similar distribution**, but **lower dimensionality**.
+## Projection
+
+Because in most real-world problems, data **is not** spread uniformly, it was empirically observed that **all data points** lie close to a **much lower-dimensional** *subspace*. The ideais to project the data into this *subspace*, which would result in **similar distribution**, but **lower dimensionality**. 
 
 ![[3d to 2d.png]]
 >*For example, here the **hyperplane** of a 3D space was found taking into account the distance of it and all data points.*
+___
+## Manifold Learning
 
-- #### Manifold Learning
-There are instances where projection data to a lower-dimension may not represent the information of the original data. In this cases, the *subspace* can twist, turn and roll around. For example, in the *Swiss Roll dataset:*
+There are instances where **projecting** data to a lower-dimension may not represent the information of the original data. In this cases, the *subspace* can twist, turn and roll around. For example, in the *Swiss Roll dataset:*
 
-![[Pasted image 20240307075811.png]]
+![[swiss rooools.png]]
+
+*Manifold Learning* remedies this situation. Instead of just projecting to a **lower dimension**, it **assumes** that the data **lie close to a lower-dimensional manifold** and that the model will **benefit from a dimensionality reduction**. So, always train the model before, so you can have a solid baseline.
+___
+# Algorithms
+
+- [[PCA]]

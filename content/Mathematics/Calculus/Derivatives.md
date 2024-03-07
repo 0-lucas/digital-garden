@@ -63,6 +63,6 @@ sns.lineplot(x=line_values, y=line_function(line_values));
 
 - #### [Derivada is All You Need](https://medium.com/@anwarhermuche/derivada-is-all-you-need-uma-aplicação-com-o-algoritmo-do-gradiente-descendente-a29510e63cb4) — Anwar Mermuche — Medium.
 
-- #### [[James Stewart - Calculus_ Early transcendentals-Brooks Cole (2016) (1).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 2.7, p. 141.
+- #### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 2.7, p. 141.
 
 - #### [Matemática Essencial](https://www.uel.br/projetos/matessencial/superior/calculo/derivada/derivada1.htm) — Universidade Estadual de Londrina.

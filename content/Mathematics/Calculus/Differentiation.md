@@ -51,7 +51,7 @@ When there are functions in a **sum** and **subtraction** between itself, or **m
 ___
 # References
 
-- #### [[James Stewart - Calculus_ Early transcendentals-Brooks Cole (2016) (1).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 3.1, p. 171.
+- #### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 3.1, p. 171.
 
 - #### [Derivative of Exponential Function](https://www.cuemath.com/calculus/derivative-of-exponential-function/) — Cuemath — Blog post.
 
