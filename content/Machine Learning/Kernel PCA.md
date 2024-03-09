@@ -3,4 +3,4 @@
 
 # What is it?
 
-*Kernel PCA* is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]]. As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that becomes **complex non-linear projections** when the dimension is reduced.
+*Kernel PCA* is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]]. As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that becomes **complex non-linear projections** when the dimension is reduced. This works much better than the *traditional PCA* for **non-linear data** and **helps clustering**.
