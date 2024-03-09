@@ -15,7 +15,6 @@ Take for example a **basic DAG structure**:
 from datetime import datetime, timedelta
 from airflow import DAG
 
-
 default_args = {
     "owner": "lucas",
     "start_date": datetime(2024, 2, 25),
