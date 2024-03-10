@@ -64,11 +64,31 @@ $$
 (f(x) - g(x))' = f(x)' = g(x)'
 $$
 
+### Product and quotient of functions
 
+The *Product Rule* states that **the derivative of a product of two functions** is the **first function times the derivative of the second functions** plus the **second functions times the derivative of the first function**.
+$$
+\begin{align}
 
+&(f(x) * g(x))' = f(x)*g(x)' + g(x)*f(x)' \\
+&or\\
+&(fg)' = fg' + gf'
+\end{align}
+$$
 
+The *Quotient Rule* looks it not as similar to the product rule like sum and subtraction. It states that **the derivative of a quotient is the denominator times the derivative of the numerator minus the numerator times the derivative of the denominator, all divided by the square of the denominator**, which translates to:
+$$
+\begin{equation}
+   \left(\frac{f}{g}\right)
+\end{equation}' = \frac{gf' -fg'}{g^2}
+$$
 
+## Chain Rule
 
+The *Chain Rule* is all about *composite functions*, so functions that depends on the values of other functions. It states that **the composite function $F(x) = f(g(x))$ is given by:**
+$$
+F'(x) = f'(g(x)) * g'(x)
+$$
 
 
 ___
