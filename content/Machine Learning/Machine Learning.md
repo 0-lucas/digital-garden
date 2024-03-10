@@ -19,6 +19,7 @@ Below, some notes separated by its categories:
 ### Unsupervised Learning
 - [[Dimensionality Reduction]]
 - [[PCA]]
+- [[Kernel PCA]]
 ___
 ### Data Centric AI
 - [[Data-Centric AI]]
