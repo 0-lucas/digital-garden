@@ -44,9 +44,33 @@ ___
 ## Derivatives between functions
 
 When there are functions in a **sum** and **subtraction** between itself, or **multiplication** by a constant, the **derivatives of the result can be calculated using the old functions**.
-### Multiplication by a constant
+### Multiplication by constant
 
-The *Constant Multiplication Rule* states that the derivative of a function times a cons
+The *Constant Multiplication Rule* states that the **derivative of a constant times a function is the constant times the derivative of the function**.
+$$
+f'(c * x) = c[f'(x)], \quad or \quad \frac{d}{dx}[cf(x)] = c\frac{d}{dx}f(x)
+$$
+
+### Sum and substraction of functions
+
+The *Sum Rule* states that **the derivative of a sum of functions is the sum of derivatives.** This allows easier calculations when this rule is appliable.
+$$
+(f(x) + g(x))' = f(x)' + g(x)'
+
+$$
+
+The *Difference Rule* is similar, but works with **subtraction** instead of addition.
+$$
+(f(x) - g(x))' = f(x)' = g(x)'
+$$
+
+
+
+
+
+
+
+
 ___
 # References
 
