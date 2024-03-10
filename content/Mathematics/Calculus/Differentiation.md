@@ -46,8 +46,7 @@ ___
 When there are functions in a **sum** and **subtraction** between itself, or **multiplication** by a constant, the **derivatives of the result can be calculated using the old functions**.
 ### Multiplication by a constant
 
-
-
+The *Constant Multiplication Rule* states that the derivative of a function times a cons
 ___
 # References
 
