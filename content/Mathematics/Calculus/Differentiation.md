@@ -82,10 +82,10 @@ $$
    \left(\frac{f}{g}\right)
 \end{equation}' = \frac{gf' -fg'}{g^2}
 $$
-
+___
 ## Chain Rule
 
-The *Chain Rule* is all about *composite functions*, so functions that depends on the values of other functions. It states that **the composite function $F(x) = f(g(x))$ is given by:**
+The *Chain Rule* is all about *composite functions*, so functions that depends on the values of other functions. It states that **the derivative of a composite function $F(x) = f(g(x))$ is given by:**
 $$
 F'(x) = f'(g(x)) * g'(x)
 $$

@@ -9,10 +9,11 @@ This is a collection of the main books I use for studying.
 Some of them are large enough that might 404 its page. Bear with it for now. 
 
 # Mathematics
-- [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|Calculus - Early Transcendentals]]
 - [[James Stewart, Lothar Redlin, Saleem Watson - Precalculus_ Mathematics for Calculus, 5th Edition, Enhanced WebAssign Edition  -Brooks Cole (2009).pdf|Precalculus - Mathematics for Calculus]]
-- [[Thomas Nield - Essential Math for Data Science_ Take Control of Your Data with Fundamental Linear Algebra, Probability, and Statistics-O'Reilly Media (2022).pdf|Essential Math for Data Science]]
+- [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|Calculus - Early Transcendentals]]
 - [[Calculus ALL IN ONE - Mark Ryan.pdf|Calculus All-in-One for Dummies]]
+- [[Linear Algebra Done Right.pdf|Linear Algebra Done Right]]
+- [[Thomas Nield - Essential Math for Data Science_ Take Control of Your Data with Fundamental Linear Algebra, Probability, and Statistics-O'Reilly Media (2022).pdf|Essential Math for Data Science]]
 - [[Mathematics for Machine Learning.pdf|Mathematics for Machine Learning]]
 ## Statistics
 - [[ISLP_website.pdf|Introduction to Statistical Learning]]
