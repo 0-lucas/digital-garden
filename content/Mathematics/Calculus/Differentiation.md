@@ -38,7 +38,7 @@ ___
 
 For functions that follow the general form $f(x) = a^x$, the **derivative of an exponential function** is the **product of the exponential function** $a^x$ and $\ln{a}$, that is:
 $$
-f'(x) = a^x \, \ln{a} \ , \quad  a > 0
+f'(a^x) = a^x \, \ln{a} \ , \quad  a > 0
 $$
 ___
 ## Derivatives between functions
