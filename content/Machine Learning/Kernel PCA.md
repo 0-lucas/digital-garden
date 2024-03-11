@@ -3,7 +3,7 @@
 ___
 # What is it?
 
-*Kernel PCA*, or *kPCA*, is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]]. As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that become **complex non-linear projections** when the dimension is reduced. This works much better than the *traditional PCA* for **non-linear data**. *Kernel PCA* also can cluster instances better than *traditional PCA*.
+*Kernel PCA*, or *kPCA*, is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]] most commonly used in [[Machine Learning]]. As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that become **complex non-linear projections** when the dimension is reduced. This works much better than the *traditional PCA* for **non-linear data**. *Kernel PCA* also can cluster instances better than *PCA* for non-linear data.
 
 ![[pca vs kpca.png]]
 

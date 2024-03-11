@@ -1,4 +1,4 @@
-Outliers are known to have **negative effects** on a predictive model. Unless they are **fundamentally a part of the model and its context**, it should be avoided and **removed** from the data entirely.
+Outliers are known to have **negative effects** on a [[Machine Learning]] model. Unless they are **fundamentally a part of the model and its context**, it should be avoided and **removed** from the data entirely.
 ___
 # Using a quantile threshold
 
@@ -36,7 +36,7 @@ plot_difference(array, filtered_array);
 ___
 # Using cleanlab Outlier Removal
 
-Another great way is to use ***cleanlab***'s [OutOfDistribution](https://docs.cleanlab.ai/stable/cleanlab/outlier.html). Behind the scenes, simply put, is just a *K-Nearest Neighbors* algorithm that detects those whose **distance** is greater than expected.
+Another great way is to use ***cleanlab***'s [OutOfDistribution](https://docs.cleanlab.ai/stable/cleanlab/outlier.html). Behind the scenes, simply put, is just a *K-Nearest Neighbors* algorithm that detects those whose **distance** is greater than expected. Is most commonly used with [[Data-Centric AI]] methods.
 
 ```python
 from cleanlab.outlier import OutOfDistribution  

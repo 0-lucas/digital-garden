@@ -1,6 +1,6 @@
 # What is it?
 
-*PCA* stands for *Principal Component Analysis*, being one of the most popular [[Dimensionality Reduction]] algorithms, used in [[Unsupervised Learning]] to **examine relations between variables**, transform a set of **correlated variables** to an **uncorrelated linear combination of the original variables**, lowering dimensionality and **retaining information**.
+*PCA* stands for *Principal Component Analysis*, being one of the most popular [[Dimensionality Reduction]] algorithms, used in [[Unsupervised Learning]] to **examine relations between variables**, transform a set of **correlated variables** to an **uncorrelated linear combination of the original variables**, lowering dimensionality and **retaining information**. Is most commonly used in [[Statistics]] and [[Machine Learning]].
 
 >***PCA** is a **linear method** and works great for linear-separable data. For **non-linear data**, check out [[Kernel PCA]].*
 ___
@@ -23,6 +23,7 @@ To apply a *PCA* in [[scikit-learn]], one should follow these steps:
 3. Apply *PCA* and **check components variance** and **performance.
 
 *PCA* is also great for **data visualization** and **clustering** higher dimensionality data for other algorithms in the end of the pipeline:
+
 ```python
 from sklearn.datasets import make_blobs  
 from sklearn.pipeline import make_pipeline  
