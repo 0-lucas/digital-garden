@@ -18,36 +18,53 @@ ___
 
 To apply a *PCA* in [[scikit-learn]], one should follow these steps:
 
-1. Create a *baseline model* and **check training time** and **model performance**.
+1. Create a *baseline model* and **check training time** and **performance**.
 2. If not used before, **scale data** before adding *PCA* in the pipeline.
-3. Apply *PCA* and **check components variance** and **model performance**.
-4. Decide if it is worth it or not.
+3. Apply *PCA* and **check components variance** and **performance.
 
-*Step 3* can easily be done in scikit-learn, using the *explained_variance_ratio* attributes of the *PCA class*:
-
+*PCA* is also great for **data visualization** and **clustering** higher dimensionality data for other algorithms in the end of the pipeline:
 ```python
-from sklearn.decomposition import PCA  
+from sklearn.datasets import make_blobs  
 from sklearn.pipeline import make_pipeline  
+from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler  
-# X_train is a table of 100rows x 100features.
 
-PCA = PCA(n_components=5)
+X, y = make_blobs(random_state=42, n_features=3)  
+
+pca = PCA()  
 scaler = StandardScaler()  
+pipeline = make_pipeline(scaler, pca)  
+  
+X_trans = pipeline.fit_transform(X)  
+  
+fig = plt.figure(figsize=(14, 6))  
+ax1 = fig.add_subplot(121, projection='3d')  
+ax1.scatter(
+	X[:, 0], X[:, 1], X[:, 2], c=y, cmap="viridis", s=50, alpha=0.75
+	) 
+ax1.set_title("3D original feature space")  
+  
+ax2 = fig.add_subplot(122)  
+ax2.scatter(
+	X_trans[:, 0], X_trans[:, 1], c=y, cmap="viridis", s=50, alpha=0.75
+	)  
+ax2.set_title("PCA transformation")  
 
-pipeline = make_pipeline(scaler, PCA)  # Remember to scale data.  
-pipeline.fit(X_train)  
-
-PCA.explained_variance_ratio_
+plt.suptitle("Make Blobs dataset")  
+plt.show()
 ```
 
-![[PCA explained variance ratio.png]]
+![[pca demonstration.png]]
 
-The returning table show how much each **component explains the percentage of variance** of the original dataset. One could want to return the components which accumulate to a **$n$ explained variance ratio**. To do this, just replace *n_components* for a *float* argument. 
+You can check each **component captured variance** with *explained_variance_ratio*. The returning table show how much each **component explains the percentage of variance** of the original dataset. One could want to return the components which accumulate to a **$n$ explained variance ratio**. To do this, just replace *n_components* for a *float* argument. 
 
 ```python
-PCA = PCA(n_components=0.95) # Will return explained_variance total of 95%
+PCA = PCA(n_components=0.9) # Will return explained_variance total of 95%
 
 pipeline = make_pipeline(scaler, PCA)
 pipeline.fit(X_train)
+pca.explained_variance_ratio
 ```
+
+![[variance pca table.png]]
 ___
