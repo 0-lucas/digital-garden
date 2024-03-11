@@ -43,5 +43,8 @@ ___
 
 The two most popular algorithms are: [[PCA]] for **linear problems** and [[Kernel PCA]] for **non-linear problems**.
 
-Some *Manifold Learning* popular algorithms are: *[LLE]([sklearn.manifold.LocallyLinearEmbedding — scikit-learn 1.4.1 documentation](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html))*, *[Isomap]([sklearn.manifold.Isomap — scikit-learn 1.4.1 documentation](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html#sklearn.manifold.Isomap))* and *[t-SNE]([sklearn.manifold.TSNE — scikit-learn 1.4.1 documentation](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html#sklearn.manifold.TSNE))*.
+Some *Manifold Learning* popular algorithms are:
+- [*LLE*](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html)
+- [*Isomap*](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.Isomap.html#sklearn.manifold.Isomap)
+- [*t-SNE*](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html)
 ___
