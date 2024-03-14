@@ -32,7 +32,7 @@ ___
 # Using scikit-learn
 
 In practice, *kPCA* uses the same trick as using *Nystroem approximation in linear regression* to adapt to non-liner data. We can fit **linear algorithms to non-linear data** if applying *kPCA* before the estimator. 
-For example, given the [make moons dataset]([sklearn.datasets.make_moons — scikit-learn 1.4.1 documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html)), would be impossible to fit a linear classification algorithm, but using *kPCA* the algorithm can draw a **linear decision boundary** in **higher-dimensionality** as seen from the image above. That translates to a **non-linear classification,** as seen below.
+For example, given the [make moons dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html), would be impossible to fit a linear classification algorithm, but using *kPCA* the algorithm can draw a **linear decision boundary** in **higher-dimensionality** as seen from the image above. That translates to a **non-linear classification,** as seen below.
 
 ```python
 from sklearn.pipeline import make_pipeline

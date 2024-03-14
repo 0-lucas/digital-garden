@@ -2,7 +2,7 @@
 
 *Machine Learning* is the science about programming algorithms that can **learn from data**, to improve its **performance** at a given task. It's also a sub-field inside *artificial intelligence*.
 
-![[ml comic.png]]
+![[ml comic.png|600]]
 
 ___
 Quoting some already established authors:
@@ -19,6 +19,12 @@ ___
 
 Below, some notes separated by its categories:
 
+### Metrics
+- [[Entropy]]
+___
+### Supervised Learning
+- [[Linear Regression]]
+___
 ### Unsupervised Learning
 - [[Dimensionality Reduction]]
 - [[PCA]]
