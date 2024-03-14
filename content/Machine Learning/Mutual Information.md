@@ -2,15 +2,34 @@
 
 *Mutual Information* between two variables describes the **extent to which knowledge of one quantity reduces uncertainty about the other**. In this case, *uncertainty* refers to the [[Entropy]] of the variables. In other words, if you **know the value of a feature**, how confident would you be about **predicting a target**?
 
-It may sound very similar to [[Correlation]], but *Mutual Information* is not restricted only to linear relationships. It **captures any kind of relationship between variables**, being **linear or non-linear**, and they can be both **continuous and discrete** variables.
+It may sound very similar to [[Correlation]], but *mutual information* is not restricted only to linear relationships. It **captures any kind of relationship between variables**, being **linear or non-linear**, and they can be both **continuous and discrete** variables.
 
 It's given by the formula:
 
 $$
-I(X;Y) = \sum
+I(X;Y) = \sum_{x}\sum_{y}P(x,y)\log{\left[\frac{P(x,y)}{P(x)P(y)}\right]}
 $$
+>*Given two discrete variables $X, Y$, with its respective probabilities $P(x), P(y)$ and joint probability $P(x,y)$.*
 ___
 # Mutual Information and Entropy
 
+One might think that the formula above looks very similar to the formula of [[Entropy]], and they indeed are! *Mutual information* is the **uncertainty**, or **entropy**, common to both $X$ and $Y$, being possible to represent the **entropic quantities** using set theory.
 
-![[mutual information.png]]
+![[mutual information.png|600]]
+
+And one could **derive the formulas** too:
+$$
+\begin{align}
+&I(X;Y) = \sum_{x}\sum_{y}P(x,y)\log{\left[\frac{P(x,y)}{P(x)P(y)}\right]} \\ \\
+&\text{could be written as} \\ \\
+&I(X;Y)= H(X) + H(Y) - H(X,Y)
+\end{align}
+$$
+___
+
+
+
+
+# References 
+
+- ##### [Entropy and mutual information](https://www.ece.tufts.edu/ee/194NIT/lect01.pdf) - Information Theory lecture - Tufts University.

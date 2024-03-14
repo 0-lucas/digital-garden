@@ -20,3 +20,7 @@ ___
 - When working with *feature engineering*, one might use *entropy* for exploring [[Mutual Information]] of features.
 
 - Or maybe, use *entropy* as the *cost-function* of [[Decision Trees]], splitting based on the **purity of data** determined by *entropy*.
+___
+# References 
+
+- ##### [Entropy and mutual information](https://www.ece.tufts.edu/ee/194NIT/lect01.pdf) - Information Theory lecture - Tufts University.
