@@ -21,6 +21,7 @@ Below, some notes separated by its categories:
 
 ### Metrics
 - [[Entropy]]
+- [[Mutual Information]]
 ___
 ### Supervised Learning
 - [[Linear Regression]]

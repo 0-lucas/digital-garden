@@ -9,10 +9,10 @@ The concept of *entropy* comes from **19th century thermodynamics**, introduced 
 ___
 # Entropy in Machine Learning
 
-When used in [[Machine Learning]], *entropy* stand together with [Information theory](https://en.wikipedia.org/wiki/Information_theory), where it takes a **new meaning**. In this context, it refers to the **amount of data and uncertainty present in a variable**, or when applied, the **amount of information a feature has**. It's given by the formula:
+When used in [[Machine Learning]], *entropy* stand together with [Information theory](https://en.wikipedia.org/wiki/Information_theory), where it takes a **new meaning**. In this context, it refers to the **amount of data and uncertainty present in a variable**, or when applied, the **amount of information learned on average from one instance of the variable**. It's given by the formula:
 
 $$
-H(X) = - \sum_{i=1}^{n}P(x_i) \log_{2} P(x_i)
+H(X) = - \sum_{i=1}^{n}P(x_i) \log P(x_i)
 $$
 >*Given a discrete random variable $X$, with possible outcomes $x_n$ with probability of occurring $P(x_n)$, and $i$ as the number of possible categories.*
 ___
