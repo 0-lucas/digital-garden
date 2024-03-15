@@ -4,3 +4,13 @@
 It's written in *GO*, being widely used in [[DevOps]] and [[Data Engineering]]. Nowadays, entire companies and services are being maintained using *Kubernetes*.
 
 ![[kubernetes warning.png]]
+___
+# Kubernetes infrastructure
+
+*Kubernetes* is a **distributed system**,
+# Cluster
+
+Any complete system deployed on *Kubernetes* is called **Cluster**.
+
+
+
