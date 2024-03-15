@@ -29,10 +29,30 @@ ___
 [[Kubernetes]] runs a application by placing its containers into Pods, then **running them** on a *Node*. A *Node* contains all **necessary services to effectively run** Pods. It's components are:
 
 - ##### kubelet
-The *kubelet* runs on each node, ensuring the **containers inside of Pods** are **running healthy**, and is the **primary communication agent** of a *Node*.
+The *kubelet* runs on each node, ensuring the **containers inside of Pods** are **running healthy** and managing its resources, also it's the **primary communication agent** of a *Node* with the *API server*.
 
+- ##### kube-proxy
+*kube-proxy* is a **network proxy that runs on each node**, handling low-level networking rules and manages traffic sent to a *Service*. *kube-proxy* also manages communication with pods to occur **both inside and outside** a *Cluster*.
+
+- ##### Container Runtime
+Is the software responsible for **effectively running the containers**, for example, *[[Docker]] Engine.*
+
+> *Check the official [Kubernetes documentation for Nodes]https://kubernetes.io/docs/concepts/architecture/nodes/).*
+
+All nodes are then, managed by the *Control Plane*.
+___
+# Control Plane
+
+![[control plane.png]]
+
+The *Control Plane* manages all worker Nodes, being responsible for **container orchestration** and the **desired state** of the *Cluster*. It's componentes are:
+
+- ##### kube-apiserver
+Is the central hub of the *Cluster*, handling the all communication between other **Cluster components** and **end users**, and controlling all processes between the *Control Plane* and the Nodes.
+
+- ##### etcd
 
 
 # Cluster
 
-Any complete system deployed on *Kubernetes* is called **Cluster**.
+Any complete system deployed on *Kubernetes* is called **Cluster**. The *Cluster* is a group of *Nodes* that run and manages the system. 
