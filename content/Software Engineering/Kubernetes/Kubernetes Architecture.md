@@ -37,7 +37,7 @@ The *kubelet* runs on each node, ensuring the **containers inside of Pods** are 
 - ##### Container Runtime
 Is the software responsible for **effectively running the containers**, for example, *[[Docker]] Engine.*
 
-> *Check the official [Kubernetes documentation for Nodes]https://kubernetes.io/docs/concepts/architecture/nodes/).*
+> *Check the official [Kubernetes documentation for Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/).*
 
 All nodes are then, managed by the *Control Plane*.
 ___
@@ -51,8 +51,15 @@ The *Control Plane* manages all worker Nodes, being responsible for **container 
 Is the central hub of the *Cluster*, handling the all communication between other **Cluster components** and **end users**, and controlling all processes between the *Control Plane* and the Nodes.
 
 - ##### etcd
+The *etcd* is the **key-value, distributed database**, that stores information about running the *Cluster*, like configurations, states and metadata of other [[Kubernetes]] objects.
 
+- ##### kube-scheduler
+The *kube-scheduler* is responsible for **scheduling the Pods** inside each Node. It chooses the **best Node for a Pod to be ran**, depending on it's requirements and needed resources. It's what effectively **scales the application**.
 
+> *Check the official [Kubernetes documentation for the Control Plane components](https://kubernetes.io/docs/concepts/overview/components/).*
+___
 # Cluster
 
-Any complete system deployed on *Kubernetes* is called **Cluster**. The *Cluster* is a group of *Nodes* that run and manages the system. 
+Any complete system deployed on *Kubernetes* is called **Cluster**. The *Cluster* groups everything talked about above, having the **Control Plane** and **Nodes** as it's main components. It operates based on its defined **desired state**, that define the **available resources**, **container images**, and which **applications should run**.
+
+![[cluster.png]]

@@ -9,6 +9,7 @@ ___
 
 Some topics:
 - [[Kubernetes Architecture]]
+- [[Kubernetes Desired State]]
 
 
 
