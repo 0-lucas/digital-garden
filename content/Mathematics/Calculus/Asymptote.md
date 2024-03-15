@@ -1,4 +1,5 @@
 An *asymptote* is a line that a **function approaches, but never quite reaches it**, in other words, **the distance** between **the function and *asymptote*** **tends to zero** as the **function tends to infinite**.
+
 There are three types of *asymptotes*:
 
 ![[Asymptote types.png]]

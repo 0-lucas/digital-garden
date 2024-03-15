@@ -16,7 +16,9 @@ ___
 ## The curse of dimensionality
 
 The expression, **brought first** by [*Richard E. Bellman*](https://en.wikipedia.org/wiki/Richard_E._Bellman), refers to the issues that arise when dealing with **high-dimensional spaces**.
+
 The general issue is that when **dimensionality increases**, the **volume of space increases so fast** that the current available data become **sparse**, and then the **data necessary to obtain a reliable result** will grow **exponentially**. 
+
 Also, organizing data becomes very messy and slow, because of the **space between valuable data points**. Another issue is the **ratio of signal** *(valuable data)* and **noise** *(irrelevant data)* that normally results in a lot of noise for high dimensions.
 So, in a *Machine Learning* context, how do we solve this problem?
 ___

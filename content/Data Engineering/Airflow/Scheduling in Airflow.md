@@ -5,6 +5,7 @@ ___
 # Scheduling Logic
 
 Airflow will **schedule the first execution** of a DAG to run at the **first schedule interval after the start date** *(start + interval)*. Subsequent runs will continue executing at schedule intervals **following this first interval**.
+
 At start date, the *DAGRun* is scheduled, but **the DAG is not executed**. It remains in this state until it reaches the time specified in **schedule interval**.  For example, if you define the *start date* as **Nov. 1, 2020** and *interval* as **@daily**, the DAG will have its first run at **Nov. 2, 2020**.
 
 ![[DAG Scheduling.png]]

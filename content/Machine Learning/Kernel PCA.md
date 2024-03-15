@@ -3,7 +3,11 @@
 ___
 # What is it?
 
-*Kernel PCA*, or *kPCA*, is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]] most commonly used in [[Machine Learning]]. As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that become **complex non-linear projections** when the dimension is reduced. This works much better than the *traditional PCA* for **non-linear data**. *Kernel PCA* also can cluster instances better than *PCA* for non-linear data.
+*Kernel PCA*, or *kPCA*, is an extension of the traditional [[PCA]] method for [[Dimensionality Reduction]] most commonly used in [[Machine Learning]]. 
+
+As the name suggests, it uses the [[Kernel Trick]], which identifies **linear high-dimensional relations** that become **complex non-linear projections** when the dimension is reduced. 
+
+This works much better than the *traditional PCA* for **non-linear data**. *Kernel PCA* also can cluster instances better than *PCA* for non-linear data.
 
 ![[pca vs kpca.png]]
 
@@ -11,7 +15,10 @@ ___
 ___
 # How does it work?
 
-The main difference between *Kernel PCA* and [[PCA]] is that *kPCA* doesn't compute the *principal components* itself, but rather the **projection of data into these components from a higher dimensionality**. Using a given *kernel function* it implicitly maps data into a higher-dimension **feature space**, where the data is **linearly separable**, and then it **projects the data** back to the desirable dimensionality.
+The main difference between *Kernel PCA* and [[PCA]] is that *kPCA* doesn't compute the *principal components* itself, but rather the **projection of data into these components from a higher dimensionality**. 
+
+Using a given *kernel function* it implicitly maps data into a higher-dimension **feature space**, where the data is **linearly separable**, and then it **projects the data** back to the desirable dimensionality.
+
 Some common *kernel functions* are:
 
 - ##### Linear
@@ -32,6 +39,7 @@ ___
 # Using scikit-learn
 
 In practice, *kPCA* uses the same trick as using *Nystroem approximation in linear regression* to adapt to non-liner data. We can fit **linear algorithms to non-linear data** if applying *kPCA* before the estimator. 
+
 For example, given the [make moons dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html), would be impossible to fit a linear classification algorithm, but using *kPCA* the algorithm can draw a **linear decision boundary** in **higher-dimensionality** as seen from the image above. That translates to a **non-linear classification,** as seen below.
 
 ```python

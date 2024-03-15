@@ -1,5 +1,6 @@
 # What is it?
 *Differentiation* is a fundamental of [[Calculus]] which studies **rates of change** and **slopes of curves**. It allows determining how a **function's output changes** when its **input changes ever so slightly**. 
+
 Basically, *differentiation* is the **process of finding** the [[Derivatives|derivative]] of a function.
 ___
 # Differentiation rules

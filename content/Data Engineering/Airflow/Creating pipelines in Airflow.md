@@ -7,6 +7,7 @@ ___
 ## DAG
 
 Airflow uses [[DAGs]] to represent pipelines. It defines them **using Python code**. The **DAG** code is **responsible only for orchestrating a pipeline**. 
+
 >*For best practices, if using other python code for the pipeline, **abstract all operations into modules** and then just **import them into the DAG** code. This way the DAG file is left only for **scheduling**.*
 
 Take for example a **basic DAG structure**:
