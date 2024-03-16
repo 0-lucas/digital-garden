@@ -54,8 +54,9 @@ It's possible to create **optional parameters**, that will have **default values
 To pass arguments that are not in order, it's possible to use **Named Arguments**. This way, it doesn't **matter the order** in which you pass the arguments, as long as all of them are passed.
 
 ```csharp
-static int CalculateAnnualWage(int monthlyWage, int numberOfMonthsWorked,
-									 int annualBonus = 0) // Optional Argument
+static int CalculateAnnualWage(
+int monthlyWage, int numberOfMonthsWorked,int annualBonus = 0
+) 
 	{
 		return monthlyWage * numberOfMonthsWorked + annualBonus;
 	}
@@ -96,25 +97,3 @@ class Program
 ___
 - ### For more information about classes, structs and other custom data types, [[User-Defined Data Types in C-Sharp|check this note!]].
 ___
-# Object-Oriented Programming
-
-**C#** supports every basic principle of [[OOP]] — ***Abstraction***, ***Encapsulation***, ***Inheritance***, ***Polymorphism*** —. 
-
-## Abstraction
-
-This is the process of ***hiding complex details*** and tasks and ***exposing only a simple interface*** for interaction between the user and the complex features, often as a function or method.
-
-## Encapsulation
-
-This is the mechanism of ***restricting access to data and parts of the code***. Each object should **control its own data**, **methods**, and **properties**. Think about what <u>really</u> needs to be exposed and what **should be kept private**.
-
-One way to do this in C# is to use **private fields and manage with** [[Auto Property in C-Sharp|properties]].
-
-## Inheritance
-
-For inheritance, check the note [[Inheritance in C-Sharp]]
-
-## Polymorphism
-
-***Polymorphism*** means <i><u>"the condition of occurring in several different forms"</u></i>. So types in the **same inheritance chain** should be able to **perform different tasks**. So children objects **share functionality,** but it's also able to **define its own implementations**.
-
