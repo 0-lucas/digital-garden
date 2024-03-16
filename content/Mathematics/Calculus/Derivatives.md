@@ -1,6 +1,6 @@
 # What is it?
 
-*Derivatives* is a fundamental of [[Calculus]] which defines the **rate of change in a function** and **the slope of a tangent line at any given point**. Using a *derivative*, one could calculate the **minimum** and **maximum** values of a function, making it a basic tool used in [[Machine Learning]] for [[Gradient Descent]] methods.
+*Derivatives* is a fundamental of [[Calculus]] and [[Differentiation]] which defines the **rate of change in a function** and **the slope of a tangent line at any given point**. Using a *derivative*, one could calculate the **minimum** and **maximum** values of a function, making it a basic tool used in [[Machine Learning]] for [[Gradient Descent]] methods.
 
 Another fundamental concept for derivatives is its *tangent line*, which **intersects the curve at a point** and has the **same instantaneous slope** and that point. The slope of this line, it's the **first derivative**! In turn, the *secant line*, touches the curve at **two different points**.
 
