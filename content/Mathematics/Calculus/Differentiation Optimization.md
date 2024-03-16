@@ -31,3 +31,6 @@ We can then use these **critical numbers** to find the **local extreme values** 
 - ##### Find the values of $f$ at the critical numbers of $f$ in $(a, \, b)$.
 - ##### Find the values of $f$ at the *endpoints* of the interval.
 - ##### The largest/ smallest $y$ value found is the local extreme value.
+
+To test the this value, one can use the [[First Derivative Test]].
+___
