@@ -8,6 +8,7 @@ ___
 [[Derivatives]] are used to define the **rate of change** and **instantaneous slope at a given point**. But using the definitions takes too much time, so there are some **rules** that help to **find the derivatives** of a function.
 
 ![[Differentiation rules.png]]
+
 >*These are some of the most commonly used rules. To see a list **containing all of them**, [[Differentiation formulas.pdf|click here]].*
 ___
 ## Polynomial and exponential functions
