@@ -8,3 +8,5 @@ You can interpret an *integral* as a **continuous sum of infinitesimally small n
 
 ![[integral area.png]]
 ___
+# Notation and Definition
+ 
