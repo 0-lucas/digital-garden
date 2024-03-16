@@ -54,5 +54,8 @@ The **process to find the inflection point** is very similar to finding the **ex
 
 You can also **test this values** similar to the [[First Derivative Test]], but use the **second derivative**, $f''(x)$ for testing. 
 
-With **multiple inflection points** you can plot a *sign graph* and determine the intervals at which the **concavity of a function would be up or down**. Given $f(x) = 3x^5 - 20x^3$ :
+With **multiple inflection points** you can plot a *sign graph* and determine the intervals at which the **concavity of a function would be up or down**. Given $f(x) = 3x^5 - 20x^3$ , the plot and sign graph would be:
+
+![[sign graph plot.png]]
+
 ![[sign graph.png]]
