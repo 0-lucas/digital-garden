@@ -12,8 +12,22 @@ Some functions **may or not present extreme values**, when its values can go **i
 
 ![[minimum and maximum x3.png]]
  ___
- 
-Considering $c$ as a **number** in the **domain** $D$ of a **function** $f$, by definition:
+## The Fermat Theorem
 
-- ##### The global v
+[*Pierre Fermat*](https://pt.wikipedia.org/wiki/Pierre_de_Fermat) was a French mathematician that founded *analytic geometry* with *[Descartes](https://pt.wikipedia.org/wiki/René_Descartes)*, and part of his importance is for **finding tangents to curves** and **extreme values of functions** <u>before the invention of limits and derivative</u>.
 
+*Fermat* proposed a theorem, called the *Fermat's Theorem*, which states:
+
+>*If $f$ has a local maximum or minimum at $c$, and if $f'(c)$ exists, then $f'(c) = 0$.*
+
+Even though **there are exceptions**, for example, $f(x) = x^3$, *Fermat's Theorem* suggests that we **could start searching** these values at $f'(c) = 0$, or where $f'(c)$ **does not exist**.
+
+These values at these points are called *critical numbers*.
+___
+### The Closed Interval Method
+
+We can then use these **critical numbers** to find the **local extreme values** of a *continuous function* on a closed interval $[a, \, b]$.
+
+- ##### Find the values of $f$ at the critical numbers of $f$ in $(a, \, b)$.
+- ##### Find the values of $f$ at the *endpoints* of the interval.
+- ##### The largest/ smallest $y$ value found is the local extreme value.
