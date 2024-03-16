@@ -8,6 +8,11 @@ The *absolute maximum/ minimum value* of a function, also called *global maximum
 
 But there is also the *local maximum/ minimum value*, which is the highest/ lowest value but only **within a specific region or interval**. So one may mistake a *local maximum* and treat as the *global*, but it may not be true.
 
+Some functions **may or not present extreme values**, when its values can go **infinitely lower or higher**. A function also need to be **continuous to have an extreme value**. For example, the function $f(x) = x^3$ has **no local or global** extreme values.
+
+![[minimum and maximum x3.png]]
+ ___
+ 
 Considering $c$ as a **number** in the **domain** $D$ of a **function** $f$, by definition:
 
 - ##### The global v
