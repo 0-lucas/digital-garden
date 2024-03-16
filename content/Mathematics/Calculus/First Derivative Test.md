@@ -9,4 +9,3 @@ ___
 - Analyze accordingly.
 
 ![[first derivative test.png]]
-___
