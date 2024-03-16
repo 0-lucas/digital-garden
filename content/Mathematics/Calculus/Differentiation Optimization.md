@@ -24,7 +24,7 @@ Even though **there are exceptions**, for example, $f(x) = x^3$, *Fermat's Theor
 
 These values at these points are called *critical numbers*.
 ___
-### The Closed Interval Method
+### The Closed Interval method
 
 We can then use these **critical numbers** to find the **local extreme values** of a *continuous function* on a closed interval $[a, \, b]$.
 
@@ -33,4 +33,26 @@ We can then use these **critical numbers** to find the **local extreme values** 
 - ##### The largest/ smallest $y$ value found is the local extreme value.
 
 To **test the this value**, one can use the [[First Derivative Test]].
+___
+# Inflection points
 
+The *point of inflection*, or *inflection point*, describe the **change in movement** from a function $f$, where the **concavity switches**. The point where the concavity of a function goes from **one direction to another** is called the *inflection point*.
+
+![[inflection point.png]]
+
+All *inflection points* have a second derivative of 0, if it exists, but **not all points with a second derivative of 0 are inflection points**.
+___
+### Finding the inflection point
+
+The **process to find the inflection point** is very similar to finding the **extreme values** of a function. Given a **continuous** function $f$ : 
+
+- ##### Find the second derivative of $f$, $f''(x)$.
+
+- ##### Solve it for $0$ and for x-values where $f''(x)$ is undefined, similar to the critical numbers.
+
+- ##### Plug the value back to the original formula $f$ and get the y-values.
+
+You can also **test this values** similar to the [[First Derivative Test]], but use the **second derivative**, $f''(x)$ for testing. 
+
+With **multiple inflection points** you can plot a *sign graph* and determine the intervals at which the **concavity of a function would be up or down**. Given $f(x) = 3x^5 - 20x^3$ :
+![[sign graph.png]]

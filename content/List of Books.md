@@ -4,9 +4,8 @@
 
 >**Data whispers truth.**
 ___
-This is a collection of the main books I use for studying.
 
-Some of them are large enough that might 404 its page. Bear with it for now. 
+This is a collection of the main books I use for studying. Enjoy!
 
 # Mathematics
 - [[James Stewart, Lothar Redlin, Saleem Watson - Precalculus_ Mathematics for Calculus, 5th Edition, Enhanced WebAssign Edition  -Brooks Cole (2009).pdf|Precalculus - Mathematics for Calculus]]

@@ -2,10 +2,10 @@ The *First [[Derivatives|Derivative]] Test* is a tool used in [[Differentiation]
 ___
 # How does it work?
 
-- Find **one point each** in the neighboring **left side** and the neighboring **right side** of the limiting point.
+- ##### Find **one point each** in the neighboring **left side** and the neighboring **right side** of the limiting point.
 
-- Replace these neighboring points in the **first derivative function**.
+- ##### Replace these neighboring points in the **first derivative function**.
 
-- Analyze accordingly.
+- ##### Analyze accordingly.
 
 ![[first derivative test.png]]
