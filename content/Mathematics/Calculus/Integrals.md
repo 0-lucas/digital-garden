@@ -14,8 +14,31 @@ The exact definition of a *integral* is the **function of the area bounded by a 
 
 So, given a function $f$ **defined** for $a \leq x \leq b$, we can **divide the interval** $[a, b]$ into **infinite** $n$ subintervals of width $\Delta x = (b - a)/n$. Taking $x{_i}{^*}$ as **any sample point** in the subintervals, **the *definite integral* of $f$ from $a$ to $b$ is**:
 $$
-\int_{a}^{b} f(x)dx = \lim _{n \to \infty} \sum _{i = 1}^{n}f(x{_i}{^*})\Delta x
+\begin{align}
+
+&\int_{a}^{b} f(x)dx = \lim _{n \to \infty} \sum _{i = 1}^{n}f(x{_i}{^*})\Delta x 
+\\ \\ 
+&\text{where}
+\\ \\
+&\Delta x = \frac{b -a}{b} \quad \text{and} \quad x_i = a + i \Delta x
+\end{align}
 $$
 The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* representes the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *"sliced"* is $x$.
 
+![[integral definition.png]]
+___
+# Finding the approximate area
 
+To find the **approximate area under the curve**, like the image above, one could use **rectangles** that **follow the shape of the curve** to **estimate** the value of the area. 
+
+This method is called [[Riemann Sum]], after [*Bernhard Riemann*](https://pt.wikipedia.org/wiki/Bernhard_Riemann), which consists of any **approximating sum made up of rectangles** of equal or unequal width. You may use this method if [[Integration]] proves to be overkill for the context. 
+
+Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width of rectangles tends to zero**. There are three main methods, the *left*, *right* and *midpoint* sum.
+
+![[riemann sum.png]]
+
+
+# Reference
+- #### [An Integrals Crash Course](https://towardsdatascience.com/an-integrals-crash-course-for-data-science-cf6e6dd7c046) - Medium.
+
+#### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 5, p. 354.
