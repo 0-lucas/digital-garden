@@ -10,7 +10,12 @@ You can interpret an *integral* as a **continuous sum of infinitesimally small n
 ___
 # Notation and Definition
 
-The exact definition of a *integral* is the **function of the area bounded by a curve, the x-axis and two points that limit the area**. So, given a function $f$ **defined** for $a \leq x \leq b$, we can **divide the interval** $[a, b]$ into **infinite** $n$ subintervals of width $\Delta x = (b - a)/n$. Taking $x{_i}{^*}$ as **any sample point** in the subintervals, the *definite integral* of $f$ from $a$ to $b$ is:
+The exact definition of a *integral* is the **function of the area bounded by a curve, the x-axis and two points that limit the area**. 
+
+So, given a function $f$ **defined** for $a \leq x \leq b$, we can **divide the interval** $[a, b]$ into **infinite** $n$ subintervals of width $\Delta x = (b - a)/n$. Taking $x{_i}{^*}$ as **any sample point** in the subintervals, **the *definite integral* of $f$ from $a$ to $b$ is**:
 $$
-\int
+\int_{a}^{b} f(x)dx = \lim _{n \to \infty} \sum _{i = 1}^{n}f(x{_i}{^*})\Delta x
 $$
+The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* representes the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *"sliced"* is $x$.
+
+
