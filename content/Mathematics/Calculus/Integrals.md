@@ -41,4 +41,4 @@ Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width
 # Reference
 - #### [An Integrals Crash Course](https://towardsdatascience.com/an-integrals-crash-course-for-data-science-cf6e6dd7c046) - Medium.
 
-#### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 5, p. 354.
+- #### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 5, p. 354.
