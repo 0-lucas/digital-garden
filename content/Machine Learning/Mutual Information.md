@@ -26,7 +26,9 @@ $$
 \end{align}
 $$
 ___
+# How does it work?
 
+We can easily calculate the *mutual information* of a feature and its target using [[scikit-learn]], for both real-value and categorical targets.
 
 
 
