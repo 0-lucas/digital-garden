@@ -5,14 +5,16 @@ ___
 # Reporting model performance
 
 The ***loss function*** is as **fundamental** in training models as it is in **evaluating** them. The loss may be a function of either:
+
  - The predicted class ***y*** for a given sample ***x***, like *accuracy*, *balanced accuracy*, *precision, and recall*.
 
  - The predicted ***probability*** of each class for a given sample ***x***, like *log loss*, *AUROC*, *calibration error*.
 
 Each metric shows a *different angle* from *the same scenario*, and should be evaluated depending on the **context** on which the model will be **applied to**. 
-Take, for example, a **Fraud vs. NotFraud** classification.  Without checking for *class imbalance*, you train a model and the *accuracy* is 99%. One could say that the model performs very well, but maybe if you look further, you can discover the *balanced accuracy*, which shows the model **is not** that accurate after all.
 
-> *Don't focus on only one metric. Check other metrics based on the context which the model will be applied and the data you're working with.* Try to represent sub-populated classes in your evaluation: a **Confusion Matrix** may help.
+Take, for example, a **Fraud vs. NotFraud** classification.  Without checking for *class imbalance*, you train a model and the *accuracy* is 99%. One could say that the model performs very well, but maybe if you look further, you can discover the *balanced accuracy*, which shows the model **is not** that accurate after all. This can happen because of the [[Class Imbalance]] of the problem.
+
+**Don't focus on only one metric**. Check other metrics based on the context which the model **will be applied** and the **data you're working with**. Try to represent sub-populated classes in your evaluation. A **Confusion Matrix** might help.
 
 ___
 # Data Leakage
@@ -25,38 +27,11 @@ Another pitfall is not using ***truly** held-out data*. It's very easy to ***ove
 
 > *A great way to deal with this is to split the data in three different parts: **train**, **validation** and **test**. [Click this link for reference.](https://mlu-explain.github.io/train-test-validation/)*
 ___
-# Underperforming samples
+# Underperforming data and imbalanced target
 
-For a given model, it's possible for the loss of a **specific subpopulation** of the data to be **significantly higher** than the rest of the dataset. For example, *Generative AI* is known to have issues in human-centric data, like race, gender and socio-economical factors, i.e., some races may perform better in facial recognition than others.
-A model prediction **should not depend on which subpopulation a data point belongs to**, and needs to be able to generalize proportionally well across the **entire distribution.**
-___
-## Discovering underperforming samples
+For a given model, it's possible for the loss of a **specific subpopulation** of the data to be **significantly higher** than the rest of the dataset. This phenomena is known as [[Underperforming Subpopulations]], where a **specific sample** of the dataset can be a **challenge to work with**, being **less frequent** and **less accurate** with **respect to the features itself**, not the target. Evaluating these are a bit different and need its own methods.
 
-It may not be easy to identify the **characteristics of the underperforming subpopulation**, so one should be able to **strategize ways to find these subgroups** where the model underperform.
-
-A common strategy is ***error analysis*** and ***clustering***, i.e., ***Slice Discovery***
-### Error Analysis
-
-Evaluate your model using **validation data**, and sort the examples by **loss value**, which would be the ones where the model is performing poorly. Then try to **identify** any **patterns**, **mislabels** or **noisy data**.
-### Error Clustering
-
-Apply ***clustering techniques*** only to the examples identified by the step above, and figure out **subgroups** and **patterns** among the examples.
-[Clustering](https://scikit-learn.org/stable/modules/clustering.html) can be done by applying a single distance metric between two examples, using *unsupervised learning*. **Plotting and inspecting the resulting clusters** can expose **patterns** the model struggles to capture. 
-
-> *It's also possible to make this method be label-aware, instead of unsupervised. Which is done by using **SDMs**.*
-### Slice Discovery Methods — SDMs
-
-*Slice Discovery* is the task of mining input data for meaningful subpopulations on which the model performs poorly. Any automated technique that performs this task can be called a **Slice Discovery Method**. 
-
-![[SDM.png]]
-> *A recent SDM using **cross-modal embeddings*** is [**Domino**](https://ai.stanford.edu/blog/domino/).
-## Improving model performance
-
-Here are some ways to improve model performance for a specific sample:
-- ##### Trying a more flexible model;
-- ##### Over-sample or up-weight the subpopulation;
-- ##### Collect additional data;
-- ##### Measure or engineer extra features for the specific sample.
+**Another face of the same coin** is [[Class Imbalance]], where the issue is **the target of the training data**, which can present **very concentrated distribution**, leaving some classes with **almost no data points**.
 ___
 # Inspecting isolated data points
 
