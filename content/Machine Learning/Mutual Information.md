@@ -28,10 +28,22 @@ $$
 ___
 # How does it work?
 
-We can easily calculate the *mutual information* of a feature and its target using [[scikit-learn]], for both real-value and categorical targets.
+We can easily calculate the *mutual information* of a feature and its target using [[scikit-learn]], for both real-value and categorical targets. For **continuous** features, use *mutual_info_regression*, and for categorical features, *mutual_info_classif*.
 
+```python
+from sklearn.datasets import make_classification  
+from sklearn.feature_selection import mutual_info_regression  
+  
+X, y = make_classification(n_features=10, n_informative=2, random_state=42)  
+  
+plt.grid(False)  
+sns.barplot(mutual_info_regression(X,y));
+```
 
+Which will return the *mutual information* of each feature:
 
+![[mutual information plot.png]]
+___
 # References 
 
 - ##### [Entropy and mutual information](https://www.ece.tufts.edu/ee/194NIT/lect01.pdf) - Information Theory lecture - Tufts University.

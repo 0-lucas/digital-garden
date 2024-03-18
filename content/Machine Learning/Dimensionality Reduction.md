@@ -43,7 +43,9 @@ There are instances where **projecting** data to a lower-dimension may not repre
 ___
 # Algorithms
 
-The two most popular algorithms are: [[PCA]] for **linear problems** and [[Kernel PCA]] for **non-linear problems**.
+The two most popular algorithms are:
+- [[PCA]] for **linear problems**
+- [[Kernel PCA]] for **non-linear problems**.
 
 Some *Manifold Learning* popular algorithms are:
 - [*LLE*](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.LocallyLinearEmbedding.html)
