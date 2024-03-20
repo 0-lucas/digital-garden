@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "c3c1a86da2c60e23",
+    "type": "split",
+    "children": [
+      {
+        "id": "c790ef8c532ddeef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e8d3d710340ff3c7",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "My Books/Calculus Early Transcendentals, 6th Edition (James Stewart).pdf"
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "33e9f6d91ef9d94a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "35bd06277e4cdb59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering/Kubernetes/Kubernetes Desired State.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "81783b80eb6801d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/Outlier Detection.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c3e96e0241a2e1aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba7c3175cf97f797",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a2b3ad64e8ab216",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9c1dd02770addc9f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 253.5
+  },
+  "right": {
+    "id": "5cf683882037ee10",
+    "type": "split",
+    "children": [
+      {
+        "id": "45b685381e1a9992",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2f95bcb62f09e98",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Machine Learning/Outlier Detection.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a27d0481309553f4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Machine Learning/Outlier Detection.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "43907a9cf177e8a1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Machine Learning/Outlier Detection.md"
+              }
+            }
+          },
+          {
+            "id": "26e5e3c17e58c609",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "e96da86f841bebe6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "46c8bb1ba7514eec",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "f9df2c318d781e51",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "1331841174805d6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc9a81704728abae",
+            "type": "leaf",
+            "state": {
+              "type": "dangling-links",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "command-palette:Open command palette": false,
+      "obsidian-dangling-links:Show dangling links panel": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "handwritten-notes:Create empty handwritten note": false,
+      "syncthing-integration:Open Syncthing conflict manager modal": false
+    }
+  },
+  "active": "81783b80eb6801d3",
+  "lastOpenFiles": [
+    "Machine Learning/Outlier Removal.md",
+    "Machine Learning/Outlier.md",
+    "Machine Learning/Outlier Detection.md",
+    "Machine Learning/Machine Learning.md",
+    "Machine Learning/Kernel PCA.md",
+    "Machine Learning/Dimensionality Reduction.md",
+    "List of Books.md",
+    "Software Engineering/Kubernetes/Kubernetes.md",
+    "Software Engineering/Kubernetes/Kubernetes Architecture.md",
+    "Machine Learning/Mutual Information.md",
+    "Software Engineering/C-Sharp/C-Sharp.md",
+    "Software Engineering/C-Sharp/Polymorphism in C-Sharp.md",
+    "Homepage/My Agenda/2024-04-01 Final Date - Calculus Exams.md",
+    "conflict-files-obsidian-git.md",
+    "Homepage/My Agenda/2024-03-03 Limit to Extension Activity - College.md",
+    "Homepage/My Agenda/2024-02-23 Ana Dental Surgery.md",
+    "Homepage/My Agenda/2024-02-19 Luis First Day.md",
+    "Homepage/Github.md",
+    "Homepage/My Kanban.md",
+    "Homepage/My Agenda/2024-02-20 Relationship Anniversary.md",
+    "Homepage/My Agenda",
+    "Homepage",
+    "My Books/Mark Ryan - Calculus All-in-One For Dummies-For Dummies (2023).pdf",
+    "My Books/Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon (z-lib.org).pdf",
+    "My Books/James Stewart, Lothar Redlin, Saleem Watson - Precalculus. Mathematics for Calculus-Cengage Learning (2024).pdf",
+    "My Books/James Stewart - Calculus_ Early transcendentals-Brooks Cole (2016) (1).pdf",
+    "My Books/Image Processing, Analysis, and Machine Vision.pdf",
+    "My Books/Demand Forecasting for Inventory Control ( PDFDrive ).pdf",
+    "My Books/Deep Learning with PyTorch - ENGLISH.pdf",
+    "My Books/Andreas Wittig, Michael Wittig - Amazon Web Services in Action_ An in-depth guide to AWS-Manning (2023) (1).pdf",
+    "C-Sharp/Auto Property in C-Sharp.md",
+    "C-Sharp/User-Defined Data Types in C-Sharp.md",
+    "C-Sharp/Inheritance in C-Sharp.md",
+    "C-Sharp/Polymorphism in C-Sharp.md",
+    "C-Sharp/C-Sharp.md",
+    "Machine Learning/Images/outlier pun.png",
+    "Machine Learning/Data-Centric AI/Class Imbalance.md",
+    "homeimage.png",
+    "Machine Learning/Images/mutual information plot.png",
+    "Mathematics/Images/riemann sum.png",
+    "Mathematics/Images/integral definition.png",
+    "Pasted image 20240317105115.png",
+    "Pasted image 20240316174251.png",
+    "Mathematics/Images/integral area.png",
+    "Mathematics/Images/sign graph plot.png",
+    "Mathematics/Images/sign graph.png",
+    "Untitled.canvas"
+  ]
+}
