@@ -1,14 +1,10 @@
 [
+  "obsidian-kanban",
+  "syncthing-integration",
   "table-editor-obsidian",
-  "auto-hide-cursor",
   "cmenu-plugin",
-  "obsidian-dangling-links",
-  "cm-editor-syntax-highlight-obsidian",
-  "obsidian-full-calendar",
-  "obsidian-git",
-  "handwritten-notes",
+  "obsidian-plugin-toc",
   "highlightr-plugin",
-  "obsidian-languagetool-plugin",
-  "quick-latex",
-  "syncthing-integration"
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-git"
 ]

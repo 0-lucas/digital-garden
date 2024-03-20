@@ -21,8 +21,6 @@
       ],
       "key": "N"
     }
-<<<<<<< HEAD
-=======
   ],
   "editor:insert-codeblock": [
     {
@@ -31,14 +29,5 @@
       ],
       "key": "C"
     }
-  ],
-  "cmenu-plugin:underline": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "U"
-    }
->>>>>>> origin/main
   ]
 }

@@ -1,16 +1,9 @@
-<<<<<<< HEAD
+
 [[Outlier|Outliers]] are known to have **negative effects** in a [[Machine Learning]] model. Unless they are **fundamentally a part of the model and its context**, it should be avoided and maybe **removed** from the data entirely.
 ___
 # Using a quantile threshold
-
-One possible way to deal with outliers is to **establish a quantile threshold**, also known as *Tukey's fences*. One could use *Interquartile Range* or come up with a limit of his own.
-=======
-Outliers are known to have **negative effects** on a predictive model. Unless they are **fundamentally a part of the model and its context**, it should be avoided and **removed** from the data entirely.
-___
-# Using a quantile threshold
-
-One possible way to deal with outliers is to **establish a quantile threshold**. One could use *Interquartile Range* or come up with a limit of his own.
->>>>>>> origin/main
+ 
+ One possible way to deal with outliers is to **establish a quantile threshold**, also known as *Tukey's fences*. One could use *Interquartile Range* or come up with a limit of his own.
 
 ```python
 import numpy as np
@@ -43,12 +36,8 @@ plot_difference(array, filtered_array);
 > *Notice the **difference of scales** in the x-axis of both plots.*
 ___
 # Using cleanlab Outlier Removal
-
-<<<<<<< HEAD
-Another great way is to use ***cleanlab***'s [OutOfDistribution](https://docs.cleanlab.ai/stable/cleanlab/outlier.html). Behind the scenes, simply put, is just a *K-Nearest Neighbors* algorithm that detects those whose **distance** is greater than expected. Is most commonly used with [[Data-Centric AI]] methods.
-=======
-Another great way is to use ***cleanlab***'s [OutOfDistribution](https://docs.cleanlab.ai/stable/cleanlab/outlier.html). Behind the scenes, simply put, is just a *K-Nearest Neighbors* algorithm that detects those whose **distance** is greater than expected.
->>>>>>> origin/main
+ 
+ Another great way is to use ***cleanlab***'s [OutOfDistribution](https://docs.cleanlab.ai/stable/cleanlab/outlier.html). Behind the scenes, simply put, is just a *K-Nearest Neighbors* algorithm that detects those whose **distance** is greater than expected. Is most commonly used with [[Data-Centric AI]] methods.
 
 ```python
 from cleanlab.outlier import OutOfDistribution  

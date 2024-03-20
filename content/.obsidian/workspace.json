@@ -4,43 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c790ef8c532ddeef",
+        "id": "ad3b145e8fdf4242",
         "type": "tabs",
         "children": [
           {
-            "id": "e8d3d710340ff3c7",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "My Books/Calculus Early Transcendentals, 6th Edition (James Stewart).pdf"
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "33e9f6d91ef9d94a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "35bd06277e4cdb59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering/Kubernetes/Kubernetes Desired State.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "81783b80eb6801d3",
+            "id": "07706b53204ed591",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -51,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,11 +49,11 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "byModifiedTime"
+                "sortOrder": "alphabetical"
               }
             }
           }
@@ -134,6 +101,17 @@
             }
           },
           {
+            "id": "a281fc5bdc730cb9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
             "id": "43907a9cf177e8a1",
             "type": "leaf",
             "state": {
@@ -144,15 +122,7 @@
             }
           },
           {
-            "id": "26e5e3c17e58c609",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "e96da86f841bebe6",
+            "id": "c0e2af57dfc46a28",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -160,103 +130,75 @@
             }
           },
           {
-            "id": "46c8bb1ba7514eec",
+            "id": "26e5e3c17e58c609",
             "type": "leaf",
             "state": {
-              "type": "mathpad-view",
+              "type": "advanced-tables-toolbar",
               "state": {}
-            }
-          },
-          {
-            "id": "f9df2c318d781e51",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
             }
           }
         ],
-        "currentTab": 4
-      },
-      {
-        "id": "1331841174805d6d",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cc9a81704728abae",
-            "type": "leaf",
-            "state": {
-              "type": "dangling-links",
-              "state": {}
-            }
-          }
-        ]
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 327.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
-      "obsidian-dangling-links:Show dangling links panel": false,
-      "obsidian-full-calendar:Open Full Calendar": false,
-      "handwritten-notes:Create empty handwritten note": false,
       "syncthing-integration:Open Syncthing conflict manager modal": false
     }
   },
-  "active": "81783b80eb6801d3",
+  "active": "07706b53204ed591",
   "lastOpenFiles": [
-    "Machine Learning/Outlier Removal.md",
     "Machine Learning/Outlier.md",
     "Machine Learning/Outlier Detection.md",
-    "Machine Learning/Machine Learning.md",
-    "Machine Learning/Kernel PCA.md",
-    "Machine Learning/Dimensionality Reduction.md",
-    "List of Books.md",
-    "Software Engineering/Kubernetes/Kubernetes.md",
-    "Software Engineering/Kubernetes/Kubernetes Architecture.md",
-    "Machine Learning/Mutual Information.md",
-    "Software Engineering/C-Sharp/C-Sharp.md",
-    "Software Engineering/C-Sharp/Polymorphism in C-Sharp.md",
-    "Homepage/My Agenda/2024-04-01 Final Date - Calculus Exams.md",
-    "conflict-files-obsidian-git.md",
-    "Homepage/My Agenda/2024-03-03 Limit to Extension Activity - College.md",
-    "Homepage/My Agenda/2024-02-23 Ana Dental Surgery.md",
-    "Homepage/My Agenda/2024-02-19 Luis First Day.md",
-    "Homepage/Github.md",
-    "Homepage/My Kanban.md",
-    "Homepage/My Agenda/2024-02-20 Relationship Anniversary.md",
-    "Homepage/My Agenda",
-    "Homepage",
-    "My Books/Mark Ryan - Calculus All-in-One For Dummies-For Dummies (2023).pdf",
-    "My Books/Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon (z-lib.org).pdf",
-    "My Books/James Stewart, Lothar Redlin, Saleem Watson - Precalculus. Mathematics for Calculus-Cengage Learning (2024).pdf",
-    "My Books/James Stewart - Calculus_ Early transcendentals-Brooks Cole (2016) (1).pdf",
-    "My Books/Image Processing, Analysis, and Machine Vision.pdf",
-    "My Books/Demand Forecasting for Inventory Control ( PDFDrive ).pdf",
-    "My Books/Deep Learning with PyTorch - ENGLISH.pdf",
-    "My Books/Andreas Wittig, Michael Wittig - Amazon Web Services in Action_ An in-depth guide to AWS-Manning (2023) (1).pdf",
-    "C-Sharp/Auto Property in C-Sharp.md",
-    "C-Sharp/User-Defined Data Types in C-Sharp.md",
-    "C-Sharp/Inheritance in C-Sharp.md",
-    "C-Sharp/Polymorphism in C-Sharp.md",
-    "C-Sharp/C-Sharp.md",
-    "Machine Learning/Images/outlier pun.png",
+    "Machine Learning/Data-Centric AI/Images/outlier detection ml.png",
+    "Machine Learning/Data-Centric AI/Confident Learning.md",
     "Machine Learning/Data-Centric AI/Class Imbalance.md",
-    "homeimage.png",
-    "Machine Learning/Images/mutual information plot.png",
-    "Mathematics/Images/riemann sum.png",
-    "Mathematics/Images/integral definition.png",
-    "Pasted image 20240317105115.png",
-    "Pasted image 20240316174251.png",
-    "Mathematics/Images/integral area.png",
-    "Mathematics/Images/sign graph plot.png",
-    "Mathematics/Images/sign graph.png",
-    "Untitled.canvas"
+    "Machine Learning/Outlier Removal.md",
+    "Machine Learning/Images/outlier pun.jpg",
+    "Machine Learning/Mutual Information.md",
+    "Machine Learning/Machine Learning.md",
+    "Software Engineering/C-Sharp/OOP in C-Sharp.md",
+    "Machine Learning/Data-Centric AI/Curriculum Learning.md",
+    "Machine Learning/Data-Centric AI/Underperforming Subpopulations.md",
+    "Machine Learning/Dimensionality Reduction.md",
+    "Machine Learning/Entropy.md",
+    "Software Engineering/Kubernetes/Kubernetes Desired State.md",
+    "Software Engineering/Kubernetes/Kubernetes Architecture.md",
+    "Software Engineering/Kubernetes/Kubernetes.md",
+    "Software Engineering/C-Sharp/User-Defined Data Types in C-Sharp.md",
+    "List of Books.md",
+    "C-Sharp/C-Sharp.md",
+    "Constructors.md",
+    "C-Sharp/CLR.md",
+    "C-Sharp/Parameters as Reference.md",
+    "Untitled.canvas",
+    "Data-Centric AI/Confident Learning.md",
+    "Data-Centric AI/What is Data-Centric AI.md",
+    "Pasted image 20240204141149.png",
+    "Pasted image 20240204141153.png",
+    "Pasted image 20240203152553.png",
+    "Pasted image 20240203152642.png",
+    "obsidian_repository",
+    "remote",
+    "Homepage/Github.md",
+    "Remote",
+    "Homepage",
+    "Data-Centric AI/Curriculum Learning.md",
+    "C-Sharp/Images/Pasted image 20240202072122.png",
+    "C-Sharp/Images/Pasted image 20240202074843.png",
+    "C-Sharp/Images",
+    "C-Sharp",
+    "Machine Learning",
+    "Data-Centric AI/Images/Pasted image 20240131065107.png",
+    "Data-Centric AI/Images/Pasted image 20240130171614.png",
+    "Data-Centric AI/Images",
+    "Images",
+    "New folder"
   ]
 }
