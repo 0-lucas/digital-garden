@@ -91,8 +91,6 @@ The *Chain Rule* is all about *composite functions*, so functions that depends o
 $$
 F'(x) = f'(g(x)) * g'(x)
 $$
-
-
 ___
 # References
 

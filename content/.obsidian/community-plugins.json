@@ -6,5 +6,11 @@
   "obsidian-plugin-toc",
   "highlightr-plugin",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-git"
+  "obsidian-git",
+  "quick-latex",
+  "obsidian-languagetool-plugin",
+  "handwritten-notes",
+  "obsidian-full-calendar",
+  "obsidian-dangling-links",
+  "auto-hide-cursor"
 ]

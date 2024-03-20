@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Outlier Detection.md",
+                "file": "Distribution Shift.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Outlier Detection.md",
+                "file": "Distribution Shift.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Outlier Detection.md",
+                "file": "Distribution Shift.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Outlier Detection.md"
+                "file": "Distribution Shift.md"
               }
             }
           },
@@ -149,17 +149,28 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
-      "syncthing-integration:Open Syncthing conflict manager modal": false
+      "syncthing-integration:Open Syncthing conflict manager modal": false,
+      "handwritten-notes:Create empty handwritten note": true,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-dangling-links:Show dangling links panel": false
     }
   },
   "active": "07706b53204ed591",
   "lastOpenFiles": [
     "Machine Learning/Outlier.md",
+    "Distribution Shift.md",
+    "Machine Learning/Outlier Removal.md",
     "Machine Learning/Outlier Detection.md",
+    "Mathematics/Calculus/Differentiation.md",
+    "Machine Learning/Linear Regression.md",
+    "Machine Learning/Entropy.md",
+    "Machine Learning/PCA.md",
+    "Machine Learning/Kernel PCA.md",
+    "Mathematics/Logarithms.md",
+    "Mathematics/Mathematics.md",
     "Machine Learning/Data-Centric AI/Images/outlier detection ml.png",
     "Machine Learning/Data-Centric AI/Confident Learning.md",
     "Machine Learning/Data-Centric AI/Class Imbalance.md",
-    "Machine Learning/Outlier Removal.md",
     "Machine Learning/Images/outlier pun.jpg",
     "Machine Learning/Mutual Information.md",
     "Machine Learning/Machine Learning.md",
@@ -167,7 +178,6 @@
     "Machine Learning/Data-Centric AI/Curriculum Learning.md",
     "Machine Learning/Data-Centric AI/Underperforming Subpopulations.md",
     "Machine Learning/Dimensionality Reduction.md",
-    "Machine Learning/Entropy.md",
     "Software Engineering/Kubernetes/Kubernetes Desired State.md",
     "Software Engineering/Kubernetes/Kubernetes Architecture.md",
     "Software Engineering/Kubernetes/Kubernetes.md",
@@ -175,21 +185,15 @@
     "List of Books.md",
     "C-Sharp/C-Sharp.md",
     "Constructors.md",
-    "C-Sharp/CLR.md",
-    "C-Sharp/Parameters as Reference.md",
     "Untitled.canvas",
-    "Data-Centric AI/Confident Learning.md",
-    "Data-Centric AI/What is Data-Centric AI.md",
     "Pasted image 20240204141149.png",
     "Pasted image 20240204141153.png",
     "Pasted image 20240203152553.png",
     "Pasted image 20240203152642.png",
     "obsidian_repository",
     "remote",
-    "Homepage/Github.md",
     "Remote",
     "Homepage",
-    "Data-Centric AI/Curriculum Learning.md",
     "C-Sharp/Images/Pasted image 20240202072122.png",
     "C-Sharp/Images/Pasted image 20240202074843.png",
     "C-Sharp/Images",

@@ -1,4 +1,9 @@
 {
   "accentColor": "",
-  "cssTheme": "Obsidian Nord"
+  "cssTheme": "Obsidian Nord",
+  "baseFontSize": 18,
+  "enabledCssSnippets": [
+    "image_centering",
+    "bigger_latex"
+  ]
 }
