@@ -10,16 +10,41 @@
           {
             "id": "07706b53204ed591",
             "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "My Books/Calculus Early Transcendentals, 6th Edition (James Stewart).pdf"
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "cdacaa258d5eddab",
+            "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Distribution Shift.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "90fbff184c8ce73d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Calculus/Integrals.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Distribution Shift.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Distribution Shift.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Distribution Shift.md"
+                "file": "Mathematics/Calculus/Riemann Sum.md"
               }
             }
           },
@@ -150,14 +175,62 @@
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
       "syncthing-integration:Open Syncthing conflict manager modal": false,
-      "handwritten-notes:Create empty handwritten note": true,
+      "handwritten-notes:Create empty handwritten note": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-dangling-links:Show dangling links panel": false
     }
   },
-  "active": "07706b53204ed591",
+  "floating": {
+    "id": "89297566a776f85f",
+    "type": "floating",
+    "children": [
+      {
+        "id": "60a8c147d089233c",
+        "type": "window",
+        "children": [
+          {
+            "id": "8d549aa82c293f05",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "444182d55897b4fe",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "My Books/Calculus ALL IN ONE - Mark Ryan.pdf"
+                  },
+                  "pinned": true
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 149,
+        "y": 40,
+        "width": 1622,
+        "height": 998,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "cdacaa258d5eddab",
   "lastOpenFiles": [
-    "Distribution Shift.md",
+    "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
+    "Mathematics/Calculus/Riemann Sum.md",
+    "Mathematics/Images/riemann sum few.png",
+    "Mathematics/Images/riemann sum comparison.png",
+    "Mathematics/Calculus/Integrals.md",
+    "My Books/Calculus Early Transcendentals, 6th Edition (James Stewart).pdf",
+    "Mathematics/Calculus/Integration.md",
+    "List of Books.md",
+    "Mathematics/Calculus/First Derivative Test.md",
+    "Mathematics/Calculus/Differentiation Optimization.md",
+    "Mathematics/Logarithms.md",
+    "Machine Learning/Distribution Shift.md",
     "Machine Learning/Outlier.md",
     "Machine Learning/Outlier Removal.md",
     "Machine Learning/Outlier Detection.md",
@@ -166,7 +239,6 @@
     "Machine Learning/Entropy.md",
     "Machine Learning/PCA.md",
     "Machine Learning/Kernel PCA.md",
-    "Mathematics/Logarithms.md",
     "Mathematics/Mathematics.md",
     "Machine Learning/Data-Centric AI/Images/outlier detection ml.png",
     "Machine Learning/Data-Centric AI/Confident Learning.md",
@@ -178,13 +250,6 @@
     "Machine Learning/Data-Centric AI/Curriculum Learning.md",
     "Machine Learning/Data-Centric AI/Underperforming Subpopulations.md",
     "Machine Learning/Dimensionality Reduction.md",
-    "Software Engineering/Kubernetes/Kubernetes Desired State.md",
-    "Software Engineering/Kubernetes/Kubernetes Architecture.md",
-    "Software Engineering/Kubernetes/Kubernetes.md",
-    "Software Engineering/C-Sharp/User-Defined Data Types in C-Sharp.md",
-    "List of Books.md",
-    "C-Sharp/C-Sharp.md",
-    "Constructors.md",
     "Untitled.canvas",
     "Pasted image 20240204141149.png",
     "Pasted image 20240204141153.png",
@@ -199,10 +264,6 @@
     "C-Sharp/Images",
     "C-Sharp",
     "Machine Learning",
-    "Data-Centric AI/Images/Pasted image 20240131065107.png",
-    "Data-Centric AI/Images/Pasted image 20240130171614.png",
-    "Data-Centric AI/Images",
-    "Images",
-    "New folder"
+    "Data-Centric AI/Images"
   ]
 }
