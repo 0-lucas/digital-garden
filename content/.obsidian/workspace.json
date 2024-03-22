@@ -11,8 +11,12 @@
             "id": "07706b53204ed591",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Calculus/Riemann Sum.md"
+                "file": "index.md"
               }
             }
           },
@@ -148,8 +154,9 @@
       "obsidian-dangling-links:Show dangling links panel": false
     }
   },
-  "active": "c0e2af57dfc46a28",
+  "active": "07706b53204ed591",
   "lastOpenFiles": [
+    "homeimage.png",
     "Mathematics/Images/riemann sum comparison.png",
     "Machine Learning/Distribution Shift.md",
     "Mathematics/Calculus/Limits.md",
@@ -193,7 +200,6 @@
     "C-Sharp",
     "Machine Learning",
     "Data-Centric AI/Images/Pasted image 20240131065107.png",
-    "Data-Centric AI/Images/Pasted image 20240130171614.png",
     "Data-Centric AI/Images",
     "Images",
     "New folder"

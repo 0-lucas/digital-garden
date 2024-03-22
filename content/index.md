@@ -6,7 +6,7 @@ title: Lucas' Digital Garden
 
 This is my own **digital garden** for knowledge management. I started it not too long ago, so for now, it's just a handful of notes.
 
-I don't really apply the Zettelkasten method or any other systematic way of making notes . I just really like summarizing my ideas while I'm studying and use for consulting later.
+I don't really apply the *Zettelkasten* method or any other systematic way of making notes . I just really like summarizing my ideas while I'm studying and use for consulting later.
 
 I mostly use Obsidian for note taking during my studies and my notes probably are kind of messy and some half-finished and even when deploying to this website, some LaTeX was broken. So, things here are really still taking shape and in progress.
 
