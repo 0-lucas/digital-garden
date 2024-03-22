@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Mathematics/Calculus/Riemann Sum.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "Mathematics/Calculus/Riemann Sum.md"
               }
             }
           },
@@ -156,6 +156,7 @@
   },
   "active": "07706b53204ed591",
   "lastOpenFiles": [
+    "index.md",
     "homeimage.png",
     "Mathematics/Images/riemann sum comparison.png",
     "Machine Learning/Distribution Shift.md",
@@ -199,7 +200,6 @@
     "C-Sharp/Images",
     "C-Sharp",
     "Machine Learning",
-    "Data-Centric AI/Images/Pasted image 20240131065107.png",
     "Data-Centric AI/Images",
     "Images",
     "New folder"

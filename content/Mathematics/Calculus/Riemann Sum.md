@@ -1,6 +1,6 @@
 # What is it?
 
-The *Riemann Sum*, named after [*Bernhard Riemann*](https://pt.wikipedia.org/wiki/Bernhard_Riemann), is a method for **approximating areas under a curve** or any **general shape that can be simplified using rectangles**, using only **the sum of said rectangles**. These rectangles can follow a equal width rule or not.
+The *Riemann Sum*, named after [*Bernhard Riemann*](https://pt.wikipedia.org/wiki/Bernhard_Riemann), is a method for **approximating areas under a curve** or any **general shape that can be simplified using rectangles**, using only **the sum of said rectangles**. These rectangles can follow an equal width rule or not.
 
 *Riemann Sum* is one of the building blocks of [[Integration]], even though it can be done without involving [[Calculus]] at all. When **used to sum rectangles with infinitesimally widths**, **it behaves the same** as [[Integrals]].
 
