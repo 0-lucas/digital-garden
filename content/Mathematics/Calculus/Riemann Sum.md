@@ -22,4 +22,8 @@ ___
 # Left point sum
 
 Using the *Left point rule*, the **height of each rectangle** is determined by where the **upper left corner touches the curve**.
-You can approximate the exact area under a curve between $a$ and $b$,
+
+You can approximate the area under a curve between an interval $[a, \, b]$, using the following steps:
+
+- ##### Get the subintervals
+Divide the interval length between the **number of subdivisions**/ **rectangles** $x_i$
