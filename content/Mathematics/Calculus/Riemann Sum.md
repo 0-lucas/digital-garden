@@ -31,7 +31,9 @@ You can approximate the area under a curve between an interval $[a, \, b]$, usin
 
 - #### Get the subintervals and rectangle width
 Divide the interval length between the **number of subdivisions**/ **rectangles** $x_n$ , resulting in the **subintervals length**/ **width of rectangles**, $\Delta x$ .
-
+$$
+\Delta x = \frac{b-a}{n}
+$$
 Given any subdivision $[a, \, b]$, the **first subinterval** is $[x_1, x_2]$; **the second is** $[x_1,\, x_2]$, the $i^{th}$ interval is $[x_i,\, x_{i+1}]$.
 
 - #### Get the height of the rectangle

@@ -9,7 +9,10 @@ Some topics:
 - [[Asymptote]]
 - [[Derivatives]]
 - [[Differentiation]]
+- [[Integrals]]
+- [[Integration]]
 ___
 Other general topics:
 - [[Logarithms]]
 - [[Ruffini's Rule]]
+- [[Riemann Sum]]

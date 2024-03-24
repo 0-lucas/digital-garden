@@ -1,6 +1,8 @@
 # What is it?
 
-One of the most popular applications for [[Differentiation]] is *optimization*, which translates to the **most optimal way** of doing something. Commonly, these problems can be reduced to finding the *maximum and minimum values o*f a function.
+One of the most popular applications for [[Differentiation]] is *optimization*, which translates to the **most optimal way** of doing something. Commonly, these problems can be reduced to finding the *maximum and minimum values* of a function.
+
+The concept of finding the *maximum and minimum* of a function is widely used in [[Machine Learning]] and [[Gradient Descent]] methods, to minimize the error of a given algorithm.
 ___
 # Minimum and maximum values
 

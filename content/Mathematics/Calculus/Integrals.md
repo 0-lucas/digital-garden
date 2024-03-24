@@ -12,7 +12,7 @@ ___
 
 The exact definition of a *integral* is the **function of the area bounded by a curve, the x-axis and two points that limit the area**. 
 
-So, given a function $f$ **defined** for $a \leq x \leq b$, we can **divide the interval** $[a, b]$ into **infinite** $n$ sub-intervals of width $\Delta x = (b - a)/n$. Taking $x{_i}{^*}$ as **any sample point** in the sub-intervals, **the *definite integral* of $f$ from $a$ to $b$ is**:
+So, given a function $f$ **defined** for $a \leq x \leq b$, we can **divide the interval** $[a, b]$ into **infinite** $n$ sub-intervals of width $\Delta x = \frac{(b - a)}{n}$. Taking $x{_i}{^*}$ as **any sample point** in the sub-intervals, **the *definite integral* of $f$ from $a$ to $b$ is**:
 
 $$
 \begin{align}
@@ -35,10 +35,19 @@ To find the **approximate area under the curve**, like the image above, one coul
 
 This method is called [[Riemann Sum]], which consists of any **approximating sum made up of rectangles** of equal or unequal width. You may use this method if [[Integration]] proves to be overkill for the context. 
 
-Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width of rectangles tends to zero**. There are three main methods, the *left*, *right* and *midpoint* sum.
+![[area under curve.png]]
 
-![[riemann sum.png]]
+# Finding the exact area
 
+To find the **exact area under a curve**, one could just apply a limit to an existing [[Riemann Sum]]. Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width of rectangles tends to zero**, or when the **number of rectangles tends to infinity**.
+$$
+\int_a^b f(x)dx = \lim_{n \to \infty}
+
+\sum _{i=1}^n \begin{equation}  \left[f(x_i) * \frac{b-a}{n}\right]  \end{equation}
+$$
+
+
+___
 
 # Reference
 - #### [An Integrals Crash Course](https://towardsdatascience.com/an-integrals-crash-course-for-data-science-cf6e6dd7c046) - Medium.
