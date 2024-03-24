@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Integration.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Integration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Integration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md"
+                "file": "Mathematics/Calculus/Integration.md"
               }
             }
           },
@@ -184,22 +184,22 @@
         "y": 20,
         "width": 1295,
         "height": 1000,
-        "maximize": true,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
   "active": "07706b53204ed591",
   "lastOpenFiles": [
-    "Mathematics/Calculus/Riemann Sum.md",
-    "Mathematics/Calculus/Integrals.md",
-    "Mathematics/Calculus/First Derivative Test.md",
-    "Mathematics/Calculus/Differentiation Optimization.md",
     "Mathematics/Mathematics.md",
+    "Mathematics/Calculus/First Derivative Test.md",
+    "Mathematics/Calculus/Integration.md",
+    "Mathematics/Calculus/Integrals.md",
+    "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
+    "Mathematics/Calculus/Riemann Sum.md",
+    "Mathematics/Calculus/Differentiation Optimization.md",
     "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Derivatives.md",
-    "Mathematics/Calculus/Integration.md",
-    "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
     "List of Books.md",
     "Mathematics/Images/area under curve.png",
     "index.md",

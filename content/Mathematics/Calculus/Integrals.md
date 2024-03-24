@@ -39,14 +39,12 @@ This method is called [[Riemann Sum]], which consists of any **approximating sum
 
 # Finding the exact area
 
-To find the **exact area under a curve**, one could just apply a limit to an existing [[Riemann Sum]]. Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width of rectangles tends to zero**, or when the **number of rectangles tends to infinity**.
+To find the **exact area under a curve**, one could just apply a limit to an existing [[Riemann Sum]]. Well, actually, an *integral* is the limit of a [[Riemann Sum]] when the **width of rectangles tends to zero** and the **number of rectangles tends to infinity**. This gives us the *definite integral*:
 $$
 \int_a^b f(x)dx = \lim_{n \to \infty}
 
 \sum _{i=1}^n \begin{equation}  \left[f(x_i) * \frac{b-a}{n}\right]  \end{equation}
 $$
-
-
 ___
 
 # Reference
