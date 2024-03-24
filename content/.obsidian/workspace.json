@@ -148,7 +148,10 @@
     "hiddenItems": {
       "graph:Open graph view": false,
       "command-palette:Open command palette": false,
-      "syncthing-integration:Open Syncthing conflict manager modal": false
+      "syncthing-integration:Open Syncthing conflict manager modal": false,
+      "handwritten-notes:Create empty handwritten note": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-dangling-links:Show dangling links panel": false
     }
   },
   "active": "07706b53204ed591",
