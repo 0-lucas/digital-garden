@@ -23,9 +23,11 @@
             "id": "00dc8f0019aed9b9",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Mathematics/Images/Calculus formulas.pdf"
+                "file": "Mathematics/Calculus/Integrals.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Images/Calculus formulas.pdf",
+                "file": "Mathematics/Calculus/Integrals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Images/Calculus formulas.pdf",
+                "file": "Mathematics/Calculus/Integrals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Images/Calculus formulas.pdf"
+                "file": "Mathematics/Calculus/Integrals.md"
               }
             }
           },
@@ -167,13 +169,13 @@
   },
   "active": "00dc8f0019aed9b9",
   "lastOpenFiles": [
+    "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Integration.md",
     "Mathematics/Images/Calculus formulas.pdf",
-    "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Integrals.md",
     "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
     "List of Books.md",
-    "Mathematics/Calculus/Riemann Sum.md",
+    "Mathematics/Riemann Sum.md",
     "Mathematics/Mathematics.md",
     "Mathematics/Calculus/First Derivative Test.md",
     "Mathematics/Calculus/Differentiation Optimization.md",

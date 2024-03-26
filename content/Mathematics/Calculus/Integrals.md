@@ -25,7 +25,7 @@ $$
 \end{align}
 $$
 
-The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* represents the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *"sliced"* is $x$.
+The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* represents the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *"sliced"* is  $x$.
 
 ![[integral definition.png]]
 ___
