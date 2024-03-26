@@ -23,11 +23,9 @@
             "id": "00dc8f0019aed9b9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Mathematics/Calculus/Integration.md",
-                "mode": "source",
-                "source": false
+                "file": "Mathematics/Images/Calculus formulas.pdf"
               }
             }
           }
@@ -90,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Calculus/Integration.md",
+                "file": "Mathematics/Images/Calculus formulas.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Calculus/Integration.md",
+                "file": "Mathematics/Images/Calculus formulas.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Calculus/Integration.md"
+                "file": "Mathematics/Images/Calculus formulas.pdf"
               }
             }
           },
@@ -169,15 +167,16 @@
   },
   "active": "00dc8f0019aed9b9",
   "lastOpenFiles": [
-    "Mathematics/Calculus/Integrals.md",
     "Mathematics/Calculus/Integration.md",
+    "Mathematics/Images/Calculus formulas.pdf",
+    "Mathematics/Calculus/Differentiation.md",
+    "Mathematics/Calculus/Integrals.md",
     "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
     "List of Books.md",
     "Mathematics/Calculus/Riemann Sum.md",
     "Mathematics/Mathematics.md",
     "Mathematics/Calculus/First Derivative Test.md",
     "Mathematics/Calculus/Differentiation Optimization.md",
-    "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Derivatives.md",
     "Mathematics/Images/area under curve.png",
     "index.md",
@@ -213,7 +212,6 @@
     "C-Sharp/Images",
     "C-Sharp",
     "Machine Learning",
-    "Data-Centric AI/Images",
-    "Images"
+    "Data-Centric AI/Images"
   ]
 }

@@ -9,7 +9,7 @@ ___
 
 ![[Differentiation rules.png]]
 
->*These are some of the most commonly used rules. To see a list **containing all of them**, [[Differentiation formulas.pdf|click here]].*
+>*These are some of the most commonly used rules. To see a list **containing all of them**, [[Calculus formulas.pdf|click here]].*
 ___
 ## Polynomial and exponential functions
 
