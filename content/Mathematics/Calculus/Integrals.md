@@ -45,6 +45,7 @@ $$
 
 \sum _{i=1}^n \begin{equation}  \left[f(x_i) * \frac{b-a}{n}\right]  \end{equation}
 $$
+We can also 
 ___
 
 # Reference
