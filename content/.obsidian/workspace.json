@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Calculus/Derivatives.md",
+                "file": "Machine Learning/Distribution Shift.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Calculus/Derivatives.md",
+                "file": "Machine Learning/Distribution Shift.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Calculus/Derivatives.md",
+                "file": "Machine Learning/Distribution Shift.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Calculus/Derivatives.md"
+                "file": "Machine Learning/Distribution Shift.md"
               }
             }
           },
@@ -169,10 +169,13 @@
   },
   "active": "00dc8f0019aed9b9",
   "lastOpenFiles": [
+    "Machine Learning/Images/Covariate shift.png",
+    "Machine Learning/Distribution Shift.md",
+    "Machine Learning/Entropy.md",
+    "Mathematics/Calculus/Derivatives.md",
     "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Integrals.md",
     "Mathematics/Calculus/Integration.md",
-    "Mathematics/Calculus/Derivatives.md",
     "Mathematics/Riemann Sum.md",
     "Mathematics/Images/Calculus formulas.pdf",
     "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
@@ -184,14 +187,12 @@
     "index.md",
     "homeimage.png",
     "Mathematics/Images/riemann sum comparison.png",
-    "Machine Learning/Distribution Shift.md",
     "Mathematics/Calculus/Limits.md",
     "Distribution Shift.md",
     "Machine Learning/Outlier.md",
     "Machine Learning/Outlier Removal.md",
     "Machine Learning/Outlier Detection.md",
     "Machine Learning/Linear Regression.md",
-    "Machine Learning/Entropy.md",
     "Machine Learning/PCA.md",
     "Machine Learning/Kernel PCA.md",
     "Mathematics/Logarithms.md",
@@ -210,7 +211,6 @@
     "remote",
     "Remote",
     "Homepage",
-    "C-Sharp/Images/Pasted image 20240202072122.png",
     "C-Sharp/Images",
     "C-Sharp",
     "Machine Learning",
