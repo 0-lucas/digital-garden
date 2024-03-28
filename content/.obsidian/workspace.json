@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Derivatives.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Derivatives.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md",
+                "file": "Mathematics/Calculus/Derivatives.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Calculus/Integrals.md"
+                "file": "Mathematics/Calculus/Derivatives.md"
               }
             }
           },
@@ -169,11 +169,11 @@
   },
   "active": "00dc8f0019aed9b9",
   "lastOpenFiles": [
-    "Mathematics/Calculus/Integration.md",
+    "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Calculus/Integrals.md",
+    "Mathematics/Calculus/Integration.md",
     "Mathematics/Calculus/Derivatives.md",
     "Mathematics/Riemann Sum.md",
-    "Mathematics/Calculus/Differentiation.md",
     "Mathematics/Images/Calculus formulas.pdf",
     "My Books/Calculus ALL IN ONE - Mark Ryan.pdf",
     "List of Books.md",

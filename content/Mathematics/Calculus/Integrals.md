@@ -25,7 +25,7 @@ $$
 \end{align}
 $$
 
-The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* represents the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *"sliced"* is  $x$.
+The symbol $\int$ was introduced by [*Leibniz*](https://pt.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz), and is called the *integral sign*. The elongated *S* represents the **limit of sums**. In the notation above, $f(x)$ is called the *integrand*, which is the **function to integrate**. The points $a$ and $b$ are the *limits of integration*. $dx$ implies that the **independent variable** which will be *“sliced”* is  $x$.
 
 ![[integral definition.png]]
 ___
@@ -45,10 +45,10 @@ $$
 
 \sum _{i=1}^n \begin{equation}  \left[f(x_i) * \frac{b-a}{n}\right]  \end{equation}
 $$
-We can also 
+>*We can also calculate the exact area integrating the derivative of the function, as shown in [[Integration]].*
 ___
 
 # Reference
-- #### [An Integrals Crash Course](https://towardsdatascience.com/an-integrals-crash-course-for-data-science-cf6e6dd7c046) - Medium.
+- #### [An Integrals Crash Course](https://towardsdatascience.com/an-integrals-crash-course-for-data-science-cf6e6dd7c046) — Medium.
 
 - #### [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|James Stewart's "Calculus - Early  Transcendentals"]] — Section 5, p. 354.
