@@ -1,7 +1,97 @@
 @use "../../styles/variables.scss" as *;
 
-button#explorer {
-  all: unset;
+@media all and ($mobile) {
+  .page > #quartz-body {
+    // Shift page position when toggling Explorer on mobile.
+    & > :not(.sidebar.left:has(.explorer)) {
+      transition: transform 300ms ease-in-out;
+    }
+    &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
+      transform: translateX(100dvw);
+      transition: transform 300ms ease-in-out;
+    }
+
+    // Sticky top bar (stays in place when scrolling down on mobile).
+    .sidebar.left:has(.explorer) {
+      box-sizing: border-box;
+      position: sticky;
+      background-color: var(--light);
+      padding: 1rem 0 1rem 0;
+      margin: 0;
+    }
+
+    .hide-until-loaded ~ .explorer-content {
+      display: none;
+    }
+  }
+}
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  min-height: 1.2rem;
+  flex: 0 1 auto;
+  &.collapsed {
+    flex: 0 1 1.2rem;
+    & .fold {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  & .fold {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
+
+  @media all and ($mobile) {
+    order: -1;
+    height: initial;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  button.mobile-explorer {
+    display: none;
+  }
+
+  button.desktop-explorer {
+    display: flex;
+  }
+
+  @media all and ($mobile) {
+    button.mobile-explorer {
+      display: flex;
+    }
+
+    button.desktop-explorer {
+      display: none;
+    }
+  }
+
+  &.desktop-only {
+    @media all and not ($mobile) {
+      display: flex;
+    }
+  }
+
+  svg {
+    pointer-events: all;
+    transition: transform 0.35s ease;
+
+    & > polyline {
+      pointer-events: none;
+    }
+  }
+}
+
+button.mobile-explorer,
+button.desktop-explorer {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -11,69 +101,51 @@ button#explorer {
   display: flex;
   align-items: center;
 
-  & h1 {
+  & h2 {
     font-size: 1rem;
     display: inline-block;
     margin: 0;
   }
-
-  & .fold {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-  }
-
-  &.collapsed .fold {
-    transform: rotateZ(-90deg);
-  }
 }
 
-.folder-outer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-in-out;
-}
-
-.folder-outer.open {
-  grid-template-rows: 1fr;
-}
-
-.folder-outer > ul {
-  overflow: hidden;
-}
-
-#explorer-content {
+.explorer-content {
   list-style: none;
   overflow: hidden;
-  max-height: none;
-  transition: max-height 0.35s ease;
+  overflow-y: auto;
   margin-top: 0.5rem;
-
-  &.collapsed > .overflow::after {
-    opacity: 0;
-  }
 
   & ul {
     list-style: none;
-    margin: 0.08rem 0;
+    margin: 0;
     padding: 0;
-    transition:
-      max-height 0.35s ease,
-      transform 0.35s ease,
-      opacity 0.2s ease;
+
     & li > a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+
+      &.active {
+        opacity: 1;
+        color: var(--tertiary);
+      }
     }
   }
-}
 
-svg {
-  pointer-events: all;
+  .folder-outer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-in-out;
+  }
 
-  & > polyline {
-    pointer-events: none;
+  .folder-outer.open {
+    grid-template-rows: 1fr;
+  }
+
+  .folder-outer > ul {
+    overflow: hidden;
+    margin-left: 6px;
+    padding-left: 0.8rem;
+    border-left: 1px solid var(--lightgray);
   }
 }
 
@@ -136,13 +208,75 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   color: var(--tertiary);
 }
 
-.no-background::after {
-  background: none !important;
+.explorer {
+  @media all and ($mobile) {
+    &.collapsed {
+      flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(-100vw);
+        visibility: hidden;
+      }
+    }
+
+    &:not(.collapsed) {
+      flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(0);
+        visibility: visible;
+      }
+    }
+
+    .explorer-content {
+      box-sizing: border-box;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      background-color: var(--light);
+      max-width: 100vw;
+      width: 100%;
+      transform: translateX(-100vw);
+      transition:
+        transform 200ms ease,
+        visibility 200ms ease;
+      overflow: hidden;
+      padding: 4rem 0 2rem 0;
+      height: 100dvh;
+      max-height: 100dvh;
+      visibility: hidden;
+    }
+
+    .mobile-explorer {
+      margin: 0;
+      padding: 5px;
+      z-index: 101;
+
+      .lucide-menu {
+        stroke: var(--darkgray);
+      }
+    }
+  }
 }
 
-#explorer-end {
-  // needs height so IntersectionObserver gets triggered
-  height: 4px;
-  // remove default margin from li
-  margin: 0;
+.no-scroll {
+  opacity: 0;
+  overflow: hidden;
+}
+
+html:has(.no-scroll) {
+  overflow: hidden;
+}
+
+@media all and not ($mobile) {
+  .no-scroll {
+    opacity: 1 !important;
+    overflow: auto !important;
+  }
+
+  html:has(.no-scroll) {
+    overflow: auto !important;
+  }
 }

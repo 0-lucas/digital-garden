@@ -129,11 +129,11 @@ export default (() => {
     return <button id="btn">Click me</button>
   }
 
-  YourComponent.beforeDOM = `
+  YourComponent.beforeDOMLoaded = `
   console.log("hello from before the page loads!")
   `
 
-  YourComponent.afterDOM = `
+  YourComponent.afterDOMLoaded = `
   document.getElementById('btn').onclick = () => {
     alert('button clicked!')
   }
@@ -161,6 +161,18 @@ document.addEventListener("nav", () => {
 })
 ```
 
+You can also add the equivalent of a `beforeunload` event for [[SPA Routing]] via the `prenav` event.
+
+```ts
+document.addEventListener("prenav", () => {
+  // executed after an SPA navigation is triggered but
+  // before the page is replaced
+  // one usage pattern is to store things in sessionStorage
+  // in the prenav and then conditionally load then in the consequent
+  // nav
+})
+```
+
 It is best practice to track any event handlers via `window.addCleanup` to prevent memory leaks.
 This will get called on page navigation.
 
@@ -180,7 +192,7 @@ export default (() => {
     return <button id="btn">Click me</button>
   }
 
-  YourComponent.afterDOM = script
+  YourComponent.afterDOMLoaded = script
   return YourComponent
 }) satisfies QuartzComponentConstructor
 ```

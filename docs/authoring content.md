@@ -29,12 +29,19 @@ Some common frontmatter fields that are natively supported by Quartz:
 
 - `title`: Title of the page. If it isn't provided, Quartz will use the name of the file as the title.
 - `description`: Description of the page used for link previews.
+- `permalink`: A custom URL for the page that will remain constant even if the path to the file changes.
 - `aliases`: Other names for this note. This is a list of strings.
 - `tags`: Tags for this note.
 - `draft`: Whether to publish the page or not. This is one way to make [[private pages|pages private]] in Quartz.
 - `date`: A string representing the day the note was published. Normally uses `YYYY-MM-DD` format.
 
+See [[Frontmatter]] for a complete list of frontmatter.
+
 ## Syncing your Content
 
 When your Quartz is at a point you're happy with, you can save your changes to GitHub.
 First, make sure you've [[setting up your GitHub repository|already setup your GitHub repository]] and then do `npx quartz sync`.
+
+## Customization
+
+Frontmatter parsing for `title`, `tags`, `aliases` and `cssclasses` is a functionality of the [[Frontmatter]] plugin, `date` is handled by the [[CreatedModifiedDate]] plugin and `description` by the [[Description]] plugin. See the plugin pages for customization options.

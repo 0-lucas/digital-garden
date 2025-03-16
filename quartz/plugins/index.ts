@@ -6,9 +6,10 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
   const staticResources: StaticResources = {
     css: [],
     js: [],
+    additionalHead: [],
   }
 
-  for (const transformer of ctx.cfg.plugins.transformers) {
+  for (const transformer of [...ctx.cfg.plugins.transformers, ...ctx.cfg.plugins.emitters]) {
     const res = transformer.externalResources ? transformer.externalResources(ctx) : {}
     if (res?.js) {
       staticResources.js.push(...res.js)
@@ -16,6 +17,26 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
     if (res?.css) {
       staticResources.css.push(...res.css)
     }
+    if (res?.additionalHead) {
+      staticResources.additionalHead.push(...res.additionalHead)
+    }
+  }
+
+  // if serving locally, listen for rebuilds and reload the page
+  if (ctx.argv.serve) {
+    const wsUrl = ctx.argv.remoteDevHost
+      ? `wss://${ctx.argv.remoteDevHost}:${ctx.argv.wsPort}`
+      : `ws://localhost:${ctx.argv.wsPort}`
+
+    staticResources.js.push({
+      loadTime: "afterDOMReady",
+      contentType: "inline",
+      script: `
+        const socket = new WebSocket('${wsUrl}')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      `,
+    })
   }
 
   return staticResources

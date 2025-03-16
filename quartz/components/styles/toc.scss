@@ -1,4 +1,24 @@
-button#toc {
+@use "../../styles/variables.scss" as *;
+
+.toc {
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: hidden;
+  min-height: 4rem;
+  flex: 0 1 auto;
+  &:has(button.toc-header.collapsed) {
+    flex: 0 1 1.2rem;
+  }
+}
+
+@media all and not ($mobile) {
+  .toc-header {
+    display: flex;
+  }
+}
+
+button.toc-header {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -25,16 +45,9 @@ button#toc {
   }
 }
 
-#toc-content {
+.toc-content {
   list-style: none;
-  overflow: hidden;
-  max-height: none;
-  transition: max-height 0.5s ease;
   position: relative;
-
-  &.collapsed > .overflow::after {
-    opacity: 0;
-  }
 
   & ul {
     list-style: none;
