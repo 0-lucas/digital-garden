@@ -10,6 +10,9 @@ This is a collection of the main books I use for studying. Enjoy!
 # Mathematics
 - [[Thomas Nield - Essential Math for Data Science_ Take Control of Your Data with Fundamental Linear Algebra, Probability, and Statistics (2022, O'Reilly Media) - libgen.li.pdf|Essential Math for Data Science]]
 - [[Mathematics for Machine Learning.pdf|Mathematics for Machine Learning]]
+
+## Discrete Mathematics
+- [[dmoi4.pdf|Discrete Mathematics - An Open Introduction]]
 ## Calculus
 - [[James Stewart- Precalculus_ Mathematics for Calculus, 5th Edition, Enhanced WebAssign Edition  -Brooks Cole (2009).pdf|Precalculus - Mathematics for Calculus]]
 - [[Calculus Early Transcendentals, 6th Edition (James Stewart).pdf|Calculus - Early Transcendentals]]
@@ -41,7 +44,7 @@ ___
 ## Data Visualization
 - [[storytelling-with-data-cole-nussbaumer-knaflic.pdf|Storytelling with Data]]
 - [[Nathan Yau - Visualize This_ The FlowingData Guide to Design, Visualization, and Statistics-Wiley (2024)_compressed.pdf|Visualize This]]
-## R parameter expression. See th
+## R
 - [[R for Data Science_Hadley Wickham.pdf|R for Data Science]]
 - [[R in Action Data Analysis and Graphics with R, Second Edition (Robert Kabacoff).pdf|R in Action]]
 ## Data Analysis
