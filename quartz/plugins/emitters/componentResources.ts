@@ -1,4 +1,4 @@
-import { FilePath, FullSlug, joinSegments } from "../../util/path"
+import { FullSlug, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
@@ -9,11 +9,15 @@ import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
-import { googleFontHref, joinStyles, processGoogleFonts } from "../../util/theme"
+import {
+  googleFontHref,
+  googleFontSubsetHref,
+  joinStyles,
+  processGoogleFonts,
+} from "../../util/theme"
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
 import { write } from "./helpers"
-import DepGraph from "../../depgraph"
 
 type ComponentResources = {
   css: string[]
@@ -84,89 +88,108 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId
     componentResources.afterDOMLoaded.push(`
-      const gtagScript = document.createElement("script")
-      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=${tagId}"
-      gtagScript.defer = true
-      document.head.appendChild(gtagScript)
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "${tagId}", { send_page_view: false });
-
-      document.addEventListener("nav", () => {
-        gtag("event", "page_view", {
-          page_title: document.title,
-          page_location: location.href,
+      const gtagScript = document.createElement('script');
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=${tagId}';
+      gtagScript.defer = true;
+      gtagScript.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '${tagId}', { send_page_view: false });
+        gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+        document.addEventListener('nav', () => {
+          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
         });
-      });`)
+      };
+      
+      document.head.appendChild(gtagScript);
+    `)
   } else if (cfg.analytics?.provider === "plausible") {
     const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
     componentResources.afterDOMLoaded.push(`
-      const plausibleScript = document.createElement("script")
-      plausibleScript.src = "${plausibleHost}/js/script.manual.js"
-      plausibleScript.setAttribute("data-domain", location.hostname)
-      plausibleScript.defer = true
-      document.head.appendChild(plausibleScript)
+      const plausibleScript = document.createElement('script');
+      plausibleScript.src = '${plausibleHost}/js/script.manual.js';
+      plausibleScript.setAttribute('data-domain', location.hostname);
+      plausibleScript.defer = true;
+      plausibleScript.onload = () => {
+        window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+        plausible('pageview');
+        document.addEventListener('nav', () => {
+          plausible('pageview');
+        });
+      };
 
-      window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
-
-      document.addEventListener("nav", () => {
-        plausible("pageview")
-      })
+      document.head.appendChild(plausibleScript);
     `)
   } else if (cfg.analytics?.provider === "umami") {
     componentResources.afterDOMLoaded.push(`
-      const umamiScript = document.createElement("script")
-      umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js"
-      umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}")
-      umamiScript.setAttribute("data-auto-track", "false")
-      umamiScript.defer = true
-      document.head.appendChild(umamiScript)
-
-      document.addEventListener("nav", () => {
+      const umamiScript = document.createElement("script");
+      umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js";
+      umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}");
+      umamiScript.setAttribute("data-auto-track", "false");
+      umamiScript.defer = true;
+      umamiScript.onload = () => {
         umami.track();
-      })
+        document.addEventListener("nav", () => {
+          umami.track();
+        });
+      };
+
+      document.head.appendChild(umamiScript);
     `)
   } else if (cfg.analytics?.provider === "goatcounter") {
     componentResources.afterDOMLoaded.push(`
-      const goatcounterScript = document.createElement("script")
-      goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}"
-      goatcounterScript.defer = true
-      goatcounterScript.setAttribute("data-goatcounter",
-        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count")
-      document.head.appendChild(goatcounterScript)
+      const goatcounterScript = document.createElement('script');
+      goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}";
+      goatcounterScript.defer = true;
+      goatcounterScript.setAttribute(
+        'data-goatcounter',
+        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count"
+      );
+      goatcounterScript.onload = () => {
+        window.goatcounter = { no_onload: true };
+        goatcounter.count({ path: location.pathname });
+        document.addEventListener('nav', () => {
+          goatcounter.count({ path: location.pathname });
+        });
+      };
 
-      window.goatcounter = { no_onload: true }
-      document.addEventListener("nav", () => {
-        goatcounter.count({ path: location.pathname })
-      })
+      document.head.appendChild(goatcounterScript);
     `)
   } else if (cfg.analytics?.provider === "posthog") {
     componentResources.afterDOMLoaded.push(`
-      const posthogScript = document.createElement("script")
+      const posthogScript = document.createElement("script");
       posthogScript.innerHTML= \`!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
       posthog.init('${cfg.analytics.apiKey}', {
         api_host: '${cfg.analytics.host ?? "https://app.posthog.com"}',
         capture_pageview: false,
       })\`
-      document.head.appendChild(posthogScript)
+      posthogScript.onload = () => {
+        posthog.capture('$pageview', { path: location.pathname });
+      
+        document.addEventListener('nav', () => {
+          posthog.capture('$pageview', { path: location.pathname });
+        });
+      };
 
-      document.addEventListener("nav", () => {
-        posthog.capture('$pageview', { path: location.pathname })
-      })
+      document.head.appendChild(posthogScript);
     `)
   } else if (cfg.analytics?.provider === "tinylytics") {
     const siteId = cfg.analytics.siteId
     componentResources.afterDOMLoaded.push(`
-      const tinylyticsScript = document.createElement("script")
-      tinylyticsScript.src = "https://tinylytics.app/embed/${siteId}.js?spa"
-      tinylyticsScript.defer = true
-      document.head.appendChild(tinylyticsScript)
-
-      document.addEventListener("nav", () => {
-        window.tinylytics.triggerUpdate()
-      })
+      const tinylyticsScript = document.createElement('script');
+      tinylyticsScript.src = 'https://tinylytics.app/embed/${siteId}.js?spa';
+      tinylyticsScript.defer = true;
+      tinylyticsScript.onload = () => {
+        window.tinylytics.triggerUpdate();
+        document.addEventListener('nav', () => {
+          window.tinylytics.triggerUpdate();
+        });
+      };
+      
+      document.head.appendChild(tinylyticsScript);
     `)
   } else if (cfg.analytics?.provider === "cabin") {
     componentResources.afterDOMLoaded.push(`
@@ -203,9 +226,6 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 export const ComponentResources: QuartzEmitterPlugin = () => {
   return {
     name: "ComponentResources",
-    async getDependencyGraph(_ctx, _content, _resources) {
-      return new DepGraph<FilePath>()
-    },
     async *emit(ctx, _content, _resources) {
       const cfg = ctx.cfg.configuration
       // component specific scripts and styles
@@ -215,8 +235,15 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
         // let the user do it themselves in css
       } else if (cfg.theme.fontOrigin === "googleFonts" && !cfg.theme.cdnCaching) {
         // when cdnCaching is true, we link to google fonts in Head.tsx
-        const response = await fetch(googleFontHref(ctx.cfg.configuration.theme))
+        const theme = ctx.cfg.configuration.theme
+        const response = await fetch(googleFontHref(theme))
         googleFontsStyleSheet = await response.text()
+
+        if (theme.typography.title) {
+          const title = ctx.cfg.configuration.pageTitle
+          const response = await fetch(googleFontSubsetHref(theme, title))
+          googleFontsStyleSheet += `\n${await response.text()}`
+        }
 
         if (!cfg.baseUrl) {
           throw new Error(
@@ -281,19 +308,22 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
           },
           include: Features.MediaQueries,
         }).code.toString(),
-      }),
-        yield write({
-          ctx,
-          slug: "prescript" as FullSlug,
-          ext: ".js",
-          content: prescript,
-        }),
-        yield write({
-          ctx,
-          slug: "postscript" as FullSlug,
-          ext: ".js",
-          content: postscript,
-        })
+      })
+
+      yield write({
+        ctx,
+        slug: "prescript" as FullSlug,
+        ext: ".js",
+        content: prescript,
+      })
+
+      yield write({
+        ctx,
+        slug: "postscript" as FullSlug,
+        ext: ".js",
+        content: postscript,
+      })
     },
+    async *partialEmit() {},
   }
 }
