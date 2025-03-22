@@ -1,9 +1,10 @@
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { normalizeRelativeURLs } from "../../util/path"
+import { fetchCanonical } from "./util"
 
 const p = new DOMParser()
 async function mouseEnterHandler(
-  this: HTMLLinkElement,
+  this: HTMLAnchorElement,
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
   const link = this
@@ -33,11 +34,11 @@ async function mouseEnterHandler(
   thisUrl.hash = ""
   thisUrl.search = ""
   const targetUrl = new URL(link.href)
-  const hash = targetUrl.hash
+  const hash = decodeURIComponent(targetUrl.hash)
   targetUrl.hash = ""
   targetUrl.search = ""
 
-  const response = await fetch(`${targetUrl}`).catch((err) => {
+  const response = await fetchCanonical(targetUrl).catch((err) => {
     console.error(err)
   })
 
@@ -47,8 +48,8 @@ async function mouseEnterHandler(
   }
 
   if (!response) return
-  const contentType = response.headers.get("Content-Type")
-  const contentTypeCategory = contentType?.split("/")[0] ?? "text"
+  const [contentType] = response.headers.get("Content-Type")!.split(";")
+  const [contentTypeCategory, typeInfo] = contentType.split("/")
 
   const popoverElement = document.createElement("div")
   popoverElement.classList.add("popover")
@@ -56,23 +57,33 @@ async function mouseEnterHandler(
   popoverInner.classList.add("popover-inner")
   popoverElement.appendChild(popoverInner)
 
-  popoverInner.dataset.contentType = contentTypeCategory
+  popoverInner.dataset.contentType = contentType ?? undefined
 
   switch (contentTypeCategory) {
     case "image":
       const img = document.createElement("img")
-
-      response.blob().then((blob) => {
-        img.src = URL.createObjectURL(blob)
-      })
+      img.src = targetUrl.toString()
       img.alt = targetUrl.pathname
 
       popoverInner.appendChild(img)
+      break
+    case "application":
+      switch (typeInfo) {
+        case "pdf":
+          const pdf = document.createElement("iframe")
+          pdf.src = targetUrl.toString()
+          popoverInner.appendChild(pdf)
+          break
+        default:
+          break
+      }
       break
     default:
       const contents = await response.text()
       const html = p.parseFromString(contents, "text/html")
       normalizeRelativeURLs(html, targetUrl)
+      // strip all IDs from elements to prevent duplicates
+      html.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"))
       const elts = [...html.getElementsByClassName("popover-hint")]
       if (elts.length === 0) return
 
@@ -92,7 +103,7 @@ async function mouseEnterHandler(
 }
 
 document.addEventListener("nav", () => {
-  const links = [...document.getElementsByClassName("internal")] as HTMLLinkElement[]
+  const links = [...document.getElementsByClassName("internal")] as HTMLAnchorElement[]
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
     window.addCleanup(() => link.removeEventListener("mouseenter", mouseEnterHandler))

@@ -1,12 +1,7 @@
-.DS_Store
-.gitignore
-node_modules
-public
-prof
-tsconfig.tsbuildinfo
-.quartz-cache
-private/
-.replit
-replit.nix
-.trash
-Personal
+./content/97. Excalidraw
+*Excalidraw
+*Work
+*work
+*personal
+*Personal
+.obsidian

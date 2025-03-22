@@ -15,6 +15,7 @@ import { WebSocketServer } from "ws"
 import { randomUUID } from "crypto"
 import { Mutex } from "async-mutex"
 import { CreateArgv } from "./args.js"
+import { globby } from "globby"
 import {
   exitIfCancel,
   escapePath,
@@ -33,18 +34,27 @@ import {
 } from "./constants.js"
 
 /**
+ * Resolve content directory path
+ * @param contentPath path to resolve
+ */
+function resolveContentPath(contentPath) {
+  if (path.isAbsolute(contentPath)) return path.relative(cwd, contentPath)
+  return path.join(cwd, contentPath)
+}
+
+/**
  * Handles `npx quartz create`
  * @param {*} argv arguments for `create`
  */
 export async function handleCreate(argv) {
   console.log()
   intro(chalk.bgGreen.black(` Quartz v${version} `))
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   let setupStrategy = argv.strategy?.toLowerCase()
   let linkResolutionStrategy = argv.links?.toLowerCase()
   const sourceDirectory = argv.source
 
-  // If all cmd arguments were provided, check if theyre valid
+  // If all cmd arguments were provided, check if they're valid
   if (setupStrategy && linkResolutionStrategy) {
     // If setup isn't, "new", source argument is required
     if (setupStrategy !== "new") {
@@ -236,6 +246,11 @@ export async function handleBuild(argv) {
         type: "css-text",
         cssImports: true,
       }),
+      sassPlugin({
+        filter: /\.inline\.scss$/,
+        type: "css",
+        cssImports: true,
+      }),
       {
         name: "inline-script-loader",
         setup(build) {
@@ -285,8 +300,8 @@ export async function handleBuild(argv) {
     }
 
     if (cleanupBuild) {
-      await cleanupBuild()
       console.log(chalk.yellow("Detected a source code change, doing a hard rebuild..."))
+      await cleanupBuild()
     }
 
     const result = await ctx.rebuild().catch((err) => {
@@ -349,6 +364,15 @@ export async function handleBuild(argv) {
             {
               source: "**/*.*",
               headers: [{ key: "Content-Disposition", value: "inline" }],
+            },
+            {
+              source: "**/*.webp",
+              headers: [{ key: "Content-Type", value: "image/webp" }],
+            },
+            // fixes bug where avif images are displayed as text instead of images (future proof)
+            {
+              source: "**/*.avif",
+              headers: [{ key: "Content-Type", value: "image/avif" }],
             },
           ],
         })
@@ -418,13 +442,12 @@ export async function handleBuild(argv) {
       ),
     )
     console.log("hint: exit with ctrl+c")
+    const paths = await globby(["**/*.ts", "**/*.tsx", "**/*.scss", "package.json"])
     chokidar
-      .watch(["**/*.ts", "**/*.tsx", "**/*.scss", "package.json"], {
-        ignoreInitial: true,
-      })
-      .on("all", async () => {
-        build(clientRefresh)
-      })
+      .watch(paths, { ignoreInitial: true })
+      .on("add", () => build(clientRefresh))
+      .on("change", () => build(clientRefresh))
+      .on("unlink", () => build(clientRefresh))
   } else {
     await build(() => {})
     ctx.dispose()
@@ -436,7 +459,7 @@ export async function handleBuild(argv) {
  * @param {*} argv arguments for `update`
  */
 export async function handleUpdate(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
   console.log("Backing up your content")
   execSync(
@@ -457,7 +480,25 @@ export async function handleUpdate(argv) {
 
   await popContentFolder(contentFolder)
   console.log("Ensuring dependencies are up to date")
-  const res = spawnSync("npm", ["i"], { stdio: "inherit" })
+
+  /*
+  On Windows, if the command `npm` is really `npm.cmd', this call fails
+  as it will be unable to find `npm`. This is often the case on systems
+  where `npm` is installed via a package manager.
+
+  This means `npx quartz update` will not actually update dependencies
+  on Windows, without a manual `npm i` from the caller.
+
+  However, by spawning a shell, we are able to call `npm.cmd`.
+  See: https://nodejs.org/api/child_process.html#spawning-bat-and-cmd-files-on-windows
+  */
+
+  const opts = { stdio: "inherit" }
+  if (process.platform === "win32") {
+    opts.shell = true
+  }
+
+  const res = spawnSync("npm", ["i"], opts)
   if (res.status === 0) {
     console.log(chalk.green("Done!"))
   } else {
@@ -470,7 +511,7 @@ export async function handleUpdate(argv) {
  * @param {*} argv arguments for `restore`
  */
 export async function handleRestore(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   await popContentFolder(contentFolder)
 }
 
@@ -479,7 +520,7 @@ export async function handleRestore(argv) {
  * @param {*} argv arguments for `sync`
  */
 export async function handleSync(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
   console.log("Backing up your content")
 

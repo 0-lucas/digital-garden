@@ -19,6 +19,7 @@ import { options } from "./util/sourcemap"
 import { Mutex } from "async-mutex"
 import DepGraph from "./depgraph"
 import { getStaticResourcesFromPlugins } from "./plugins"
+import { randomIdNonSecure } from "./util/random"
 
 type Dependencies = Record<string, DepGraph<FilePath> | null>
 
@@ -40,6 +41,7 @@ type FileEvent = "add" | "change" | "delete"
 
 async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   const ctx: BuildCtx = {
+    buildId: randomIdNonSecure(),
     argv,
     cfg,
     allSlugs: [],
@@ -134,9 +136,9 @@ async function startServing(
 
   const buildFromEntry = argv.fastRebuild ? partialRebuildFromEntrypoint : rebuildFromEntrypoint
   watcher
-    .on("add", (fp) => buildFromEntry(fp, "add", clientRefresh, buildData))
-    .on("change", (fp) => buildFromEntry(fp, "change", clientRefresh, buildData))
-    .on("unlink", (fp) => buildFromEntry(fp, "delete", clientRefresh, buildData))
+    .on("add", (fp) => buildFromEntry(fp as string, "add", clientRefresh, buildData))
+    .on("change", (fp) => buildFromEntry(fp as string, "change", clientRefresh, buildData))
+    .on("unlink", (fp) => buildFromEntry(fp as string, "delete", clientRefresh, buildData))
 
   return async () => {
     await watcher.close()
@@ -157,10 +159,13 @@ async function partialRebuildFromEntrypoint(
     return
   }
 
-  const buildStart = new Date().getTime()
-  buildData.lastBuildMs = buildStart
+  const buildId = randomIdNonSecure()
+  ctx.buildId = buildId
+  buildData.lastBuildMs = new Date().getTime()
   const release = await mut.acquire()
-  if (buildData.lastBuildMs > buildStart) {
+
+  // if there's another build after us, release and let them do it
+  if (ctx.buildId !== buildId) {
     release()
     return
   }
@@ -185,9 +190,14 @@ async function partialRebuildFromEntrypoint(
         const emitterGraph =
           (await emitter.getDependencyGraph?.(ctx, processedFiles, staticResources)) ?? null
 
-        // emmiter may not define a dependency graph. nothing to update if so
         if (emitterGraph) {
-          dependencies[emitter.name]?.updateIncomingEdgesForNode(emitterGraph, fp)
+          const existingGraph = dependencies[emitter.name]
+          if (existingGraph !== null) {
+            existingGraph.mergeGraph(emitterGraph)
+          } else {
+            // might be the first time we're adding a mardown file
+            dependencies[emitter.name] = emitterGraph
+          }
         }
       }
       break
@@ -224,7 +234,6 @@ async function partialRebuildFromEntrypoint(
   // EMIT
   perf.addEvent("rebuild")
   let emittedFiles = 0
-  const destinationsToDelete = new Set<FilePath>()
 
   for (const emitter of cfg.plugins.emitters) {
     const depGraph = dependencies[emitter.name]
@@ -241,15 +250,25 @@ async function partialRebuildFromEntrypoint(
         ([_node, vfile]) => !toRemove.has(vfile.data.filePath!),
       )
 
-      const emittedFps = await emitter.emit(ctx, files, staticResources)
-
-      if (ctx.argv.verbose) {
-        for (const file of emittedFps) {
-          console.log(`[emit:${emitter.name}] ${file}`)
+      const emitted = await emitter.emit(ctx, files, staticResources)
+      if (Symbol.asyncIterator in emitted) {
+        // Async generator case
+        for await (const file of emitted) {
+          emittedFiles++
+          if (ctx.argv.verbose) {
+            console.log(`[emit:${emitter.name}] ${file}`)
+          }
+        }
+      } else {
+        // Array case
+        emittedFiles += emitted.length
+        if (ctx.argv.verbose) {
+          for (const file of emitted) {
+            console.log(`[emit:${emitter.name}] ${file}`)
+          }
         }
       }
 
-      emittedFiles += emittedFps.length
       continue
     }
 
@@ -264,11 +283,6 @@ async function partialRebuildFromEntrypoint(
       // and supply [a.md, b.md] to the emitter
       const upstreams = [...depGraph.getLeafNodeAncestors(fp)] as FilePath[]
 
-      if (action === "delete" && upstreams.length === 1) {
-        // if there's only one upstream, the destination is solely dependent on this file
-        destinationsToDelete.add(upstreams[0])
-      }
-
       const upstreamContent = upstreams
         // filter out non-markdown files
         .filter((file) => contentMap.has(file))
@@ -276,29 +290,50 @@ async function partialRebuildFromEntrypoint(
         .filter((file) => !toRemove.has(file))
         .map((file) => contentMap.get(file)!)
 
-      const emittedFps = await emitter.emit(ctx, upstreamContent, staticResources)
-
-      if (ctx.argv.verbose) {
-        for (const file of emittedFps) {
-          console.log(`[emit:${emitter.name}] ${file}`)
+      const emitted = await emitter.emit(ctx, upstreamContent, staticResources)
+      if (Symbol.asyncIterator in emitted) {
+        // Async generator case
+        for await (const file of emitted) {
+          emittedFiles++
+          if (ctx.argv.verbose) {
+            console.log(`[emit:${emitter.name}] ${file}`)
+          }
+        }
+      } else {
+        // Array case
+        emittedFiles += emitted.length
+        if (ctx.argv.verbose) {
+          for (const file of emitted) {
+            console.log(`[emit:${emitter.name}] ${file}`)
+          }
         }
       }
-
-      emittedFiles += emittedFps.length
     }
   }
 
   console.log(`Emitted ${emittedFiles} files to \`${argv.output}\` in ${perf.timeSince("rebuild")}`)
 
   // CLEANUP
-  // delete files that are solely dependent on this file
-  await rimraf([...destinationsToDelete])
+  const destinationsToDelete = new Set<FilePath>()
   for (const file of toRemove) {
     // remove from cache
     contentMap.delete(file)
-    // remove the node from dependency graphs
-    Object.values(dependencies).forEach((depGraph) => depGraph?.removeNode(file))
+    Object.values(dependencies).forEach((depGraph) => {
+      // remove the node from dependency graphs
+      depGraph?.removeNode(file)
+      // remove any orphan nodes. eg if a.md is deleted, a.html is orphaned and should be removed
+      const orphanNodes = depGraph?.removeOrphanNodes()
+      orphanNodes?.forEach((node) => {
+        // only delete files that are in the output directory
+        if (node.startsWith(argv.output)) {
+          destinationsToDelete.add(node)
+        }
+      })
+    })
   }
+  await rimraf([...destinationsToDelete])
+
+  console.log(chalk.green(`Done rebuilding in ${perf.timeSince()}`))
 
   toRemove.clear()
   release()
@@ -340,26 +375,22 @@ async function rebuildFromEntrypoint(
     toRemove.add(filePath)
   }
 
-  const buildStart = new Date().getTime()
-  buildData.lastBuildMs = buildStart
+  const buildId = randomIdNonSecure()
+  ctx.buildId = buildId
+  buildData.lastBuildMs = new Date().getTime()
   const release = await mut.acquire()
 
   // there's another build after us, release and let them do it
-  if (buildData.lastBuildMs > buildStart) {
+  if (ctx.buildId !== buildId) {
     release()
     return
   }
 
   const perf = new PerfTimer()
   console.log(chalk.yellow("Detected change, rebuilding..."))
+
   try {
     const filesToRebuild = [...toRebuild].filter((fp) => !toRemove.has(fp))
-
-    const trackedSlugs = [...new Set([...contentMap.keys(), ...toRebuild, ...trackedAssets])]
-      .filter((fp) => !toRemove.has(fp))
-      .map((fp) => slugifyFilePath(path.posix.relative(argv.directory, fp) as FilePath))
-
-    ctx.allSlugs = [...new Set([...initialSlugs, ...trackedSlugs])]
     const parsedContent = await parseMarkdown(ctx, filesToRebuild)
     for (const content of parsedContent) {
       const [_tree, vfile] = content
@@ -373,6 +404,13 @@ async function rebuildFromEntrypoint(
     const parsedFiles = [...contentMap.values()]
     const filteredContent = filterContent(ctx, parsedFiles)
 
+    // re-update slugs
+    const trackedSlugs = [...new Set([...contentMap.keys(), ...toRebuild, ...trackedAssets])]
+      .filter((fp) => !toRemove.has(fp))
+      .map((fp) => slugifyFilePath(path.posix.relative(argv.directory, fp) as FilePath))
+
+    ctx.allSlugs = [...new Set([...initialSlugs, ...trackedSlugs])]
+
     // TODO: we can probably traverse the link graph to figure out what's safe to delete here
     // instead of just deleting everything
     await rimraf(path.join(argv.output, ".*"), { glob: true })
@@ -385,10 +423,10 @@ async function rebuildFromEntrypoint(
     }
   }
 
-  release()
   clientRefresh()
   toRebuild.clear()
   toRemove.clear()
+  release()
 }
 
 export default async (argv: Argv, mut: Mutex, clientRefresh: () => void) => {

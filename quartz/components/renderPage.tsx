@@ -3,31 +3,41 @@ import { QuartzComponent, QuartzComponentProps } from "./types"
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
-import { clone, FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import { clone } from "../util/clone"
 import { visit } from "unist-util-visit"
 import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
+import { QuartzPluginData } from "../plugins/vfile"
 
 interface RenderComponents {
   head: QuartzComponent
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
+  afterBody: QuartzComponent[]
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
 }
 
+const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
+  fileData: QuartzPluginData,
   staticResources: StaticResources,
 ): StaticResources {
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
-  return {
-    css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
+  const resources: StaticResources = {
+    css: [
+      {
+        content: joinSegments(baseDir, "index.css"),
+      },
+      ...staticResources.css,
+    ],
     js: [
       {
         src: joinSegments(baseDir, "prescript.js"),
@@ -41,14 +51,18 @@ export function pageResources(
         script: contentIndexScript,
       },
       ...staticResources.js,
-      {
-        src: joinSegments(baseDir, "postscript.js"),
-        loadTime: "afterDOMReady",
-        moduleType: "module",
-        contentType: "external",
-      },
     ],
+    additionalHead: staticResources.additionalHead,
   }
+
+  resources.js.push({
+    src: joinSegments(baseDir, "postscript.js"),
+    loadTime: "afterDOMReady",
+    moduleType: "module",
+    contentType: "external",
+  })
+
+  return resources
 }
 
 export function renderPage(
@@ -105,18 +119,24 @@ export function renderPage(
           // header transclude
           blockRef = blockRef.slice(1)
           let startIdx = undefined
+          let startDepth = undefined
           let endIdx = undefined
           for (const [i, el] of page.htmlAst.children.entries()) {
-            if (el.type === "element" && el.tagName.match(/h[1-6]/)) {
-              if (endIdx) {
-                break
-              }
+            // skip non-headers
+            if (!(el.type === "element" && el.tagName.match(headerRegex))) continue
+            const depth = Number(el.tagName.substring(1))
 
-              if (startIdx !== undefined) {
-                endIdx = i
-              } else if (el.properties?.id === blockRef) {
+            // lookin for our blockref
+            if (startIdx === undefined || startDepth === undefined) {
+              // skip until we find the blockref that matches
+              if (el.properties?.id === blockRef) {
                 startIdx = i
+                startDepth = depth
               }
+            } else if (depth <= startDepth) {
+              // looking for new header that is same level or higher
+              endIdx = i
+              break
             }
           }
 
@@ -180,6 +200,7 @@ export function renderPage(
     header,
     beforeBody,
     pageBody: Content,
+    afterBody,
     left,
     right,
     footer: Footer,
@@ -203,7 +224,7 @@ export function renderPage(
     </div>
   )
 
-  const lang = componentData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
+  const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
     <html lang={lang}>
       <Head {...componentData} />
@@ -225,10 +246,16 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+              <hr />
+              <div class="page-footer">
+                {afterBody.map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </div>
             </div>
             {RightComponent}
+            <Footer {...componentData} />
           </Body>
-          <Footer {...componentData} />
         </div>
       </body>
       {pageResources.js

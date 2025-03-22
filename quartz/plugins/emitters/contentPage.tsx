@@ -59,14 +59,25 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
     ...userOpts,
   }
 
-  const { head: Head, header, beforeBody, pageBody, left, right, footer: Footer } = opts
+  const { head: Head, header, beforeBody, pageBody, afterBody, left, right, footer: Footer } = opts
   const Header = HeaderConstructor()
   const Body = BodyConstructor()
 
   return {
     name: "ContentPage",
     getQuartzComponents() {
-      return [Head, Header, Body, ...header, ...beforeBody, pageBody, ...left, ...right, Footer]
+      return [
+        Head,
+        Header,
+        Body,
+        ...header,
+        ...beforeBody,
+        pageBody,
+        ...afterBody,
+        ...left,
+        ...right,
+        Footer,
+      ]
     },
     async getDependencyGraph(ctx, content, _resources) {
       const graph = new DepGraph<FilePath>()
@@ -83,9 +94,8 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
 
       return graph
     },
-    async emit(ctx, content, resources): Promise<FilePath[]> {
+    async *emit(ctx, content, resources) {
       const cfg = ctx.cfg.configuration
-      const fps: FilePath[] = []
       const allFiles = content.map((c) => c[1].data)
 
       let containsIndex = false
@@ -95,8 +105,13 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           containsIndex = true
         }
 
-        const externalResources = pageResources(pathToRoot(slug), resources)
+        if (file.data.slug?.endsWith("/index")) {
+          continue
+        }
+
+        const externalResources = pageResources(pathToRoot(slug), file.data, resources)
         const componentData: QuartzComponentProps = {
+          ctx,
           fileData: file.data,
           externalResources,
           cfg,
@@ -106,25 +121,21 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
         }
 
         const content = renderPage(cfg, slug, componentData, opts, externalResources)
-        const fp = await write({
+        yield write({
           ctx,
           content,
           slug,
           ext: ".html",
         })
-
-        fps.push(fp)
       }
 
       if (!containsIndex && !ctx.argv.fastRebuild) {
         console.log(
           chalk.yellow(
-            `\nWarning: you seem to be missing an \`index.md\` home page file at the root of your \`${ctx.argv.directory}\` folder. This may cause errors when deploying.`,
+            `\nWarning: you seem to be missing an \`index.md\` home page file at the root of your \`${ctx.argv.directory}\` folder (\`${path.join(ctx.argv.directory, "index.md")} does not exist\`). This may cause errors when deploying.`,
           ),
         )
       }
-
-      return fps
     },
   }
 }
