@@ -1,1 +1,0 @@
-![[stop doing la.png]]

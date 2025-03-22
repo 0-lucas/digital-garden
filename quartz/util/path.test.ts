@@ -38,6 +38,17 @@ describe("typeguards", () => {
     assert(!path.isRelativeURL("./abc/def.md"))
   })
 
+  test("isAbsoluteURL", () => {
+    assert(path.isAbsoluteURL("https://example.com"))
+    assert(path.isAbsoluteURL("http://example.com"))
+    assert(path.isAbsoluteURL("ftp://example.com/a/b/c"))
+    assert(path.isAbsoluteURL("http://host/%25"))
+    assert(path.isAbsoluteURL("file://host/twoslashes?more//slashes"))
+
+    assert(!path.isAbsoluteURL("example.com/abc/def"))
+    assert(!path.isAbsoluteURL("abc"))
+  })
+
   test("isFullSlug", () => {
     assert(path.isFullSlug("index"))
     assert(path.isFullSlug("abc/def"))
@@ -157,6 +168,29 @@ describe("transforms", () => {
       path.isFullSlug,
       path.isRelativeURL,
     )
+  })
+
+  test("joinSegments", () => {
+    assert.strictEqual(path.joinSegments("a", "b"), "a/b")
+    assert.strictEqual(path.joinSegments("a/", "b"), "a/b")
+    assert.strictEqual(path.joinSegments("a", "b/"), "a/b/")
+    assert.strictEqual(path.joinSegments("a/", "b/"), "a/b/")
+
+    // preserve leading and trailing slashes
+    assert.strictEqual(path.joinSegments("/a", "b"), "/a/b")
+    assert.strictEqual(path.joinSegments("/a/", "b"), "/a/b")
+    assert.strictEqual(path.joinSegments("/a", "b/"), "/a/b/")
+    assert.strictEqual(path.joinSegments("/a/", "b/"), "/a/b/")
+
+    // lone slash
+    assert.strictEqual(path.joinSegments("/a/", "b", "/"), "/a/b/")
+    assert.strictEqual(path.joinSegments("a/", "b" + "/"), "a/b/")
+
+    // works with protocol specifiers
+    assert.strictEqual(path.joinSegments("https://example.com", "a"), "https://example.com/a")
+    assert.strictEqual(path.joinSegments("https://example.com/", "a"), "https://example.com/a")
+    assert.strictEqual(path.joinSegments("https://example.com", "a/"), "https://example.com/a/")
+    assert.strictEqual(path.joinSegments("https://example.com/", "a/"), "https://example.com/a/")
   })
 })
 

@@ -1,12 +1,12 @@
 import { QuartzConfig } from "../cfg"
-import { FullSlug } from "./path"
+import { FilePath, FullSlug } from "./path"
 
 export interface Argv {
   directory: string
   verbose: boolean
   output: string
   serve: boolean
-  fastRebuild: boolean
+  watch: boolean
   port: number
   wsPort: number
   remoteDevHost?: string
@@ -14,7 +14,12 @@ export interface Argv {
 }
 
 export interface BuildCtx {
+  buildId: string
   argv: Argv
   cfg: QuartzConfig
   allSlugs: FullSlug[]
+  allFiles: FilePath[]
+  incremental: boolean
 }
+
+export type WorkerSerializableBuildCtx = Omit<BuildCtx, "cfg">
