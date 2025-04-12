@@ -10,9 +10,12 @@ The main differences from *NoSQL* to [[SQL]] databases, is how the data is store
 The **method that data is retrieved also differs**. The standard [[SQL]] query language allows to query every [[SQL]] database. However, for *NoSQL*, **each database has its own language of API to retrieve the data**. 
 The average transaction in *NoSQL* can be simple, **containing little processing and aggregation**, but mostly **retrieves large volumes of data**.
 
-Also, instead of applying the *ACID* principles, *NoSQL* adapt these principle
+Also, instead of applying the *ACID* principles, *NoSQL* adapt these principles to a **distributed environment** by using the [[CAP Theorem]].
 
 ![[nosql vs sql.png]]
+
+> [!note]  What about *ACID* compliance?
+> Instead of applying the *ACID* principles, *NoSQL* adapt these principles to a **distributed environment** by using the [[CAP Theorem]]. **Not all databases follow at a risk**, but most try to implement the [[CAP Theorem]].
 
 ___
 # Types of NoSQL
