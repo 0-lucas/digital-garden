@@ -10,7 +10,6 @@ This is a collection of the main books I use for studying. Enjoy!
 # Mathematics
 - [[Thomas Nield - Essential Math for Data Science_ Take Control of Your Data with Fundamental Linear Algebra, Probability, and Statistics (2022, O'Reilly Media) - libgen.li.pdf|Essential Math for Data Science]]
 - [[Mathematics for Machine Learning.pdf|Mathematics for Machine Learning]]
-
 ## Discrete Mathematics
 - [[dmoi4.pdf|Discrete Mathematics - An Open Introduction]]
 ## Calculus

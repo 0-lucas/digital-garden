@@ -10,7 +10,7 @@ ___
 ___
 # Semi-structured data
 
-*Semi-structured data* refers to all data that has **consistent characteristics** and **format,** containing metadata for separating fields, but **does not follow a tabular structure**. *JSON*, *XML* , *MongoDB*, and emails, for example, are **semi-structured**.
+*Semi-structured data* refers to all data that has **consistent characteristics** and **format,** containing metadata for separating fields, but **does not follow a tabular structure**. Most [[NoSQL]] databases, *JSON*, *XML* , *MongoDB*, and emails, for example, are **semi-structured**.
 
 ![[Semi-Structured data.png]]
 ___

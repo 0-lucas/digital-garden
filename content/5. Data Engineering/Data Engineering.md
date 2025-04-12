@@ -6,6 +6,6 @@ A *Data Engineer* usual tasks involves **extracting**, **processing**, and **sto
 ___
 Check some links about **Data Engineering**:
 - [[Types of Data]]
-- [[Data Orchestration]]
+- [[Data Orchestration - ETL]]
 - [[Airflow]]
 - [[DAGs]]

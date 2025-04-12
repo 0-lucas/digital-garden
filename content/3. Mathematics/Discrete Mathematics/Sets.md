@@ -33,7 +33,6 @@ ___
 	The set A is a subset of B if and only if, every element of A is also in B.
 
 Which can be denoted as:
-x
 $$
 A \subset B \iff x \in A \rightarrow x \in B
 $$

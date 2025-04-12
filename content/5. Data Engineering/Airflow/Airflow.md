@@ -1,6 +1,6 @@
 # What is it?
 
-*Apache Airflow* is an open-source tool for **developing**, **scheduling**, and **orchestrating** pipelines and workflows widely used in [[Data Engineering]] and [[Data Orchestration]]. It uses [[Python]] files as an **abstraction of the pipeline itself**, through [[DAGs]].
+*Apache Airflow* is an open-source tool for **developing**, **scheduling**, and **orchestrating** pipelines and workflows widely used in [[Data Engineering]] and [[Data Orchestration - ETL]]. It uses [[Python]] files as an **abstraction of the pipeline itself**, through [[DAGs]].
 
 > *For consulting, check the book [[Data Pipelines with Airflow.pdf|Data Pipeline with Airflow]], from Bas Harenslak and Julian de Ruiter*.
 ___
@@ -26,7 +26,7 @@ ___
 
 Check some other links regarding Airflow:
 
-- [[Data Orchestration]]
+- [[Data Orchestration - ETL]]
 - [[Creating pipelines in Airflow]]
 - [[Scheduling in Airflow]]
 - [[XCOMs]]
