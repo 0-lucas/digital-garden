@@ -11,7 +11,7 @@ ___
 *Document-oriented* databases are commonly modeled for performance, which can focus either on **read performance** or **write performance**, respectively:
 
 - ##### Embedded Modelling
-	A **parent document contains all related documents within itself**, which removes the need of *join operations*, and improves **read performance by keeping related data together**. However, data can be easily du
+	A **parent document contains all related documents within itself**, which removes the need of *join operations*, and improves **read performance by keeping related data together**. However, **data can be easily duplicated** and be limited by document size *(MongoDB sets a size limit of 16MB)*.
 
 ```json
 {
@@ -29,3 +29,4 @@ ___
 ```
 
 - ##### Normalized Modelling
+	**Related documents are connected by using relational references**, similar to [[SQL]], which reduces duplicated data may be a simpler approach to model large hierarchical data.
