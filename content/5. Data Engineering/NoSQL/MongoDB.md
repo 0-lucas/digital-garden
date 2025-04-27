@@ -8,4 +8,24 @@ A collection of similar documents **don't necessarily need to share the same fie
 ___
 # Modelling
 
-*Document-oriented* databases are commonly modeled for performance, which can focus either on **read performance** or **write performance**.
+*Document-oriented* databases are commonly modeled for performance, which can focus either on **read performance** or **write performance**, respectively:
+
+- ##### Embedded Modelling
+	A **parent document contains all related documents within itself**, which removes the need of *join operations*, and improves **read performance by keeping related data together**. However, data can be easily du
+
+```json
+{
+	"id": 1,
+	"name": "User X",
+	"contact": {
+		"phone": "(01) 23456-7890",
+		"email": "userx@email.com"
+	},
+	"profile": {
+		"level": 1,
+		"group": "admin"
+	} 
+}
+```
+
+- ##### Normalized Modelling
