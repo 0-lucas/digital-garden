@@ -7,7 +7,14 @@
 ___
 # Modelling
 
-Regardless of the data inputted in *Neo4j*, it **will always follow** a [[Graphs|graph]] structure, which represented as:
+Regardless of the data inputted in *Neo4j*, it **will always follow** a [[Graphs|graph]] structure, which can be represented as:
 
 - ##### Nodes
-	Represent the **entities of a domain** *(discrete objects)*. **Labels are used to group** different ***nodes* to the same set**, and each *node* can **contain multiple labels**.
+	Represent the **entities of a domain** *(discrete objects)*. **Labels are used to group** *(or classify)* different ***nodes* to the same set**, and each *node* can **contain multiple labels**. A *node* can also contain a set of *key-value* properties.
+
+```cypher
+CREATE (:FirstLabel:SecondLabel {first: 'My value', second: 123})
+```
+
+- ##### Relationship
+	Describes the **connection between two nodes**, or the same node to itself. 
