@@ -28,11 +28,11 @@ e.g. *DynamoDB* and *Redis*, used for web and cache.
 
 - ##### Document-oriented
 The *document-oriented* approach is similar to the *key-value* model to retrieve the data, but stores only *XML*, *JSON* and related types. Each document can **contain its own schema and nests**, without definition, which makes this a *schema-free* database.
-e.g. *MongoDB* and *CouchDB*, used for content management systems.
+e.g. [[MongoDB]] and *CouchDB*, used for content management systems.
 
 - ##### Column-oriented
 More similar to relational databases, *column-based* databases stores data in a **multi-dimensional *key-value*** store, which is **persistent**, **distributed**, **sorted** and **sparse** *(values for certain dimensions may not be populated)*.
-e.g. *Cassandra*, [[Hadoop|Hadoop's HBase]], *Bigtable*, used for business intelligence.
+e.g. *Cassandra*, [[Hadoop|HBase]], *Bigtable*, used for business intelligence.
 
 - ##### Graph-oriented
 This category is solely dedicated to store [[Graphs|graphs]] and other *graph-oriented* [[Data Structures|data structures]]. These databases are optimized to traverse through [[Graphs|graphs]], **without increasing the complexity and resource cost as the database grows larger**.
