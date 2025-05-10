@@ -17,4 +17,4 @@ CREATE (:FirstLabel:SecondLabel {first: 'My value', second: 123})
 ```
 
 - ##### Relationship
-	Describes the **connection between two nodes**, or the same node to itself.  vn 
+	Describes the **connection between two nodes**, or the same node to itself. 
