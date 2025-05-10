@@ -16,5 +16,10 @@ Regardless of the data inputted in *Neo4j*, it **will always follow** a [[Graphs
 CREATE (:FirstLabel:SecondLabel {first: 'My value', second: 123})
 ```
 
-- ##### Relationship
-	Describes the **connection between two nodes**, or the same node to itself. 
+- ##### Relationships
+	Describes the **connection between two nodes**, or the same node to itself. It's **normally the main data** component of a *graph-based* database. This are also known as *edges*.
+
+___
+# Querying
+
+*Neo4j* uses [[Cypher]] as it's **query language**. [[SQL]] is to relational databases as [[Cypher]] is to *Neo4j*.
