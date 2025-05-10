@@ -22,4 +22,4 @@ CREATE (:FirstLabel:SecondLabel {first: 'My value', second: 123})
 ___
 # Querying
 
-*Neo4j* uses [[Cypher]] as it's **query language**. [[SQL]] is to relational databases as [[Cypher]] is to *Neo4j*.
+*Neo4j* uses [[Cypher]] as it's **query language**. [[SQL]] is to relational databases as [[Cypher]] is to *Neo4j* and other *graph-oriented* databases.
