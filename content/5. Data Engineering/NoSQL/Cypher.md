@@ -38,4 +38,26 @@ CREATE (node: label)
 ```cypher
 CREATE (n: label :subLabel {property: 'Value'}) RETURN n
 ```
-One
+
+One could also add *duplicate labels* to a same node with different values. These nodes can be retrieved by either property.
+```cypher
+CREATE (n: label :sublabel {property: 'FirstValue', property: 'SecondValue'}) RETURN n
+```
+
+- ##### Querying with a WHERE filter
+```cypher
+MATCH (n) WHERE n.property = 'Value' RETURN n
+```
+
+- ##### Creating relationships between nodes
+```cypher
+MATCH (p: label), (c: label)
+WHERE p.property = 'Value' AND c.property = 'Value'
+MERGE (p) - [r: Relationship] -> (c)
+RETURN p, c, r
+```
+
+- ##### Deleting all nodes
+```cypher
+MATCH (n) DETACH DELETE n
+```
