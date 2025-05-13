@@ -29,7 +29,13 @@ Below, are some examples using *Cypher* for common operations in any database:
 CREATE (node)
 ```
 
-- ##### Creating a node inside a label
+- ##### Creating a node in a label
 ```cypher
 CREATE (node: label)
 ```
+
+- ##### Adding properties to a label
+```cypher
+CREATE (n: label :subLabel {property: 'Value'}) RETURN n
+```
+One
