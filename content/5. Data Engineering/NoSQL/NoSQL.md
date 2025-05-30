@@ -3,7 +3,7 @@
 Given the *"recent"* rise in social media and data generation, [[SQL]] databases **were not fast and flexible enough** to apply to these huge [[Big Data]] systems. Because of it, the *NoSQL* databases were created to **aggregate all the not relational databases** *(which does not follow [[SQL]] principles)* which were created to solve the problem.
 Nowadays, *NoSQL* is used mainly for decentralized and [[Microservices]] application, i.e. [[Big Data]], social media and *IoT*.
 ___
-## Differences between SQL databases
+## Differences between [[SQL]] databases
 
 The main differences from *NoSQL* to [[SQL]] databases, is how the data is stored. Instead of complying to fixed table structures, *NoSQL* **allows flexible schema**, even for *schema-less*. This will vary from each chosen database and implementation.
 
