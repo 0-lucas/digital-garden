@@ -4,13 +4,6 @@
 
 A *distributed computing* task can be defined as **anything that uses multiple computers to achieve a common result**. 
 ### Use-cases and examples 
-> 	 Web servers **asynchronously receiving and sending multiple** requests.
-- [[Load Balancing]]
-- Systems with **partition tolerance**, like decentralized [[NoSQL]] databases.
-- **Real-time computing**, which needs immediate processing of multiple processes.
-
-> 
-
 - Web servers **asynchronously receiving and sending multiple** requests.
 - [[Load Balancing]]
 - Systems with **partition tolerance**, like decentralized [[NoSQL]] databases.
