@@ -14,4 +14,12 @@
 ![[SIMD.png]]
 
 - ##### MISD - Multiple Instruction, Single Data
-	*MISD* systems are the least used, once *MIMD* and *SIMD* have 
+	*MISD* systems are **the least used**, once *MIMD* and *SIMD* are more flexible and scalable. However, when running a pipeline of instructions, *MISD* systems are **extremely resistant to partition and failures**, where nodes validate each other results. *e.g. NASA used it for flight-control algorithms*
+
+- ##### MIMD - Multiple Instruction, Multiple Data
+	Consists in **multiple processors running different instructions in different data**, at the same time, **asynchronously** and **independently**. These can be divided into two groups: *shared memory* and *distributed memory*.
+	- ###### Shared Memory
+		Each processor has its own memory and runs independently. The **communication between processors are made in a external bus**. *i.e. Clusters and [[Scaling|horizontal scaling]]*
+
+	- ######
+		
