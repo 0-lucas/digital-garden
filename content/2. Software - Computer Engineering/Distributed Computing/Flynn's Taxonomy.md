@@ -4,4 +4,7 @@
 
 ![[flynn taxonomy.png]]
 
-- ###
+- ##### SISD - Single Instruction, Single Data
+	Consists in a **single processor which runs instructions one at a time**, storing **data in a single memory**. Instructions are retrieved from memory, processed, and then returned to memory. e.g. [[Von Neumann Architecture]].
+
+- ##### 
