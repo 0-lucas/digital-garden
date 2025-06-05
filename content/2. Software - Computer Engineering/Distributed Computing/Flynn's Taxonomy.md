@@ -18,8 +18,9 @@
 
 - ##### MIMD - Multiple Instruction, Multiple Data
 	Consists in **multiple processors running different instructions in different data**, at the same time, **asynchronously** and **independently**. These can be divided into two groups: *shared memory* and *distributed memory*.
-	- ###### Shared Memory
+	- ###### Distributed Memory
 		Each processor has its own memory and runs independently. The **communication between processors are made in a external bus**. *i.e. Clusters and [[Scaling|horizontal scaling]]*
 
-	- ######
-		
+	- ###### Shared Memory
+		**Multiple processors access the same memory**, normally using *SMP (Symmetric Multi Processing)* to manage memory. This is the architecture used in most devices today. with uniform access to memory for all processors.
+		However, a recent architecture with **non-uniform access to memory** has been created. *NUMA (Non-Uniform Memory Access)* is normally used in servers, which is basically a cluster of multiple *SMP* nodes.
