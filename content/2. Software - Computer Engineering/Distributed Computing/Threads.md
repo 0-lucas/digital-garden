@@ -9,3 +9,7 @@ A *thread* is a **unique sequence of instructions executed** by a [[Processes|pr
 The [[Operational Systems|operational system]] handles *threads* and [[Processes|processes]] similarly in **processor time allocation**. However, **memory allocation is responsibility of the application**.
 
 ![[tjreads.png]]
+
+# Multi-threading
+
+*Multi-threading* allows for a **single process to have multiple running threads**, each with its own code segment. These run [[Concurrency and Parallelism|concurrent]] within the [[Processes|process]].
