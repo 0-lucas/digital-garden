@@ -1,9 +1,8 @@
 # What is it?
 
-*Concurrency* and *parallelism* are two methods of running [[Threads|multi-threads]] or multiple [[Processes|processes]], executed by the [[Operational Systems|operational system]].
+*Multi-threading* allows for a **single process to have multiple running threads**, each with its own code segment. These run either *concurrent* or *parallel* within the [[Processes|process]]. 
 
 ![[conc vs paral.png]]
-
 ___
 ## Concurrency
 
