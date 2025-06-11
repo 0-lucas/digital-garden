@@ -23,8 +23,6 @@ Because **multiple threads can access the same memory address**, it's possible t
 - [[Deadlocks]]
 - [[Livelocks]]
 - [[Starvation]]
-- [[Producer–consumer problem]]
-- [[Sleeping barber problem]]
 
 All of these can be summed in a single concept: **trying to interact with the same data simultaneously**. If a task wants to write something in a file, and another task deletes it in the middle of it, that surely is going to cause a problem.
 

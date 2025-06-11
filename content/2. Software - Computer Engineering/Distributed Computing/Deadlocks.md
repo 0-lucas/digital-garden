@@ -1,6 +1,6 @@
 # What is it?
 
-In [[Multi Threading|multi-threading]] applications or [[Distributed Computing]] systems, a *deadlock* occurs when a **waiting [[Threads|thread]] is [[Locks|locking]] a resource that the other one needs it before it can finish**.
+In [[Multi-Threading|multi-threading]] applications or [[Distributed Computing]] systems, a *deadlock* occurs when a **waiting [[Threads|thread]] is [[Locks|locking]] a resource that the other one needs it before it can finish**.
 
 ![[deadlock.png]]
 
