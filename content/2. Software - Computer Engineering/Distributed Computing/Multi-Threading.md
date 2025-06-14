@@ -30,4 +30,3 @@ To prevent these issues, the **programmer needs to implement** an [[Algorithms|a
 
 - [[Mutex]]
 - [[Monitors]]
-- [[Semaphores]]
