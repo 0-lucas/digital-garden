@@ -1,6 +1,6 @@
 # What is it?
 
-A *perceptron* is the simplest [[Neural Networks|neural network unit]], being historically **modeled after a biological neuron**. Similar to the neuron, there are **signals flowing from the input to the output**. These *signals* interact with three properties: the *bias*, the *weight* and the [[Activation Functions|activation function]].
+A *perceptron* is the simplest [[Artificial Neural Networks|neural network unit]], being historically **modeled after a biological neuron**. Similar to the neuron, there are **signals flowing from the input to the output**. These *signals* interact with three properties: the *bias*, the *weight* and the [[Activation Functions|activation function]].
 
 ![[perceptron.png]]
 

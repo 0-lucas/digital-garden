@@ -6,7 +6,7 @@ In [[Machine Learning]], *entropy* measures the level of **disorder or uncertain
 
 The concept of *entropy* comes from **19th century thermodynamics**, introduced by [Ludwig Boltzmann](https://pt.wikipedia.org/wiki/Ludwig_Boltzmann), who statistically showed how the *entropy* of an isolated system can never decrease with time. 
 
-*Entropy* was formerly a **measure of chaos** of particles in a system, but nowadays, it is widely used in [[Machine Learning]], especially in [[Decision Trees]] and [[Neural Networks]]. 
+*Entropy* was formerly a **measure of chaos** of particles in a system, but nowadays, it is widely used in [[Machine Learning]], especially in [[Decision Trees]] and [[Artificial Neural Networks]]. 
 ___
 # Entropy in Machine Learning
 
