@@ -9,7 +9,7 @@ This takes a more *data-driven* approach to the problem, given that all **possib
 In [[Supervised Learning]], training data contains **both** *features* and *target* variables. In *unsupervised learning*, the training data **contains only** the *features*, **without** any *target* variables to predict.
 
 ___
-# Algorithms of unsupervised ML
+# Algorithms of unsupervised learning
 
 All use cases of *unsupervised learning* [[Algorithms|algorithms]] could be **boiled down** to [[Clustering]], which identify *patterns* and *structures* in data, and [[Autoencoding]], which **identify latent factors in data**.
 
