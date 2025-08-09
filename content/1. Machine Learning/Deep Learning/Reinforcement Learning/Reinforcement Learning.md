@@ -6,6 +6,8 @@
 ___
 # How does it work?
 
+Any *reinforcement learning* agent borrows heavily from the [[Markov Decision Process]] framework to model the *agent-environment interaction*.
+
 For **any action that the agent performs**, the environment will **react positively or negatively**, and if this action receives a *positive reward*, the **model will repeat the same action whenever possible**.
 However, if it receives a **negative reward** *(also called punishment)*, the model will **avoid repeating the same action**.
 
