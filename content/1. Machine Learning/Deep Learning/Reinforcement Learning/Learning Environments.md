@@ -33,4 +33,22 @@ Environments can be differ its characteristics in seven distinct dimensions: *ob
 	- ###### Continuous
 		Action and states are real-values. *e.g. controlling a drone's pitch, roll and yaw.*
 	- ###### Hybrid
-		Some parts and discrete and some are continuous. *e.g. autonomous driving*
+		Some parts and discrete and some are continuous. *e.g. autonomous driving (gear shifts = discrete, steering = continuous).*
+
+- ##### Agent-environment interaction
+	- ###### Single-Agent
+		**One agent** acts in the environment.
+	- ###### Multi-Agent
+		**Multiple agents acting at the same time**, cooperatively and/or competitively.
+
+- ##### Stationarity
+	- ###### Stationary
+		[[Probability|Probabilities]] and environment rules **do not change** or shift over time.
+	- ###### Non-stationary
+		Environment rules are **dynamic** and can change over time.
+
+- ##### Rewards
+	- ###### Dense
+		Frequent feedback loop for small achievements.
+	- ###### Sparse
+		Feedback only for significant achievements and milestones.
