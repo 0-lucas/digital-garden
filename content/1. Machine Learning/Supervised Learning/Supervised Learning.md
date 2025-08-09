@@ -8,3 +8,9 @@ These algorithms focuses on [[Inference and Prediction|prediction]] problems, ei
 > [!tip] Garbage in, garbage out
 > *Supervised learning* biggest weakness is how **clean and correct is the data**. Because the algorithm **fully ingests whatever pattern it finds in the data**, *misleading samples* can cause the **algorithm to not perform accurately**. In these cases, hardly an algorithm-based change will solve the issue, once the **training data in flawed to begin with**.
 > When that happens, check for [[Data-Centric AI]] solutions.
+
+___
+# Algorithms of supervised learning
+
+Most *supervised learning* [[Algorithms|algorithms]] can be summed up in two categories, [[Regression]] and [[Classification]].
+[[Regression]] will concern itself with the [[Inference and Prediction|prediction]] of **numerical values**, while [[Classification]] will only concern itself with the **output labels / categories** of the data.
