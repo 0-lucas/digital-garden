@@ -60,6 +60,8 @@ ___
 - [[Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon.pdf|Machine Learning with Python Cookbook]]
 - [[Hands-On Unsupervised Learning Using Python  (Ankur A. Patel).pdf|Hands-On: Unsupervised Learning]]
 - [[Bishop - Pattern Recognition And Machine Learning - Springer  2006.pdf|Pattern Recognition and Machine Learning]]
+- [[Reinforcement Learning, Second Edition _ An Introduction -- Richard S_ Sutton; Andrew G_ Barto .pdf|Reinforcement Learning - An Introduction]]
+
 ## ML Ops
 - [[Dataset Shift in Machine Learning.pdf|Dataset Shift in Machine Learning]]
 - [[Introducing MLOps How to Scale Machine Learning in the Enterprise (Mark Treveil, Nicolas Omont, Clément Stenac etc.).pdf|Introducing MLOPS]]

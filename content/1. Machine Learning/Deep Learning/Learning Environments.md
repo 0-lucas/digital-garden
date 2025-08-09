@@ -7,3 +7,4 @@ To better understand how to handle problems with *unpredictable and dynamic envi
 ___
 # Types of environments
 
+Environments can be differ its characteristics in seven distinct dimensions: *observability*, *determinism*, *episodicity*, *action space*, *agent-environment interaction*, 
