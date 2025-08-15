@@ -1,6 +1,6 @@
 # What is it?
 
-The *binomial probability distribution* is a [[Statistical Distribution]] user in [[Statistics]] for [[Statistical Modelling|modelling]] events that have *discrete binomial variables*, which can **only take two values**, positive or negative.
+The *binomial probability distribution* is a [[Statistical Distribution]] used in [[Statistics]] for [[Statistical Modelling|modelling]] events that have *discrete binomial variables*, which can **only take two values**, positive or negative.
 
 When applied to a series of events, **with two possible outcomes**, it describes the [[Probability]] of getting a certain **number of successes in a series of trials**. 
 
