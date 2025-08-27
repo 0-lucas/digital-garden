@@ -13,13 +13,13 @@ $$
 IDF(w) = \log_{2}{\frac{N}{N_w}}
 $$
 
-Now, to calculate *TF-IDF*, one just multiply the known [[Term-Frequency|TF]] value of a *token* by its *IDF*:
+Now, to calculate *TF-IDF*, just multiply the known [[Term-Frequency|TF]] value of a *token* by its *IDF*:
 
 $$
 \text{TF-IDF}(w) = \text{TF} * \text{IDF}
 $$
 
-Now, one can use the resulting value as **the weight of the corresponding *token***.
+The resulting value is **the weight of the corresponding *token***.
 ___
 # Applying in Python
 
