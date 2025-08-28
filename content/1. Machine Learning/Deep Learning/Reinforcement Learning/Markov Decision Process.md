@@ -15,3 +15,11 @@ To calculate the *expected return*, starting from a state $s$ and a policy $\pi$
 $$
 V^{\pi}(s) = \mathbb{E}_{\pi}\left[\sum^{\infty}_{t=0} \gamma^t R(S_{t})   \right]
 $$
+
+The *optimal policy* $\pi^*$ is obtained with the highest $V^\pi(s)$, which can be denoted as:
+
+$$
+V^*(s)= max_{\pi}V^\pi(s)
+$$
+
+However, it's a **very expensive solution**. To discover the *optimal values*, [Richard Bellman](https://pt.wikipedia.org/wiki/Richard_Bellman) proposed an iterative method, which is named [[D]]
