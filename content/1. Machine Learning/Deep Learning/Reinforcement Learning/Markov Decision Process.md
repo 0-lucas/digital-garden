@@ -22,4 +22,4 @@ $$
 V^*(s)= max_{\pi}V^\pi(s)
 $$
 
-However, it's a **very expensive solution**. To discover the *optimal values*, [Richard Bellman](https://pt.wikipedia.org/wiki/Richard_Bellman) proposed an iterative method, which is named [[D]]
+However, it's a **very expensive solution**. To discover the *optimal values*, [Richard Bellman](https://pt.wikipedia.org/wiki/Richard_Bellman) proposed an iterative method, which is named [[Dynamic Programming]].
