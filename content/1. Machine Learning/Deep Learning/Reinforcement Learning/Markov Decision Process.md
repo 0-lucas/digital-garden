@@ -9,4 +9,9 @@ ___
 # How does it work?
 
 An *agent* in a *Markov Decision Process* always tries to **find the optimal *policy*** $\pi^*$, which is the the **rule for choosing the actions**, maximizing rewards over time by using *value functions* to **estimate the expected reward**.
-However, *discounts factors* are added into the equation to **prevent an infinite policy**, which can also weigh some rewards, making it more valuable than others, or  
+However, *discounts factors* are added into the equation to **prevent an infinite policy**, which can also **weigh some rewards**, making it more **valuable than others** and can also make the *agent* **pursue short or long term rewards**.
+
+To calculate the *expected return*, starting from a state $s$ and a policy $\pi$, also called *value* or *utility function*:
+$$
+V^{\pi}(s) = \mathbb{E}_{\pi}\left[\sum^{\infty}_{t=0} \gamma^t R(S_{t})   \right]
+$$
