@@ -10,15 +10,16 @@ $$
 y = f(w_ix_i + b) 
 $$
 
-Normally, we can **represent the set of inputs as [[Vectors]]**, and the product of $w * b$ becomes a *dot product*:
-
+Normally, we can **represent the set of inputs as [[Vectors]]**, and the product of $w * b$ becomes a *dot product*. We can go a step further and write it as a sum:
 $$
-y= f(\boldsymbol{wx} + b)
+y= \delta()
 $$
 ___
 ## The importance of bias
 
-Represented by $b$, the *bias* can increase or decrease the input in the *activation function*, which can displace the whole function, based on the *bias* value.
+Represented by $b$, the *bias* can increase or decrease the input in the *activation function*, which can displace the whole function, based on the *bias* value. The below image **reflects the displacement** of a [[Sigmoid Function]] for different *bias* values.
+
+![[bias displacement.png]]
 ___
 # Implementing with PyTorch
 
