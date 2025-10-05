@@ -7,12 +7,12 @@ A *perceptron* is the simplest [[Artificial Neural Networks|neural network unit]
 Given, $f$ as the [[Activation Functions|activation function]], $w$ as the *weight* $x, y$ as the *input and output*, and $b$ as the bias, the *perceptron* can be mathematically represented as:
 
 $$
-y = f(w_ix_i + b) 
+y_{i} = f(w_ix_i + b_i) 
 $$
 
 Normally, we can **represent the set of inputs as [[Vectors]]**, and the product of $w * b$ becomes a *dot product*. We can go a step further and write it as a sum:
 $$
-y= \delta()
+y_{m}= \delta\left( \sum ^{m}_{i=0}w_{i}x_{i} \right)
 $$
 ___
 ## The importance of bias
