@@ -15,6 +15,11 @@ Normally, we can **represent the set of inputs as [[Vectors]]**, and the product
 $$
 y= f(\boldsymbol{wx} + b)
 $$
+___
+## The importance of bias
+
+Represented by $b$, the *bias* can increase or decrease the input in the *activation function*, which can displace the whole function, based on the *bias* value.
+___
 # Implementing with PyTorch
 
 One can easily implement a *perceptron* algorithm using [[PyTorch]]:
