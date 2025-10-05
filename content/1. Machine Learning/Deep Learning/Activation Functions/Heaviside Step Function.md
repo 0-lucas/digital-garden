@@ -20,4 +20,4 @@ Because of its binary nature, the *Heaviside function* may **not be the best opt
 It also does not introduce *non-linearity*, which for complex problems with *non-linear* decision boundaries or complicated data, **will not be enough**.
 
 For these cases, other *activation functions* are recommended, like the [[Sigmoid Function]], [[Tanh Function]], and [[ReLU Function]]
- 
+ t
