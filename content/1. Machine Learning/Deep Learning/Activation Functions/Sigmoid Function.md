@@ -1,0 +1,1 @@
+Used for [[Deep Learning]] mainly as an *activation function* of an [[Artificial Neural Networks|Artificial Neural Network]], the *sigmoid function* maps any *real-valued number* to a value between **0 and 1**, using a very characteristic 
