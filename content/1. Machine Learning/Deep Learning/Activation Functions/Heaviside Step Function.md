@@ -12,11 +12,11 @@ $$H(x) := \begin{cases}
 
 Which would yield the following function:
 
-![[Pasted image 20251005115720.png|600]]
+![[step function.png|600]]
 ___
 # Limitations
 
 Because of its binary nature, the *Heaviside function* may **not be the best option for problems where flexibility is needed**. For [[Deep Learning]] purposes, most cases needs models to have greater flexibility to be able to learn from raw data and prevent [[Underfitting]].
 It also does not introduce *non-linearity*, which for complex problems with *non-linear* decision boundaries or complicated data, **will not be enough**.
 
-For these cases, other *activation functions* are recommended, like the [[Sigmoid Function]], [[Tanh Function]], and [[ReLU Function]].
+For these cases, other *activation functions* are recommended, like the [[Sigmoid Function]], [[Tanh Function]], and [[ReLU Function]]
