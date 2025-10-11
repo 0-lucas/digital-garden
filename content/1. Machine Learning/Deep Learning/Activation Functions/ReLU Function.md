@@ -16,4 +16,9 @@ x,\ \ \ x > 0 \\
 \end{cases}
 $$
 
-However, it's possible that some neurons **become inactive during training**, without ever recovering. These neurons **always output zero** and **stops contributing to the learning process**. This issue is known as *dying ReLU*.
+However, it's possible that some neurons **become inactive during training**, without ever recovering. These neurons **always output zero** and **stops contributing to the learning process**. This issue is known as *dying ReLU*. 
+The [[Derivatives|derivative]] of the *ReLU* function is either $0$ or $1$, and on the cases of negative inputs, the *gradient* becomes zero. 
+
+![[dying relu.png]]
+
+In these cases, the *Leaky ReLU* can be used to mitigate the *dying ReLU* problem.
