@@ -1,6 +1,6 @@
 # What is it?
 
-Used for [[Deep Learning]] mainly as an *activation function* of an [[Artificial Neural Networks|Artificial Neural Network]], the *sigmoid function*, also called *logistic function*, maps any *real-valued number* to a value between **0 and 1**, using a very characteristic *"S" shaped curve*: 
+Used for [[Deep Learning]] mainly as an *activation function* of an [[Artificial Neural Networks|Artificial Neural Network]], the *sigmoid function*, also called *logistic function*, maps any *real-valued number* to a value between **0 and 1**, which makes it naturally useful for **binary classification problems**.
 
 ![[sigmoid.png]]
 
@@ -9,8 +9,9 @@ Due to the **steep gradient** in $-2 < x < 2$, the function is **sensitive to sm
 ___
 # Mathematical definition
 
-The *sigmoid function* can be mathematically defined as:
+Given $x$ as an input value, and $e$ as the *Euler number(≈2.718)* , the *sigmoid function* can be mathematically defined as:
 $$
-p
+\sigma = \frac{1}{1+ e^{-x}}
 $$
 
+Due to it being [[Differentiation|differenciable]], it's **very useful for calculations of gradient optimizations**.
