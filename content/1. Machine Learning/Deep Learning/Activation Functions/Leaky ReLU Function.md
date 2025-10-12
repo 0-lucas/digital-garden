@@ -5,4 +5,4 @@ The *leaky ReLU* function is designed to overcome the *dying ReLU* problem and *
 
 ![[leaky relu.png]]
 
-The biggest difference of the *leaky ReLU*, is the slope it has on the negative part of the function. This slope ensures that negative inputs are not mapped directly to zero, but another negative 
+The biggest feature of the *leaky ReLU*, is the **slope on the negative part** of the function. This slope ensures that **negative inputs are not mapped directly to zero**, but another negative continuous value.
