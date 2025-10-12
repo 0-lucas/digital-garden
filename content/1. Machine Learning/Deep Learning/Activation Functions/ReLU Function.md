@@ -1,6 +1,6 @@
 # What is it?
 
-User for [[Deep Learning]], as an *activation function* of an [[Artificial Neural Networks|Artificial Neural Network]], the *ReLU function*, which stands for *Rectified Linear Unit function*, is probably the **most used** *activation function* in [[Deep Learning]].
+Used for [[Deep Learning]], as an *activation function* of an [[Artificial Neural Networks|Artificial Neural Network]], the *ReLU function*, which stands for *Rectified Linear Unit function*, is probably the **most used** *activation function* in [[Deep Learning]].
 The *ReLU function* is also *non-linear* and **very fast to compute**, once it **output the input directly if it's positive**, otherwise, **if the input is negative or zero**, **outputs zero**.
 
 ![[relu.png]]
@@ -21,4 +21,4 @@ The [[Derivatives|derivative]] of the *ReLU* function is either $0$ or $1$, and 
 
 ![[dying relu.png]]
 
-In these cases, the *Leaky ReLU* can be used to mitigate the *dying ReLU* problem.
+In these cases, the [[Leaky ReLU Function]] can be used to mitigate the *dying ReLU* problem.
