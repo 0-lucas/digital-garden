@@ -6,3 +6,11 @@ The *leaky ReLU* function is designed to overcome the *dying ReLU* problem and *
 ![[leaky relu.png]]
 
 The biggest feature of the *leaky ReLU*, is the **slope on the negative part** of the function. This slope ensures that **negative inputs are not mapped directly to zero**, but another negative continuous value.
+
+It can be mathematically defined as:
+$$
+f(x) = \begin{cases}
+x,\ \  \ \ \ \ \ \ \ \ \ \ \, \ x > 0 \\ 
+0.01 * x, \ \ \ x \leq 0
+\end{cases}
+$$
