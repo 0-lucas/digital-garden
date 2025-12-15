@@ -8,3 +8,5 @@ It's said that during the crusades, the Byzantine general wanted to **individual
 Under each general, we also have lieutenants. Either the **general may be malicious** and issue different orders to each lieutenant, or **lieutenants may be malicious** and choose not to follow the major's order.
 
 Generals and lieutenants are just **analogies for computer nodes**. [*Leslie Lamport et al., proposes*](https://lamport.azurewebsites.net/pubs/byz.pdf) that for **$n$ malicious nodes**, **$3n + 1$** **reliable nodes** are needed to ensure the **data is not compromised** and decisions are taken as it should.
+
+![[Pasted image 20251215085559.png]]
