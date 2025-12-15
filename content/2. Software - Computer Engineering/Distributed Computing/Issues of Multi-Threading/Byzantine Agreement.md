@@ -4,4 +4,6 @@ Some [[Distributed Computing]] applications implement decentralized [[Architectu
 ___
 # How does it work?
 
-It's said that during the crusades, the Byzantine major wanted to **individually** attack or retreat. However, if a partial attack or a partial retreat would to occur, it would compromise Byzantine forces. It was vital that all majors **followed the same instruction**. To make things worse, each major was far away from each other, which also **compromises the reliability of the information**.
+It's said that during the crusades, the Byzantine general wanted to **individually** attack or retreat. However, if a partial attack or a partial retreat would to occur, it would compromise Byzantine forces. It was vital that all generals **followed the same instruction**. To make things worse, each general was far away from each other, which also **compromises the reliability of the information**.
+
+Under each general, we also have lieutenants. Either the general may be malicious and issue different orders to each lieutenant, or lieutenants may be malicious and choose not to follow the major's order.
