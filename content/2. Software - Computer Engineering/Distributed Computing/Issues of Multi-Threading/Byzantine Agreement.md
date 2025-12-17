@@ -9,4 +9,4 @@ Under each general, we also have lieutenants. Either the **general may be malici
 
 Generals and lieutenants are just **analogies for computer nodes**. [*Leslie Lamport et al., proposes*](https://lamport.azurewebsites.net/pubs/byz.pdf) that for **$n$ malicious nodes**, **$3n + 1$** **reliable nodes** are needed to ensure the **data is not compromised** and decisions are taken as it should.
 
-![[Pasted image 20251215085559.png]]
+![[byzantine agreement.png]]
