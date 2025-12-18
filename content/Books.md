@@ -119,6 +119,7 @@ ____
 - [[Joshua Bloch - Effective Java-Addison-Wesley Professional (2018).pdf|Effective Java]]
 - [[Core Java html - Cay S. Horstmann.pdf|Core Java for the Impatient]]
 ## C-Sharp
+- [[99. Books/The Art of Unit Testing _ With Examples in C# -- Osherove, Roy.pdf|The Art of Unit Testing _ With Examples in C# -- Osherove, Roy]]
 - [[Introduction to Web Development with ASP.NET.pdf|Introduction to the Development of Web Applications Using ASP .Net (Core) MVC]]
 - [[Andrew Lock - ASP.NET Core in Action-Manning Publications (2021).pdf|ASP.NET Core in Action]]
 - [[Pro ASP.NET MVC 5.pdf|PRO ASP.NET MVC 5]]
