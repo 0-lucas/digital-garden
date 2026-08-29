@@ -78,6 +78,9 @@ ___
 
 ## Artificial Intelligence
 - [[Designing Large Language Model Applications_ A Holistic Approach to LLMs{Suhas Pai}(2025 April 15, O&_039_Reilly Media){108181018} libgen.li.pdf|Designing LLM Applications - A Holistic Approach to LLMs]]
+- [[AI Agents in Action{Micheal Lanham}(2025, MANNING Publications){108026360} libgen.li.pdf|AI Agents in Action]]
+- [[Learning LangChain_ Building AI and LLM Applications with LangChain and LangGraph{Mayo Oshin, Nuno Campos}(2025 March 25, O&_039_Reilly Media){111168933} libgen.li.pdf|Learning LangChain]]
+- [[Build a Large Language Model (From Scratch){Sebastian Raschka}(2024, MANNING Publications){107327269} libgen.li.pdf|Build a Large Language Model (From Stratch)]]
 ___
 # Data Engineering
 
