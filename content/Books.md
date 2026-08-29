@@ -75,6 +75,9 @@ ___
 - [[Practical Time Series Analysis.pdf|Practical Time Series Analysis]]
 - [[Forecasting Principles and Practice.pdf|Forecasting: Principles and Practice]]
 - [[Demand Forecasting for Inventory Control.pdf|Demand Forecasting for Inventory Control]]
+
+## Artificial Intelligence
+- [[Designing Large Language Model Applications_ A Holistic Approach to LLMs{Suhas Pai}(2025 April 15, O&_039_Reilly Media){108181018} libgen.li.pdf|Designing LLM Applications - A Holistic Approach to LLMs]]
 ___
 # Data Engineering
 
