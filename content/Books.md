@@ -61,7 +61,6 @@ ___
 - [[Hands-On Unsupervised Learning Using Python  (Ankur A. Patel).pdf|Hands-On: Unsupervised Learning]]
 - [[Bishop - Pattern Recognition And Machine Learning - Springer  2006.pdf|Pattern Recognition and Machine Learning]]
 - [[Reinforcement Learning, Second Edition _ An Introduction -- Richard S_ Sutton; Andrew G_ Barto .pdf|Reinforcement Learning - An Introduction]]
-
 ## ML Ops
 - [[Dataset Shift in Machine Learning.pdf|Dataset Shift in Machine Learning]]
 - [[Introducing MLOps How to Scale Machine Learning in the Enterprise (Mark Treveil, Nicolas Omont, Clément Stenac etc.).pdf|Introducing MLOPS]]
@@ -75,7 +74,6 @@ ___
 - [[Practical Time Series Analysis.pdf|Practical Time Series Analysis]]
 - [[Forecasting Principles and Practice.pdf|Forecasting: Principles and Practice]]
 - [[Demand Forecasting for Inventory Control.pdf|Demand Forecasting for Inventory Control]]
-
 ## Artificial Intelligence
 - [[Designing Large Language Model Applications_ A Holistic Approach to LLMs{Suhas Pai}(2025 April 15, O&_039_Reilly Media){108181018} libgen.li.pdf|Designing LLM Applications - A Holistic Approach to LLMs]]
 - [[AI Agents in Action{Micheal Lanham}(2025, MANNING Publications){108026360} libgen.li.pdf|AI Agents in Action]]
