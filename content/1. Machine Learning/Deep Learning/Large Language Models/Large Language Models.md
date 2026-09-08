@@ -6,20 +6,18 @@ A *Large Language Model*, commonly abbreviated to *LLM* is a [[Artificial Neural
 ___
 ## Modelling
 
-Most *LLMs* used in real-world scenarios are either **fine-tuned models, [[AI Agents]], or assistants**. 
+Most *LLMs* used in real-world scenarios are either **fine-tuned models, [[AI Agents]], or assistants**.  The popular usage of *LLM*-based assistants such as *ChatGPT* and *Copilot* rely on **general models**, which have **general knowledge but don't excel at anything particularly**. They have great performance for most use-cases but might not be efficient if you want to perform a **specific task**. If that is the case, one can decide to [[Fine-Tuning|fine-tune]] the model in his last stage of training.
 
-> [!info] [[Transformers]] and LLMs 
-> Practically all the big names such as *Claude*, *GPT*, *Llama*, *etc.* rely on the [[Transformers|tranformers]] architecture, presented on the paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762).
-> Because of that, both on literature and day-to-day conversations, *LLMs* are assumed to be [[Transformers|transformers]]-based. However not all *LLMs* rely on this architecture - researchers are trying to create alternative approaches to combat the heavy computer usage of these models, such as 
-
-However, much training and modelling is needed to reach an usable state of a language model, which generally consists of:
+The whole chain of training a *LLM* from scratch goes like this:
 
 - ##### Pre-training
 	The first stage of training an *LLM* is known as *pre-training*, which creates the **base, foundation model**. At this point, **raw unlabeled data** is used as training data with the **objective of creating language, syntax and contextual understanding** — *e.g., GPT-3, the precursor and original model of ChatGPT*. 
 
-	Here 
 
 
 
 
-The popular usage of *LLM*-based assistants such as *ChatGPT* and *Copilot* rely on **general models**, which have **general knowledge but don't excel at anything particularly**. They have great performance for most use-cases but 
+> [!info] [[Transformers]] and LLMs 
+> Practically all the big names such as *Claude*, *GPT*, *Llama*, *etc.* rely on the [[Transformers|tranformers]] architecture, presented on the paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762).
+> Because of that, both on literature and day-to-day conversations, *LLMs* are assumed to be [[Transformers|transformers]]-based. However not all *LLMs* rely on this architecture - researchers are trying to create alternative approaches to combat heavy computer usage, such as *[[State-Space Modelling]]*.
+
