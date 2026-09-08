@@ -4,5 +4,5 @@ The *transformer architecture* has become a synonym with [[Large Language Models
 
 It consists of two main parts: the *encoder* and *decoder*.
 
-![[Transformers-1788865231380.webp]]
+![[Transformers-1788865231380.png]]
 
