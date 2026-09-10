@@ -10,4 +10,11 @@ Words with **similar contextual significance stay close to each other** in the [
 
 ![[Embedding-1789046046338.webp]]
 
-One of the foundational examples of *embedding [[Algorithms|algorithms]]* is *Word2Vec*.
+One of the foundational examples of *embedding [[Algorithms|algorithms]]* is *Word2Vec*, which uses [[Continuous Bag of Words]] and [[Skip-gram]] to give contextual significance to words and phrases. The main idea is that **words in similar contexts tend to have similar meanings**.
+___
+# The dimensionality trade-off
+
+*Embedding* models can be built to output vectors of various sizes. The popular model *EmbeddingGemma* has a **default dimension size of 768**. Bigger dimension means that more **fine and complex relationships** may be captured and perform much better for multilingual and technical tasks, but it also has a **higher compute and storage cost**.
+
+Currently, most models are trained with [[Matryoshka Representation Learning]] - *MRL* for short. Which allows using **smaller dimension sizes**, with **small performance cost** compared to storage and latency saving compared to a bigger dimension size.
+
