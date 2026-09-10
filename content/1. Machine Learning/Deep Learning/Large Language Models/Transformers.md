@@ -5,7 +5,7 @@ The *transformer architecture* has become a synonym with [[Large Language Models
 It consists of two main parts: the *encoder* and *decoder*.
 
 - ##### Encoder
-	The *encoder* is responsible by taking the input text and **transforming into vectors which capture the contextual information** of the input. This process can also be called [[Embedding]].
+	The *encoder* is responsible by taking the input text and **transforming into vectors which capture the contextual information** of the input. This process is called [[Embedding]].
 
 - ##### Decoder
 	The *decoder* receives the **vectors from the *encoder*** and decode them to generate the output text.

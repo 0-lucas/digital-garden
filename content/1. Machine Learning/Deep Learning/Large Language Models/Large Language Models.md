@@ -10,10 +10,12 @@ Most *LLMs* used in real-world scenarios are either **fine-tuned models, [[AI Ag
 
 The whole chain of training a *LLM* from scratch goes like this:
 
+- ##### Data preparation
+	No [[Deep Learning]] model understands raw text directly, since it's not compatible with it's underlying .
+- ##### LLM architecture
+
 - ##### Pre-training
-	The first stage of training an *LLM* is known as *pre-training*, which creates the **base, foundation model**. At this point, **raw unlabeled data** is used as training data with the **objective of creating language, syntax and contextual understanding** — *e.g., GPT-3, the precursor and original model of ChatGPT*. 
-
-
+	The second stage of building an *LLM* is known as *pre-training* *(which is the first training stage)*, creating the **foundation model**. At this point, **raw unlabeled data** is used as training data with the **objective of creating language, syntax and contextual understanding** — *e.g., GPT-3, the precursor and original model of ChatGPT*. 
 
 
 
