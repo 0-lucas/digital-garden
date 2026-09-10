@@ -1,4 +1,4 @@
-# What is it?
+# What is it? - WIP
 
 A *Large Language Model*, commonly abbreviated to *LLM* is a [[Artificial Neural Networks|Artificial Neural Network]] designed and trained to **understand and generate human language**, using massive amounts of data and billions of parameters, from where which comes the name *large*.
 
