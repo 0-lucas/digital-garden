@@ -11,7 +11,8 @@ Most *LLMs* used in real-world scenarios are either **fine-tuned models, [[AI Ag
 The whole chain of training a *LLM* from scratch goes like this:
 
 - ##### Data preparation
-	No [[Deep Learning]] model understands raw text directly, since it's not compatible with it's underlying .
+	[[Deep Learning]] models **don't understand raw text directly**: words and phrases are represented as [[Vectors|vectors]]. The process to convert data to [[Vectors|vectors]] is called [[Embedding]], which can be inserted as a previous [[Artificial Neural Networks|neural network]] layer or as an **external model**.
+	
 - ##### LLM architecture
 
 - ##### Pre-training
