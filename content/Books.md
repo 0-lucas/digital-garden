@@ -79,6 +79,7 @@ ___
 - [[AI Agents in Action{Micheal Lanham}(2025, MANNING Publications){108026360} libgen.li.pdf|AI Agents in Action]]
 - [[Learning LangChain_ Building AI and LLM Applications with LangChain and LangGraph{Mayo Oshin, Nuno Campos}(2025 March 25, O&_039_Reilly Media){111168933} libgen.li.pdf|Learning LangChain]]
 - [[Build a Large Language Model (From Scratch){Sebastian Raschka}(2024, MANNING Publications){107327269} libgen.li.pdf|Build a Large Language Model (From Stratch)]]
+- [[Large Language Models Projects_ Apply and Implement Strategies for Large Language Model{Pere Marta}(2024, Apress){106114813} libgen.li.pdf|Large Language Models Projects]]
 ___
 # Data Engineering
 
